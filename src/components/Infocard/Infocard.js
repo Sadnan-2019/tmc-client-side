@@ -1,6 +1,6 @@
 import React from "react";
 
-const Infocard = ({img}) => {
+const Infocard = ({img,cardTitle}) => {
   return (
     <div>
       <div className="card card-side bg-gray-800 shadow-xl px-4">
@@ -11,7 +11,7 @@ const Infocard = ({img}) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title text-white">New movie is released!</h2>
+          <h2 className="card-title text-white">{cardTitle}</h2>
           <p className="text-white">Click the button to watch on Jetflix app.</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Watch</button>
