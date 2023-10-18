@@ -33,7 +33,7 @@ const Services = () => {
  <div className="py-12">
         <div>
       <h2 className="text-center text-3xl font-bold text-blue-800 mt-[35px]">Our Services</h2>
-      <h2 className="text-center text-3xl font-bold text-blue-800 mt-5">Service We Provide</h2>
+      <h2 className="text-center text-3xl font-bold text-blue-800 mt-2">Service We Provide</h2>
 
       <div className="grid sm:grid-cols-1 lg:grid-cols-3 px-12">
 {
