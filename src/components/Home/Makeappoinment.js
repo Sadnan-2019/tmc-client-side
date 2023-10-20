@@ -26,6 +26,10 @@ const Makeappoinment = () => {
             labore eligendi culpa suscipit quae iste deserunt voluptas! Veniam,
             expedita. Laborum?
           </h2>
+
+          <div className="card-actions">
+      <button className="btn btn-primary">Buy Now</button>
+    </div>
         </div>
       </div>
     </div>
