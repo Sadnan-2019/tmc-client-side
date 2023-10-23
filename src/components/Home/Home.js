@@ -4,7 +4,7 @@ import Info from '../Info/Info';
 import Services from '../Services/Services';
 import Makeappoinment from './Makeappoinment';
 import Tstimoniel from './Tstimoniel';
-import Footer from '../Footer/Footer';
+import Footer from '../Shared/Footer/Footer';
 
 const Home = () => {
      return (

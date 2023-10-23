@@ -1,0 +1,21 @@
+/* .card {
+  border-radius: 35px;
+  background: #f8f1f1;
+  box-shadow: inset 5px -5px 0px #636060, inset -5px 5px 0px #ffffff;
+} */
+/* .card {
+  border-radius: 35px;
+  background: #f8f1f1;
+  box-shadow: inset 5px 5px 5px #e8e8eee8, inset -5px -5px 5px #ffffff;
+} */
+.card {
+     border-radius: 15px;
+     /* background: #f8f1f1; */
+     box-shadow: inset 8px 8px 0px #636060,
+                 inset -8px -8px 0px #ffffff;
+}
+/* .card {
+  border-radius: 35px;
+  background: #f8f1f1;
+  box-shadow: inset 5px 5px 5px #636060, inset -5px -5px 5px #ffffff;
+} */
