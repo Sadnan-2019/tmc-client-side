@@ -2,12 +2,12 @@ import { format } from "date-fns";
 import React from "react";
 
 const BookingModal = ({ treatment, date,setTreatment }) => {
-  const { _id,name, slots } = treatment;
+  const { _id,dept_name, doctor_name,slots } = treatment;
 
   const handleSubmit =(event)=>{
     event.preventDefault()
     const slot = event.target.slot.value;
-    console.log(_id,name,slot)
+    console.log(_id,dept_name,doctor_name,slot)
     setTreatment(null);
   }
   return (
@@ -15,7 +15,7 @@ const BookingModal = ({ treatment, date,setTreatment }) => {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
 
       <input type="checkbox" id="booking-modal" className="modal-toggle" />
-      <div class="modal modal-bottom sm:modal-middle">
+      <div class="modal modal-bottom sm:modal-middle     ">
         <div className="modal-box">
           <label
             for="booking-modal"
@@ -24,9 +24,14 @@ const BookingModal = ({ treatment, date,setTreatment }) => {
             ✕
           </label>
 
-          <h3 className="font-bold text-lg text-center py-5">
-            Booking For:{name}
+          <div className=" text-red-800 font-bold  modal-button">
+          <h3 className="font-bold text-lg text-center py-2">
+            Booking For:{dept_name}
           </h3>
+          <h3 className="font-bold text-lg text-center py-2">
+            Booking For:{doctor_name}
+          </h3>
+          </div>
           <form
             action=""
             onSubmit={handleSubmit}

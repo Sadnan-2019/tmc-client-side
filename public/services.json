@@ -1,7 +1,8 @@
 [
   {
     "_id": 1,
-    "name": "Teeth Orthodontics",
+    "dept_name": "Gynecology",
+    "doctor_name":"Prof. Dr. Rumana Arman",
     "price":100,
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -12,12 +13,13 @@
       "10.30 AM - 11.00 AM",
       "11.00 AM - 11.30 AM",
       "11.30 AM - 12.00 AM"
-       
+     
     ]
   },
   {
     "_id": 2,
-    "name": "Cosmetic Dentistry",
+    "dept_name": "Orthopedic",
+    "doctor_name":"Prof. Dr. Md. Nasir Uddin",
     "price":100,
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -32,13 +34,15 @@
   },
   {
     "_id": 3,
-    "name": "Teeth Cleaning",
+    "dept_name": "Cardiology",
+    "doctor_name":"Dr. Md. Shafiqul Islam",
     "price":100,
     "slots": []
   },
   {
     "_id": 4,
-    "name": "Cavity Protection",
+    "dept_name": "Physiotherapy & Rehabilitation Specialist",
+    "doctor_name":"Dr. Md. Mahbubur Rahman",
     "price":100,
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -53,7 +57,8 @@
   },
   {
     "_id": 5,
-    "name": "Pediatric Dental",
+    "dept_name": "Neonatal & Child Specialist",
+    "doctor_name":"Dr. Muhammad Shafiqul Haque Sharif",
     "price":100,
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -68,7 +73,24 @@
   },
   {
     "_id": 6,
-    "name": "Oral Surgery",
+    "dept_name": "Kidney & Hypertension Specialist",
+    "doctor_name":"Dr. Abu Zafor Md. Salahuddin",
+    "price":100,
+    "slots": [
+      "08.00 AM - 08.30 AM",
+      "08.30 AM - 09.00 AM",
+      "09.00 AM - 9.30 AM",
+      "09.30 AM - 10.00 AM",
+      "10.00 AM - 10.30 AM",
+      "10.30 AM - 11.00 AM",
+      "11.00 AM - 11.30 AM",
+      "11.30 AM - 12.00 AM" 
+    ]
+  },
+  {
+    "_id": 7,
+    "dept_name": " Gynecology, Obstetrics & Ultrasonogram Specialist",
+    "doctor_name":"Dr. H. A. Mahmudunnesa",
     "price":100,
     "slots": [
       "08.00 AM - 08.30 AM",
