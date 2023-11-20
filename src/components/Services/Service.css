@@ -11,7 +11,7 @@
 .card {
      border-radius: 15px;
      /* background: #f8f1f1; */
-     box-shadow: inset 8px 8px 0px #636060,
+     box-shadow: inset 8px 8px 0px rgb(69, 152, 115),
                  inset -8px -8px 0px #ffffff;
 }
 /* .card {
