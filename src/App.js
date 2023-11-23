@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Shared/Navbar/Navbar";
 import Appoinment from "./components/Appoinment/Appoinment";
 import Login from "./components/Login/Login";
+import SignUp from "./components/Login/SignUp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/appoinment" element={<Appoinment />}></Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/sign-up" element={<SignUp />}></Route>
 
 
      
