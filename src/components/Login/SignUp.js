@@ -6,14 +6,17 @@ import "./Login.css";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import Loading from "../Loading/Loading";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+    const [updateProfile, updating, UpDateError] = useUpdateProfile(auth);
+
 
   let signError;
   const {
@@ -22,22 +25,26 @@ const SignUp = () => {
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const navigate = useNavigate()
+  const onSubmit = async data => {
     console.log(data);
-    createUserWithEmailAndPassword(data.email, data.password);
+   await createUserWithEmailAndPassword(data.email, data.password);
+   await updateProfile({displayName:data.name})
+   console.log("Update done");
+   navigate("/appoinment")
   };
 
-  if (user || gUser) {
+  if (user || gUser ) {
     console.log(user || gUser);
   }
 
-  if (gLoading || loading) {
+  if (gLoading || loading || updating) {
     return <Loading></Loading>;
   }
 
-  if (error || gError) {
+  if (error || gError || UpDateError) {
     signError = (
-      <p className="text-red-900 py-3">{error?.message || gError?.message}</p>
+      <p className="text-red-900 py-3">{error?.message || gError?.message || UpDateError.message}</p>
     );
   }
   return (

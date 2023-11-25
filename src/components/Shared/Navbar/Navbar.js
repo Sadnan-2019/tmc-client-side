@@ -1,7 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 // import chair from "../../assets/images/chair.png";
 const Navbar = () => {
+const navigate = useNavigate()
+  const [user, loading, error] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+    navigate("/login")
+  };
+
   const menuitems = (
     <>
       <li className="">
@@ -21,8 +31,8 @@ const Navbar = () => {
         <Link to="/">About</Link>
       </li>
       <li>
-        {" "}
-        <Link to="/login">Login</Link>
+         {user ? <button className="btn btn-sm btn-ghost" onClick={logout}> Sign Out</button> :  <Link to="/login">Login</Link>}
+        
       </li>
     </>
   );

@@ -9,7 +9,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import Loading from "../Loading/Loading";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
  
 
 const Login = () => {
@@ -27,10 +27,11 @@ const Login = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-
+const navigate = useNavigate()
   const onSubmit = (data) => {
     console.log(data);
     signInWithEmailAndPassword(data.email, data.password)
+    navigate("/")
   };
 
   if (user || gUser) {
