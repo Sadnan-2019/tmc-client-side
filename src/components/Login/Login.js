@@ -36,6 +36,7 @@ const navigate = useNavigate()
 
   if (user || gUser) {
     console.log(user || gUser);
+    navigate("/")
   }
 
   if ( gLoading || loading) {
