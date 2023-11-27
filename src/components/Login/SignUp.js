@@ -6,10 +6,11 @@ import "./Login.css";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
-  useUpdateProfile,
+  useUpdateProfile, useSendEmailVerification 
 } from "react-firebase-hooks/auth";
 import Loading from "../Loading/Loading";
 import { Link, useNavigate } from "react-router-dom";
+import { sendEmailVerification } from "firebase/auth";
 
 const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -32,7 +33,20 @@ const SignUp = () => {
    await updateProfile({displayName:data.name})
    console.log("Update done");
    navigate("/appoinment")
+   veryfyEmail();
   };
+
+  const veryfyEmail=()=>{
+   sendEmailVerification(auth.currentUser)
+    .then(() => {
+      // 
+      // ...
+      console.log("Email verification sent!")
+    });
+
+    
+  }
+
 
   if (user || gUser ) {
     console.log(user || gUser);

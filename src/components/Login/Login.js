@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import "./Login.css";
@@ -10,6 +10,8 @@ import {
 } from "react-firebase-hooks/auth";
 import Loading from "../Loading/Loading";
 import { Link, useNavigate } from "react-router-dom";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { toast } from "react-toastify";
  
 
 const Login = () => {
@@ -28,14 +30,30 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 const navigate = useNavigate()
-  const onSubmit = (data) => {
+  const onSubmit = (data ) => {
     console.log(data);
-    signInWithEmailAndPassword(data.email, data.password)
+    signInWithEmailAndPassword( data.email, data.password)
     navigate("/")
+    handleResetPassword(data.email)
+    console.log(data.email)
   };
+
+  // const email =auth.email
+  const [currentEmail, setCurrentEmail] = useState("");
+  const handleResetPassword = async (data)=>{
+    console.log(data)
+    if (data.email) {
+      await sendPasswordResetEmail(data.email);
+      toast("Sent email");
+      // console.log(email);
+    } else {
+      toast("Please Enter Your Email ");
+    }
+  }
 
   if (user || gUser) {
     console.log(user || gUser);
+   
     navigate("/")
   }
 
@@ -140,6 +158,9 @@ const navigate = useNavigate()
             <p className="font-bold">Create a New Account Please</p> 
             <Link to="/sign-up" className="text-blue-900 font-bold">Sign Up</Link>
 
+            </div>
+            <div>
+              <button  className="text-sm font-bold btn-link" onClick={handleResetPassword}>Forget Password</button>
             </div>
             <div className="divider">OR</div>
             <div className="card-actions justify-center">
