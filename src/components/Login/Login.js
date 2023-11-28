@@ -39,7 +39,7 @@ const navigate = useNavigate()
   };
 
   // const email =auth.email
-  const [currentEmail, setCurrentEmail] = useState("");
+ 
   const handleResetPassword = async (data)=>{
     console.log(data)
     if (data.email) {

@@ -3,32 +3,39 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
-const BookingModal = ({ treatment, date,setTreatment }) => {
-  const { _id,dept_name, doctor_name,slots } = treatment;
+const BookingModal = ({ treatment, date, setTreatment }) => {
+  const { _id, dept_name, doctor_name, slots } = treatment;
 
   const [user, loading, error] = useAuthState(auth);
 
-  const formattedDate= format(date,"PP")
+  const formattedDate = format(date, "PP");
 
-
-  const handleSubmit =(event)=>{
-    event.preventDefault()
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const slot = event.target.slot.value;
-    console.log(_id,dept_name,doctor_name,slot);
-    const booking={
+    console.log(_id, dept_name, doctor_name, slot);
+    const appoinment = {
+      treatmentId: _id,
+      department: dept_name,
+      name: doctor_name,
+      date: formattedDate,
+      patients_name: user.displayName,
+      patients_email: user.email,
+      phone: event.target.phone.value,
+      slot,
+    };
 
-      treatmentId:_id,
-      department:dept_name,
-      name:doctor_name,
-      date : formattedDate,
-      patients_name:user.displayName,
-      patients_email:user.email,
-      phone:event.target.phone.value,
-      slot
+    fetch(`http://localhost:5000/appoinment`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
 
-    }
-    setTreatment(null);
-  }
+      body: JSON.stringify(appoinment),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
   return (
     <div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -44,12 +51,12 @@ const BookingModal = ({ treatment, date,setTreatment }) => {
           </label>
 
           <div className=" text-red-800 font-bold  modal-button">
-          <h3 className="font-bold text-lg text-center py-2">
-            Booking For:{dept_name}
-          </h3>
-          <h3 className="font-bold text-lg text-center py-2">
-            Booking For:{doctor_name}
-          </h3>
+            <h3 className="font-bold text-lg text-center py-2">
+              Booking For:{dept_name}
+            </h3>
+            <h3 className="font-bold text-lg text-center py-2">
+              Booking For:{doctor_name}
+            </h3>
           </div>
           <form
             action=""
@@ -61,28 +68,27 @@ const BookingModal = ({ treatment, date,setTreatment }) => {
               value={format(date, "PP")}
               className="input input-bordered w-full max-w-xs"
             />
-            <select name="slot" className="select select-bordered w-full max-w-xs">
-              {
-                slots.map((slot,index)=><option
-                 value={slot}
-                 key={index}
-                 
-                 >{slot}</option>)
-              }
-              
+            <select
+              name="slot"
+              className="select select-bordered w-full max-w-xs"
+            >
+              {slots.map((slot, index) => (
+                <option value={slot} key={index}>
+                  {slot}
+                </option>
+              ))}
             </select>
             <input
-            disabled
-            value={user?.displayName}
+              disabled
+              value={user?.displayName}
               type="text"
               placeholder="Name"
               name="name"
               className="input input-bordered w-full max-w-xs"
             />
             <input
-
-            disabled
-            value={user?.email}
+              disabled
+              value={user?.email}
               type="email"
               placeholder="Email
               "
