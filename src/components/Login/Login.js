@@ -23,7 +23,7 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
-  let signError;
+  
   const {
     register,
     formState: { errors },
@@ -32,36 +32,41 @@ const Login = () => {
 const navigate = useNavigate()
   const onSubmit = (data ) => {
     console.log(data);
-    signInWithEmailAndPassword( data.email, data.password)
-    navigate("/")
-    handleResetPassword(data.email)
-    console.log(data.email)
+    signInWithEmailAndPassword(data.email, data.password)
+    // navigate("/")
+    // handleResetPassword(data.email)
+    // console.log(data.email)
+    
   };
 
   // const email =auth.email
  
-  const handleResetPassword = async (data)=>{
-    console.log(data)
-    if (data.email) {
-      await sendPasswordResetEmail(data.email);
-      toast("Sent email");
-      // console.log(email);
-    } else {
-      toast("Please Enter Your Email ");
-    }
-  }
+  // const handleResetPassword = async (data)=>{
+  //   console.log(data)
+  //   if (data.email) {
+  //     await sendPasswordResetEmail(data.email);
+  //     toast("Sent email");
+     
+  //   } else {
+  //     toast("Please Enter Your Email ");
+  //   }
+  // }
 
   if (user || gUser) {
-    console.log(user || gUser);
+    // console.log(user || gUser);
+    // console.log(user);
    
     navigate("/")
   }
+  // if(!user){
+  //   navigate("/login")
+  // }
 
   if ( gLoading || loading) {
     return <Loading></Loading>
 
   }
-
+  let signError;
   if(error || gError){
 
     signError = <p className="text-red-900 py-3">{error?.message|| gError?.message}</p>
@@ -160,7 +165,9 @@ const navigate = useNavigate()
 
             </div>
             <div>
-              <button  className="text-sm font-bold btn-link" onClick={handleResetPassword}>Forget Password</button>
+              <button  className="text-sm font-bold btn-link"
+              //  onClick={handleResetPassword}
+               >Forget Password</button>
             </div>
             <div className="divider">OR</div>
             <div className="card-actions justify-center">
