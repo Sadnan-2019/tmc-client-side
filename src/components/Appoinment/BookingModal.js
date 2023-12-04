@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { toast } from "react-toastify";
 
 const BookingModal = ({ treatment, date, setTreatment }) => {
   const { _id, dept_name, doctor_name, slots } = treatment;
@@ -13,7 +14,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const slot = event.target.slot.value;
-    console.log(_id, dept_name, doctor_name, slot);
+    // console.log(_id, dept_name, doctor_name, slot);
     const appoinment = {
       treatmentId: _id,
       department: dept_name,
@@ -34,7 +35,20 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
       body: JSON.stringify(appoinment),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+          console.log(data)
+
+        if(data.success){
+          toast(`Appoinment is set,${formattedDate} at ${slot}`)
+        
+
+        }else{
+          toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
+
+        }
+
+        setTreatment(null)
+      } );
   };
   return (
     <div>

@@ -8,6 +8,7 @@ import Appoinment from "./components/Appoinment/Appoinment";
 import Login from "./components/Login/Login";
 import SignUp from "./components/Login/SignUp";
 import PrivateRoute from "./components/Login/PrivateRoute";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
      
       </Routes>
+      <ToastContainer />
+
     </div>
   );
 }
