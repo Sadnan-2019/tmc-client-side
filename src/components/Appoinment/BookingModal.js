@@ -35,15 +35,16 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
       body: JSON.stringify(appoinment),
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(data => {
           console.log(data)
+          console.log("sadannnnwni",appoinment)
 
         if(data.success){
-          toast(`Appoinment is set,${formattedDate} at ${slot}`)
+          // toast(`Appoinment is set,${formattedDate} at ${slot}`)
         
 
         }else{
-          toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
+          // toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
 
         }
 
@@ -94,7 +95,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
             </select>
             <input
               disabled
-              value={user?.displayName}
+              value={user?.displayName || ""}
               type="text"
               placeholder="Name"
               name="name"
@@ -102,7 +103,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
             />
             <input
               disabled
-              value={user?.email}
+              value={user?.email || ""}
               type="email"
               placeholder="Email
               "

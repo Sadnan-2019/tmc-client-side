@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import "./Login.css";
@@ -52,12 +52,17 @@ const navigate = useNavigate()
   //   }
   // }
 
-  if (user || gUser) {
-    // console.log(user || gUser);
-    // console.log(user);
-   
-    navigate("/")
-  }
+
+  useEffect(()=>{
+    if (user || gUser) {
+      // console.log(user || gUser);
+      // console.log(user);
+     
+      navigate("/")
+    }
+
+  },[user,gUser,navigate])
+ 
   // if(!user){
   //   navigate("/login")
   // }
