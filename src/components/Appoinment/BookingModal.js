@@ -35,16 +35,16 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
       body: JSON.stringify(appoinment),
     })
       .then((res) => res.json())
-      .then(data => {
-          console.log(data)
-          console.log("sadannnnwni",appoinment)
+      .then((data) => {
+          // console.log(data)
+          // console.log("sadannnnwni",appoinment)
 
         if(data.success){
           // toast(`Appoinment is set,${formattedDate} at ${slot}`)
         
 
         }else{
-          // toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
+          toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
 
         }
 
