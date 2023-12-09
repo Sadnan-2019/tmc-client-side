@@ -1,11 +1,11 @@
-import React from 'react';
-import call from "../../../assets/images/call-center.gif"
-import consultancy from "../../../assets/images/video-call.png"
+import React from "react";
+import call from "../../../assets/images/call-center.gif";
+import working from "../../../assets/images/working.png";
 import Marquee from "react-fast-marquee";
 const Nav = () => {
-    return (
-        <div>
-            <div className="bg-gradient-to-r from-[#575be8] via-[#160a2c] to-[#38235D] text-white ">
+  return (
+    <div>
+      <div className="bg-gradient-to-r from-[#575be8] via-[#160a2c] to-[#38235D] text-white ">
         <div className="flex   flex-col md:flex-row  justify-between px-10	 lx:px-12    items-center ">
           {/* <img  src={logo} className="w-24" alt="" /> */}
           <div className="grid grid-cols-2 justify-items-center items-center gap-12  ">
@@ -15,7 +15,7 @@ const Nav = () => {
             >
               <div>
                 {/* <MdOutlinePhonelinkRing className="text-[10px] lg:text-2xl    " /> */}
-                <img className="w-7 rounded-full" src={call} alt=""/>
+                <img className="w-10 rounded-full" src={call} alt="" />
               </div>
               <div>
                 <p className="text-[10px] lg:text-xs   	">
@@ -26,10 +26,26 @@ const Nav = () => {
                 <p className="text-[10px] lg:text-xs  	 	">01643-390832 </p>
               </div>
             </div>
-           
-          
+            <div
+              className="flex items-center font-bold    gap-2"
+              // style={{ color: "#92468E" }}
+            >
+              <div>
+                {/* <MdOutlinePhonelinkRing className="text-[10px] lg:text-2xl    " /> */}
+                <img className="w-10 rounded-full" src={working} alt="" />
+              </div>
+              <div>
+                <p className="text-[10px] lg:text-xs   	">
+                  <a href="tel:+01643-390832 " className="  	">
+                  Working Hour
+                  </a>
+                </p>
+                <p className="text-[10px] lg:text-xs  	 	">
+                   We are open 24/7{" "}
+                </p>
+              </div>
+            </div>
           </div>
-        
 
           <div className="grid grid-cols-2 justify-items-center items-center gap-12  ">
             <div
@@ -37,7 +53,7 @@ const Nav = () => {
               // style={{ color: "#92468E" }}
             >
               <ul className="flex items-center font-bold    gap-2">
-              <li>
+                <li>
                   <a
                     href="/"
                     rel="noreferrer"
@@ -127,8 +143,8 @@ const Nav = () => {
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Nav;

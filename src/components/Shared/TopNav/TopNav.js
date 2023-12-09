@@ -14,7 +14,7 @@ const TopNav = () => {
               // style={{ color: "#92468E" }}
             >
               <div className="">
-                <img className="w-8  " src={sample} alt="" />
+                <img className="w-10  " src={sample} alt="" />
               </div>
               <div>
                 <p className="text-[10px] lg:text-xs   	">
@@ -26,7 +26,7 @@ const TopNav = () => {
               className="flex items-center font-bold   gap-2   "
               // style={{ color: "#92468E" }}
             >
-              <div><img className="w-8" src={consultancy} alt="" /></div>
+              <div><img className="w-10" src={consultancy} alt="" /></div>
               <div>
                 <p className="text-[10px] lg:text-xs   	">
                   Video Consultancy 
