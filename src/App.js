@@ -10,12 +10,15 @@ import SignUp from "./components/Login/SignUp";
 import PrivateRoute from "./components/Login/PrivateRoute";
 import { ToastContainer } from 'react-toastify';
 import TopNav from "./components/Shared/TopNav/TopNav";
+import Nav from "./components/Shared/TopNav/Nav";
 
 function App() {
   return (
     <div className=" ">
       <TopNav></TopNav>
+      <Nav></Nav>
       <Navbar></Navbar>
+      
 
       <Routes>
       <Route path="/" element={<Home />}></Route>
