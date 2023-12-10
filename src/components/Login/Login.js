@@ -177,7 +177,7 @@ const navigate = useNavigate()
             <div className="divider text-white">OR</div>
             <div className="card-actions justify-center">
               <button
-                className="btn btn-primary"
+                className="btn bg-blue-900 text-white"
                 onClick={() => signInWithGoogle()}
               >
                 CONTINIUE WITH GOOGLE

@@ -62,18 +62,18 @@ const SignUp = () => {
     );
   }
   return (
-    <div className="login">
+    <div className="login py-24">
       <div className="flex items-center justify-center h-screen  ">
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] shadow-xl">
           <div className="card-body">
-            <h2 className="  text-center text-2xl text-blue-600 font-bold">
+            <h2 className="  text-center text-2xl text-white font-bold">
               SIGN UP
             </h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-white">Email</span>
                 </label>
                 <input
                   {...register("email", {
@@ -106,7 +106,7 @@ const SignUp = () => {
               </div>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text text-white">Name</span>
                 </label>
                 <input
                   {...register("name", {
@@ -131,7 +131,7 @@ const SignUp = () => {
               </div>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-white">Password</span>
                 </label>
                 <input
                   {...register("password", {
@@ -172,15 +172,15 @@ const SignUp = () => {
               </div>
             </form>
             <div className="flex items-center justify-center">
-              <p className="font-bold">Already Have an Account</p>
-              <Link to="/login" className="text-blue-900 font-bold">
+              <p className="font-bold text-white">Already Have an Account</p>
+              <Link to="/login" className="text-white font-bold">
                 LOG IN
               </Link>
             </div>
-            <div className="divider">OR</div>
+            <div className="divider text-white">OR</div>
             <div className="card-actions justify-center">
               <button
-                className="btn btn-primary"
+                className="btn bg-blue-900 text-white  "
                 onClick={() => signInWithGoogle()}
               >
                 CONTINIUE WITH GOOGLE
