@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 const Nav = () => {
   return (
     <div>
-      <div className=" text-black ">
+      <div className=" text-black py-2">
         <div className="flex   flex-col md:flex-row  justify-between px-10	 lx:px-12    items-center ">
           {/* <img  src={logo} className="w-24" alt="" /> */}
           <div className="grid grid-cols-2 justify-items-center items-center gap-12  ">

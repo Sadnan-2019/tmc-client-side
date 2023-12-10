@@ -82,16 +82,16 @@ const navigate = useNavigate()
   return (
     <div className="login">
       <div className="flex items-center justify-center h-screen  ">
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] shadow-xl">
           <div className="card-body">
-            <h2 className="  text-center text-2xl text-blue-600 font-bold">
+            <h2 className="  text-center text-2xl text-white font-bold">
               LOG IN
             </h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-white">Email</span>
                 </label>
                 <input
                   {...register("email", {
@@ -124,7 +124,7 @@ const navigate = useNavigate()
               </div>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-white">Password</span>
                 </label>
                 <input
                   {...register("password", {
@@ -165,16 +165,16 @@ const navigate = useNavigate()
               </div>
             </form>
             <div className="flex items-center justify-center">
-            <p className="font-bold">Create a New Account Please</p> 
-            <Link to="/sign-up" className="text-blue-900 font-bold">Sign Up</Link>
+            <p className="font-bold text-white">Create a New Account Please</p> 
+            <Link to="/sign-up" className="text-white font-bold">Sign Up</Link>
 
             </div>
             <div>
-              <button  className="text-sm font-bold btn-link"
+              <button  className="text-sm font-bold btn-link text-white"
               //  onClick={handleResetPassword}
                >Forget Password</button>
             </div>
-            <div className="divider">OR</div>
+            <div className="divider text-white">OR</div>
             <div className="card-actions justify-center">
               <button
                 className="btn btn-primary"

@@ -4,7 +4,7 @@
 /* From https://css.glass */
 /* background: rgba(22, 147, 189, 0.14); */
 background-image: url("../../assets/images/tmc1.jpg");
-border-radius: 16px;
+/* border-radius: 16px; */
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(6.5px);
 -webkit-backdrop-filter: blur(6.5px);

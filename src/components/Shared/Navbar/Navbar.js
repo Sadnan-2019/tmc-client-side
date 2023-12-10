@@ -24,6 +24,14 @@ const navigate = useNavigate()
       </li>
       <li>
         {" "}
+        <Link to="/our-doctors">Our Doctors</Link>
+      </li>
+      <li>
+        {" "}
+        <Link to="/our-department">Our Department</Link>
+      </li>
+      <li>
+        {" "}
         <Link to="/review">Review</Link>
       </li>
       <li>
