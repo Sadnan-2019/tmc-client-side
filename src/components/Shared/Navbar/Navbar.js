@@ -38,7 +38,7 @@ const navigate = useNavigate()
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
