@@ -34,7 +34,7 @@ const Services = () => {
         >
           <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
-              Our Services
+              Our Department 
             </h2>
           </div>
 
