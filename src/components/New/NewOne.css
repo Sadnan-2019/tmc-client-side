@@ -1,0 +1,58 @@
+
+.animated-text-container {
+     width: 100%;
+     height: 100vh; /* Set the desired height for your background image container */
+     overflow: hidden;
+     position: relative;
+   }
+   
+   
+   
+   
+   .carrerlanding {
+   
+       /* linear-gradient(
+           to left,
+           rgba(11, 238, 238, 0.504),
+           rgba(10, 107, 102, 0.999)
+         ), */
+        
+       /* height: auto; */
+       /* width: 100%; */
+       /* background-size: contain; */
+       /* background-size: cover; */
+       /* object-fit: cover; */
+       background-size: 100% 100%;
+     
+       background-repeat: no-repeat;
+       width: 100%;
+     height: 100vh;
+     background-size: cover;
+     background-color: aqua;
+     /* background-repeat: no-repeat; */
+     }
+   
+   
+     .title {
+     font-family: "Cairo";
+     text-align: center;
+     color: #FFF;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     /* height: 100vh; */
+     letter-spacing: 1px;
+     line-height:2
+   }
+   
+   .artificial {
+     /* background-image: url(https://giphy.com/gifs/design-mograph-tunnel-3o85xzkvl1siB2rHSo); */
+     background-size: cover;
+     color: transparent;
+     -moz-background-clip: text;
+     -webkit-background-clip: text;
+     /* text-transform: uppercase;
+     font-size: 120px;
+     margin: 10px 0; */
+   }
