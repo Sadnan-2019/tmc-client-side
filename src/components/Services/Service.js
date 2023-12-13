@@ -1,22 +1,27 @@
-import React from 'react';
-import "./Service.css"
-const Service = ({service}) => {
-     return (
-          <div>
-               <div className="card w-96 bg-base-100 shadow-xl">
-  <figure className="px-10 pt-10">
-    <img src={service.img}alt="Shoes" className="rounded-xl" />
-  </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">{service.name}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+import React from "react";
+import "./Service.css";
+const Service = ({ service }) => {
+  return (
+    <div>
+      <div class="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
+        <div class="flex h-[180px] flex-col justify-between rounded-md p-6">
+          {/* <svg viewBox="0 0 24 24" class=""> */}
+          <img
+            src={service.img}
+            alt="Shoes"
+            className="rounded-xl h-12 w-12 fill-current"
+          />
+          {/* </svg> */}
+          <div class="space-y-2">
+            <h3 class="font-bold">{service.name}</h3>
+            <p class="text-sm text-muted-foreground">
+              App dir, Routing, Layouts, Loading UI and API routes.
+            </p>
           </div>
-     );
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Service;
