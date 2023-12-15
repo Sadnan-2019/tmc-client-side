@@ -11,7 +11,7 @@ const AvailableAppoinment = ({ date }) => {
     fetch(`http://localhost:5000/availableservices?date${formatedDate}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, []);
+  }, [formatedDate]);
   return (
     <div className="bg-gradient-to-r from-indigo-900 from-10% via-sky-900 via-30% to-emerald-900 to-90% ...">
       <p className="text-center py-8 text-4xl font-bold text-white">

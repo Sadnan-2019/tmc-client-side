@@ -36,7 +36,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-          // console.log(data)
+          console.log(data)
           // console.log("sadannnnwni",appoinment)
 
         if(data.success){
