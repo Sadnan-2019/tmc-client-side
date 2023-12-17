@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
+import { toast } from 'react-toastify';
 import "./New.css"
+import 'react-toastify/dist/ReactToastify.css';
 const New = () => {
+  const notify = () => toast("Wow so easy!");
+
      const images = [
           "https://i.ibb.co/RH2hZGX/IMG-8342-scaled.jpg",
           "https://i.ibb.co/LrWMJBb/product-8.jpg",
@@ -35,6 +39,7 @@ const New = () => {
         />
       </AnimatePresence>
     </div> 
+    <button onClick={notify}>Notify!</button>
           </div>
      );
 };

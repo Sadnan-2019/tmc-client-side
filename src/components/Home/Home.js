@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import Makeappoinment from './Makeappoinment';
 import Tstimoniel from './Tstimoniel';
 import Footer from '../Shared/Footer/Footer';
+// import New from '../New/New';
 
 const Home = () => {
      return (
@@ -15,6 +16,8 @@ const Home = () => {
               <Services></Services>
               <Makeappoinment></Makeappoinment>
               <Tstimoniel></Tstimoniel>
+
+              {/* <New></New> */}
               <Footer></Footer>
           </div>
      );

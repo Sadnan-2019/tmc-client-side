@@ -3,6 +3,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookingModal = ({ treatment, date, setTreatment }) => {
   const { _id, dept_name, doctor_name, slots } = treatment;
@@ -40,7 +41,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
           // console.log("sadannnnwni",appoinment)
 
         if(data.success){
-          // toast(`Appoinment is set,${formattedDate} at ${slot}`)
+          toast(`Appoinment is set,${formattedDate} at ${slot}`)
         
 
         }else{
