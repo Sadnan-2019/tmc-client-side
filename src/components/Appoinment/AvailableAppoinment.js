@@ -1,24 +1,30 @@
 import { format } from "date-fns";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import Service from "./Service";
 import BookingModal from "./BookingModal";
+import { useQuery } from "react-query";
+import Loading from "../Loading/Loading" 
 
 const AvailableAppoinment = ({ date }) => {
-  const [services, setServices] = useState([]);
+  // const [services, setServices] = useState([]);
   const [treatment,setTreatment] = useState(null);
   const formatedDate = format(date, "PP");
-  useEffect(() => {
-    fetch(`http://localhost:5000/availableservices?date=${formatedDate}`)
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, [formatedDate]);
+  // useEffect(() => {
+    // fetch(`http://localhost:5000/availableservices?date=${formatedDate}`)
+    //   .then((res) => res.json())
+  //     .then((data) => setServices(data));
+  // }, [formatedDate]);
 
-//   const { isLoading, error, data } = useQuery('repoData', () =>
-//   fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
-//     res.json()
-//   )
-// )
+  const {data:services, isLoading,refetch} = useQuery(['availableservices',formatedDate], () =>
+  fetch(`http://localhost:5000/availableservices?date=${formatedDate}`)
+  .then((res) => res.json())
+)
 
+if(isLoading){
+
+  return <Loading></Loading>
+  
+}
 
 
 
@@ -41,6 +47,7 @@ const AvailableAppoinment = ({ date }) => {
           date={date} 
           treatment={treatment}
           setTreatment={setTreatment}
+          refetch = {refetch}
           ></BookingModal>
       }
     </div>

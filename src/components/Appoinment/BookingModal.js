@@ -5,7 +5,7 @@ import auth from "../../firebase.init";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const BookingModal = ({ treatment, date, setTreatment }) => {
+const BookingModal = ({ treatment, date, setTreatment,refetch }) => {
   const { _id, dept_name, doctor_name, slots } = treatment;
 
   const [user, loading, error] = useAuthState(auth);
@@ -48,7 +48,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
           toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
 
         }
-
+        refetch()
         setTreatment(null)
       } );
   };
