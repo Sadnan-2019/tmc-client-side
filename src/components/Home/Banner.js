@@ -64,7 +64,7 @@ const Banner = () => {
         <Slider {...settings} className="">
           <div className=" ">
             <section className="   blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
-              <div className=" md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse  h-screen      ">
+              <div className=" md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse       ">
                 <div className="slide-content sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0 ">
                   <h2
                     style={{ lineHeight: "120%" }}
@@ -101,7 +101,7 @@ const Banner = () => {
 
                 <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
                   <img src={landingone} alt=""
-                  className={`h-3/5 w-3/5 slide-text p-1   lg:p-2 rounded-full  lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
+                  className={`  max-w-sm slide-text p-1   lg:p-2 rounded-full  lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
                     currentSlideTwo === 0 ? "animatedpic" : ""
                   }`}
                   
@@ -117,7 +117,7 @@ const Banner = () => {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="1500"
@@ -133,7 +133,7 @@ const Banner = () => {
                     d="M0,128L120,160C240,192,480,256,720,272C960,288,1200,256,1320,240L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
                   ></path>
                 </svg>
-              </div>
+              </div> */}
             </section>
           </div>
           <div className=" ">
