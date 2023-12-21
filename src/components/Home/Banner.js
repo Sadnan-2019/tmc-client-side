@@ -11,6 +11,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlideTwo, setCurrentSlideTwo] = useState(0);
   var settings = {
     dots: true,
     infinite: true,
@@ -21,6 +22,7 @@ const Banner = () => {
     fade: true,
     afterChange: (index) => {
       setCurrentSlide(index);
+      setCurrentSlideTwo(index);
     },
     // afternewChange: (index) => {
     //   setCurrentSlideTwo(index);
@@ -61,8 +63,8 @@ const Banner = () => {
         {/* <h2> Responsive </h2> */}
         <Slider {...settings} className="">
           <div className=" ">
-            <section className="landingone  blog h-auto      text-white">
-              <div className=" md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-2  gap-5 justify-center items-center">
+            <section className="   blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
+              <div className=" md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse  h-screen      ">
                 <div className="slide-content sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0 ">
                   <h2
                     style={{ lineHeight: "120%" }}
@@ -81,8 +83,6 @@ const Banner = () => {
                     which aims to induce and influence.{" "}
                   </h1>
 
-                  
-
                   <div className="flex  gap-4 mt-10 text-center">
                     <a
                       href="/"
@@ -100,11 +100,20 @@ const Banner = () => {
                 </div>
 
                 <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  <img
-                    src={landingone}
-                    alt=""
-                    className="  h-5/6 w-5/6 "
-                  />
+                  <img src={landingone} alt=""
+                  className={`h-5/6 w-4/5 slide-text p-1   lg:p-2 rounded-full  lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
+                    currentSlideTwo === 0 ? "animatedpic" : ""
+                  }`}
+                  
+                   />
+
+                  {/* <a
+                    href="/"
+                    
+                  >
+                    MORE EXPLORE
+                    <BsArrowRight className="text-lg   lg:ml-2" />
+                  </a> */}
                 </div>
               </div>
 
@@ -149,8 +158,6 @@ const Banner = () => {
                     to re-envision and develop the future market.
                   </h1>
 
-                
-
                   <div className="flex  gap-4 mt-10 text-center">
                     <a
                       href="/"
@@ -168,11 +175,7 @@ const Banner = () => {
                 </div>
 
                 <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  <img
-                    src={landingtwo}
-                    alt=""
-                    className="  h-5/6 w-5/6 "
-                  />
+                  <img src={landingtwo} alt="" className="  h-5/6 w-5/6 " />
                 </div>
               </div>
 
@@ -234,11 +237,7 @@ const Banner = () => {
                 </div>
 
                 <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  <img
-                    src={landingthree}
-                    alt=""
-                    className="  h-5/6 w-5/6 "
-                  />
+                  <img src={landingthree} alt="" className="  h-5/6 w-5/6 " />
                 </div>
               </div>
 
@@ -301,11 +300,7 @@ const Banner = () => {
                 </div>
 
                 <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  <img
-                    src={landingfour}
-                    alt=""
-                    className=" h-5/6 w-5/6 "
-                  />
+                  <img src={landingfour} alt="" className=" h-5/6 w-5/6 " />
                 </div>
               </div>
 

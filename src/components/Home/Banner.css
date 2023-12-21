@@ -115,7 +115,28 @@
 
   animation-duration: 1s;
 }
-@keyframes bounce-in-right {
+
+/* .fade-in-left {
+  animation: fade-in-left 2s ease infinite;
+} */
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animatedpic {
+  opacity: 1;
+
+  animation: fade-in-left 2s ease;
+
+  animation-duration: 1s;
+}
+@keyframes bounce-in-left {
   0% {
     opacity: 0;
     transform: translateX(2000px);
