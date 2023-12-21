@@ -99,9 +99,9 @@ const Banner = () => {
                   </div>
                 </div>
 
-                <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
+                <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
                   <img src={landingone} alt=""
-                  className={`h-5/6 w-4/5 slide-text p-1   lg:p-2 rounded-full  lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
+                  className={`h-3/5 w-3/5 slide-text p-1   lg:p-2 rounded-full  lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
                     currentSlideTwo === 0 ? "animatedpic" : ""
                   }`}
                   
