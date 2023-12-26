@@ -9,11 +9,7 @@ const AvailableAppoinment = ({ date }) => {
   // const [services, setServices] = useState([]);
   const [treatment,setTreatment] = useState(null);
   const formatedDate = format(date, "PP");
-  // useEffect(() => {
-    // fetch(`http://localhost:5000/availableservices?date=${formatedDate}`)
-    //   .then((res) => res.json())
-  //     .then((data) => setServices(data));
-  // }, [formatedDate]);
+ 
 
   const {data:services, isLoading,refetch} = useQuery(['availableservices',formatedDate], () =>
   fetch(`http://localhost:5000/availableservices?date=${formatedDate}`)

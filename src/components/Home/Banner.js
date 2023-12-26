@@ -101,7 +101,7 @@ const Banner = () => {
 
                 <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
                   <img src={landingone} alt=""
-                  className={`  max-w-sm slide-text p-1   lg:p-2 rounded-full  lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
+                  className={`  max-w-sm slide-text p-1   lg:p-2   lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
                     currentSlideTwo === 0 ? "animatedpic" : ""
                   }`}
                   
