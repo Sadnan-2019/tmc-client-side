@@ -1,28 +1,109 @@
 import React from "react";
 import floride from "../../assets/images/fluoride.png";
 import cavity from "../../assets/images/cavity.png";
-import whitening from "../../assets/images/whitening.png";
+import Orthopedics from "../../assets/images/orthopedics.png";
+import Cardiology from "../../assets/images/Cardiology.png";
+import Gynaecology from "../../assets/images/Gynaecology.png";
+import GeneralSurgeon from "../../assets/images/surgeon.png";
+import Medicine from "../../assets/images/medicine.png";
+import Chest from "../../assets/images/chest.png";
+import Nephrology from "../../assets/images/Nephrology.png";
+import Skin from "../../assets/images/skin-care.png";
+import Neurology from "../../assets/images/neurology.png";
+import Pediatrics from "../../assets/images/pediatrics.png";
 import Service from "./Service";
 
 const Services = () => {
   const services = [
     {
       _id: 1,
-      name: "floride",
+      name: "Orthopedics",
       description: "",
-      img: floride,
+      img: Orthopedics,
     },
     {
       _id: 2,
-      name: "cavity",
+      name: "Cardiology",
+      description: "",
+      img: Cardiology,
+    },
+    {
+      _id: 3,
+      name: "Gynaecology & Obstetircs",
+      description: "",
+      img: Gynaecology,
+    },
+    {
+      _id: 4,
+      name: "General Surgeon",
+      description: "",
+      img: GeneralSurgeon,
+    },
+    {
+      _id: 5,
+      name: "Medicine",
+      description: "",
+      img: Medicine,
+    },
+    {
+      _id: 6,
+      name: "Asthma, Chest & Cardiology",
+      description: "",
+      img: Chest,
+    },
+    {
+      _id: 7,
+      name: "Nephrology",
+      description: "",
+      img: Nephrology,
+    },
+    {
+      _id: 8,
+      name: "Skin VD",
+      description: "",
+      img: Skin,
+    },
+    {
+      _id: 9,
+      name: "Neurology",
+      description: "",
+      img: Neurology,
+    },
+    {
+      _id: 10,
+      name: "Padiatrics",
+      description: "",
+      img: Pediatrics,
+    },
+    {
+      _id: 11,
+      name: "Oral & Dental",
       description: "",
       img: cavity,
     },
     {
-      _id: 3,
-      name: "whitening",
+      _id: 12,
+      name: "ENT",
       description: "",
-      img: whitening,
+      img: cavity,
+    },
+    {
+      _id: 13,
+      name: "IMO",
+      description: "",
+      img: cavity,
+    },
+    {
+      _id: 14,
+      name: "Gastroenterology",
+      description: "",
+      img: cavity,
+    },
+    {
+      _id: 15,
+      name: "Gastroenterology",
+      description: "",
+      img: cavity,
     },
   ];
   return (
@@ -34,7 +115,7 @@ const Services = () => {
         >
           <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
-              Our Department 
+              Our Department
             </h2>
           </div>
 
