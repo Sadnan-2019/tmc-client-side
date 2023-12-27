@@ -11,6 +11,10 @@ import Nephrology from "../../assets/images/Nephrology.png";
 import Skin from "../../assets/images/skin-care.png";
 import Neurology from "../../assets/images/neurology.png";
 import Pediatrics from "../../assets/images/pediatrics.png";
+import Oral from "../../assets/images/oral& mouth.png";
+import ENT from "../../assets/images/ENT.png";
+import Gastroenterology from "../../assets/images/Gastroenterology.png";
+import Rehabilitation from "../../assets/images/rehabilitation.png";
 import Service from "./Service";
 
 const Services = () => {
@@ -79,13 +83,13 @@ const Services = () => {
       _id: 11,
       name: "Oral & Dental",
       description: "",
-      img: cavity,
+      img: Oral,
     },
     {
       _id: 12,
       name: "ENT",
       description: "",
-      img: cavity,
+      img: ENT,
     },
     {
       _id: 13,
@@ -97,13 +101,13 @@ const Services = () => {
       _id: 14,
       name: "Gastroenterology",
       description: "",
-      img: cavity,
+      img: Gastroenterology,
     },
     {
       _id: 15,
-      name: "Gastroenterology",
+      name: "Rehabilitation and Sports Medicine",
       description: "",
-      img: cavity,
+      img: Rehabilitation,
     },
   ];
   return (
