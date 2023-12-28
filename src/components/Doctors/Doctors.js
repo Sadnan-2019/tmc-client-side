@@ -39,11 +39,11 @@ const Doctors = () => {
 
     return (
         <div>
-              <div className="bg-gradient-to-r from-[#575be8] via-[#160a2c] to-[#38235D] " id="smooth-wrapper" ref={main}>
+              <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]" id="smooth-wrapper" ref={main}>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 px-5 mx-5 justify-center items-center " id="smooth-content">
        
        
-        <div  class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white ">
+        <div data-speed="0.5"  class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white ">
           <div class="  h-32 w-96 overflow-hidden">
            </div>
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
@@ -95,7 +95,7 @@ const Doctors = () => {
             </button>
           </div>
         </div>
-        <div class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
+        <div data-speed="0.5" class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
           <div class="  h-32 w-96 overflow-hidden">
            </div>
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
@@ -147,7 +147,7 @@ const Doctors = () => {
             </button>
           </div>
         </div>
-        <div class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
+        <div data-speed="0.5" class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
           <div class="  h-32 w-96 overflow-hidden">
            </div>
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
@@ -199,7 +199,7 @@ const Doctors = () => {
             </button>
           </div>
         </div>
-        <div class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
+        <div data-speed="0.5" class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
           <div class="  h-32 w-96 overflow-hidden">
            </div>
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
@@ -251,7 +251,7 @@ const Doctors = () => {
             </button>
           </div>
         </div>
-        <div class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
+        <div data-speed="0.5" class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
           <div class="  h-32 w-96 overflow-hidden">
            </div>
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
@@ -303,7 +303,7 @@ const Doctors = () => {
             </button>
           </div>
         </div>
-        <div class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
+        <div data-speed="0.5"  class="team    max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16    text-white">
           <div class="  h-32 w-96 overflow-hidden">
            </div>
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
@@ -355,8 +355,8 @@ const Doctors = () => {
             </button>
           </div>
         </div>
+        <div className="line"></div>
       </div>
-
 <div id="smooth-wrapper" ref={main}>
         <div id="smooth-content">
 
@@ -380,6 +380,7 @@ const Doctors = () => {
           <div className="line"></div>
         </div>
       </div>
+
        
 
     </div>

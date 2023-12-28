@@ -51,7 +51,7 @@
   }
   
   .box.active {
-    border: solid 2px red;
+    border: solid 2px rgb(121, 9, 9);
   }
   
   .box-a {
@@ -73,7 +73,7 @@
     position: absolute;
     left: 400px;
     top: 0px;
-    background-color: #777;
+    background-color: #eb0808;
   }
   
   .title {

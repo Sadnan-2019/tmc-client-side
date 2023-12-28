@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import floride from "../../assets/images/fluoride.png";
 import cavity from "../../assets/images/cavity.png";
 import Orthopedics from "../../assets/images/orthopedics.png";
@@ -16,8 +16,52 @@ import ENT from "../../assets/images/ENT.png";
 import Gastroenterology from "../../assets/images/Gastroenterology.png";
 import Rehabilitation from "../../assets/images/rehabilitation.png";
 import Service from "./Service";
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
+import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
+import { useGSAP } from '@gsap/react';
+import "./Services.css"
 const Services = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  const main = useRef();
+  const smoother = useRef();
+
+  const scrollTo = () => {
+    smoother.current.scrollTo('.box-c', true, 'center center');
+  };
+
+  useGSAP(
+    () => {
+      // create the smooth scroller FIRST!
+      smoother.current = ScrollSmoother.create({
+        smooth: 2, // seconds it takes to "catch up" to native scroll position
+        effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+      });
+      ScrollTrigger.create({
+        trigger: '.box-c',
+        pin: true,
+        start: 'center center',
+        end: '+=300',
+        markers: true,
+      });
+    },
+    { scope: main }
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const services = [
     {
       _id: 1,
@@ -112,7 +156,7 @@ const Services = () => {
   ];
   return (
     <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-black ">
-      <div>
+      <div className=""  >
         <section
           id="features"
           class="container mx-auto px-4 space-y-6   py-8 dark:bg-transparent md:py-12 lg:py-20"
@@ -123,9 +167,9 @@ const Services = () => {
             </h2>
           </div>
 
-          <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+          <div id="smooth-wrapper" ref={main} class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
             {services.map((service) => (
-              <Service service={service} key={service._id}></Service>
+              <Service id="smooth-content" service={service} key={service._id} ></Service>
             ))}
           </div>
         </section>

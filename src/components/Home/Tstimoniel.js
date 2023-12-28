@@ -13,7 +13,7 @@ const Tstimoniel = () => {
 ];
 
   return (
-    <div className="px-12 my-12">
+    <div className="px-12 my-12 bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]">
       <div className="flex justify-between ">
         <div>
           <h1 className="text-2xl text-blue-400">Testimonial</h1>
