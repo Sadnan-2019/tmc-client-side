@@ -15,31 +15,14 @@ const Doctors = () => {
       smoother.current.scrollTo('.box-c', true, 'center center');
     };
   
-    useGSAP(
-      () => {
-        // create the smooth scroller FIRST!
-        smoother.current = ScrollSmoother.create({
-          smooth: 2, // seconds it takes to "catch up" to native scroll position
-          effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
-        });
-        ScrollTrigger.create({
-          trigger: '.box-c',
-          pin: true,
-          start: 'center center',
-          end: '+=300',
-          markers: true,
-        });
-      },
-      { scope: main }
-    );
     
     
 
  
 
     return (
-        <div>
-              <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]" id="smooth-wrapper" ref={main}>
+        <div id="smooth-wrapper" ref={main}>
+              <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]" >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 px-5 mx-5 justify-center items-center " id="smooth-content">
        
        

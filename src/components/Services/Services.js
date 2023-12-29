@@ -169,7 +169,7 @@ const Services = () => {
 
           <div id="smooth-wrapper" ref={main} class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
             {services.map((service) => (
-              <Service id="smooth-content" service={service} key={service._id} ></Service>
+              <Service id="smooth-content" service={service} key={service._id} scrollTo={scrollTo} ></Service>
             ))}
           </div>
         </section>
