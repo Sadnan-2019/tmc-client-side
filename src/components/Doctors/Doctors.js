@@ -450,14 +450,14 @@ const Doctors = () => {
       </h1> */}
     </div>
     <div>
-      <section className="scroll-section">
+      <section className="scroll-section text-center py-10">
         {/* Content of the first section */}
         <p className="text-red-700">Me Looser </p>
       </section>
-      <section className="scroll-section">
+      <section className="scroll-section text-center py-10">
       <p className="text-red-900">Me Looser boy for you </p>
       </section>
-      <section className="scroll-section">
+      <section className="scroll-section text-center py-10">
       <p className="text-green-900">Me Looser boy for your life </p>
       </section>
       {/* Add more sections as needed */}
