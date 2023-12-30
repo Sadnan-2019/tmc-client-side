@@ -9,3 +9,22 @@
 [data-scroll-section] {
   min-height: 100vh; /* Set the height of your sections as needed */
 }
+[data-scroll-speed] {
+  min-height: 100vh; /* Set the height of your sections as needed */
+}
+
+
+.team {
+  border-radius: 10%;
+  /* background: #e0e0e0; */
+  box-shadow: inset 5px 5px 10px #150b41, inset -10px -10px 15px #150b41;
+}
+
+.left{
+  color: #e41111;
+  font-size: 40px;
+  font-weight: bolder;
+  padding:2em 0 1em 3em;
+  opacity:0;
+  transition: opacity 4s;
+}
