@@ -1,6 +1,6 @@
 import React from "react";
 import "./Service.css";
-const Service = ({ service,scrollTo }) => {
+const Service = ({ service }) => {
   return (
     <div>
       <div class="relative overflow-hidden rounded-lg border   select-none hover:shadow hover:shadow-teal-200 p-2">
@@ -20,12 +20,12 @@ const Service = ({ service,scrollTo }) => {
           </div>
         </div>
 
-        <header className="header">
+        {/* <header className="header">
             <h2 className="title">GSAP ScrollSmoother in React</h2>
             <button className="button" onClick={scrollTo}>
               Jump to C
             </button>
-          </header>
+          </header> */}
       </div>
     </div>
   );

@@ -11,10 +11,33 @@ import PrivateRoute from "./components/Login/PrivateRoute";
 import { ToastContainer } from 'react-toastify';
 import TopNav from "./components/Shared/TopNav/TopNav";
 import Nav from "./components/Shared/TopNav/Nav";
-
+import { useEffect, useRef } from "react";
+ 
+import locomotiveScroll from "locomotive-scroll";
 function App() {
+
+  const scrollRef = useRef(null);
+  useEffect(() => {
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      smoothWheel: true,
+      smoothTouch: false,
+      wrapper: window,
+      content: document.documentElement,
+      lerp: 0.1,
+      duration: 1.2,
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
   return (
-    <div className=" ">
+    <div  ref={scrollRef}
+    data-scroll-container className=" ">
       <TopNav></TopNav>
       <Nav></Nav>
       <Navbar></Navbar>

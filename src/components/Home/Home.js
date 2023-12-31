@@ -18,12 +18,12 @@ const Home = () => {
 
       <Banner className=""></Banner>
       {/* <Info></Info> */}
-      {/* <Services></Services> */}
+      <Services></Services>
       <Makeappoinment></Makeappoinment>
       <Tstimoniel></Tstimoniel>
       {/* <ScrollSmoother></ScrollSmoother> */}
       <Doctors></Doctors>
-      {/* <Business></Business> */}
+      <Business></Business>
       {/* <New></New> */}
       <Footer></Footer>
     </div>

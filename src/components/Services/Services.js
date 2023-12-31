@@ -17,36 +17,10 @@ import Gastroenterology from "../../assets/images/Gastroenterology.png";
 import Rehabilitation from "../../assets/images/rehabilitation.png";
 import Service from "./Service";
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
-import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
-import { useGSAP } from '@gsap/react';
+ 
 import "./Services.css"
 const Services = () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  const main = useRef();
-  const smoother = useRef();
-
-  const scrollTo = () => {
-    smoother.current.scrollTo('.box-c', true, 'center center');
-  };
-
-  useGSAP(
-    () => {
-      // create the smooth scroller FIRST!
-      smoother.current = ScrollSmoother.create({
-        smooth: 2, // seconds it takes to "catch up" to native scroll position
-        effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
-      });
-      ScrollTrigger.create({
-        trigger: '.box-c',
-        pin: true,
-        start: 'center center',
-        end: '+=300',
-        markers: true,
-      });
-    },
-    { scope: main }
-  );
+ 
 
 
 
@@ -166,12 +140,16 @@ const Services = () => {
               Our Department
             </h2>
           </div>
+         
+          <div id="smooth-wrapper"  >
 
-          <div id="smooth-wrapper" ref={main} class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+          <div id="smooth-content "   class="scroll-container  mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
             {services.map((service) => (
-              <Service id="smooth-content" service={service} key={service._id} scrollTo={scrollTo} ></Service>
+              <Service  service={service} key={service._id}   ></Service>
             ))}
           </div>
+          </div>
+
         </section>
       </div>
     </div>
