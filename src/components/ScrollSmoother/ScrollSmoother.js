@@ -1,36 +1,34 @@
 // ScrollSmoother.js
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+ 
 const ScrollSmoother = () => {
-  const controls = useAnimation();
+  const texts = ['Text 1', 'Text 2', 'Text 3']; // Add your desired texts here
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Create ScrollTrigger for smooth scrolling
-    ScrollTrigger.create({
-      onUpdate: (self) => {
-        controls.start({ y: -self.scroll(), ease: "none" });
-      },
-    });
-  }, [controls]);
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 2000);
 
+    return () => clearInterval(intervalId);
+  }, [currentIndex, texts.length]);
   return (
     <div>
       <motion.div
-        style={{
-          height: "100vh", // Adjust the height according to your content
-          background: "linear-gradient(to bottom, #f0f0f0, #cccccc)",
-        }}
-        animate={controls}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.h1
+        key={texts[currentIndex]}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
       >
-        {/* Your content goes here */}
-        <div style={{ paddingTop: "50vh", textAlign: "center" }}>
-          <h1>Framer Motion Scroll Smoothing</h1>
-          <p>Scroll down to see the smooth scrolling effect</p>
-        </div>
-      </motion.div>{" "}
+        {texts[currentIndex]}
+      </motion.h1>
+    </motion.div>
     </div>
   );
 };

@@ -5,11 +5,8 @@ import appoinment from "../../assets/images/appointment.png";
 const Makeappoinment = () => {
   return (
     <div className="py-10">
-     <div className=""  
-    style={{
-
-     background: `url(${appoinment})`
-    }}
+     <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]"  
+     
     >
       <div className="flex justify-center items-center">
         <div className="flex-1">
@@ -28,7 +25,7 @@ const Makeappoinment = () => {
           </h2>
 
           <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn btn-primary">Get Appoinment </button>
     </div>
         </div>
       </div>

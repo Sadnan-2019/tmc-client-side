@@ -21,9 +21,9 @@ const Home = () => {
       <Services></Services>
       <Makeappoinment></Makeappoinment>
       <Tstimoniel></Tstimoniel>
-      {/* <ScrollSmoother></ScrollSmoother> */}
+      <ScrollSmoother></ScrollSmoother>
       <Doctors></Doctors>
-      <Business></Business>
+      {/* <Business></Business> */}
       {/* <New></New> */}
       <Footer></Footer>
     </div>

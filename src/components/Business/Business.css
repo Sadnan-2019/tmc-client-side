@@ -1,37 +1,75 @@
 #smooth-content {
-     overflow: visible;
-     width: 100%;
-     /* set a height because the contents are position: absolute, thus natively there's no height */
-     height: 100vh;
-   
-     background-image: linear-gradient(
-         rgba(255, 255, 255, 0.07) 2px,
-         /* transparent 2px */
-       ),
-       
-   }
+  overflow: visible;
+  width: 100%;
+  /* set a height because the contents are position: absolute, thus natively there's no height */
+  height: 100vh;
 
-   .fade-in-out-text {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.07) 2px,
+    /* transparent 2px */
+  );
+}
+
+.fade-in-out-text {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-out-text.visible {
+  opacity: 1;
+}
+
+.transitionsItem {
+  width: 100%;
+  color: white;
+
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 80px;
+  opacity: 0;
+
+  animation: fade-in 1s ease-in-out;
+
+  animation-duration: 1s;
+}
+.animateText {
+  /* overflow: hidden; */
+  width: 100%;
+  color: white;
+
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 80px;
+  opacity: 0;
+
+
+  animation-duration: 1s;
+  animation: bounce-in-left 1s ease;
+
   
-  .fade-in-out-text.visible {
+  /* animation-delay: 200; */
+}
+@keyframes bounce-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
     opacity: 1;
+    transform: translateX(-30px);
   }
-
-  .transitionsItem {
-    overflow: hidden;
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 4em;
-    font-weight: 800;
-    text-transform: uppercase;
-    will-change: transform, opacity, height;
-    white-space: nowrap;
-    cursor: pointer;
-    line-height: 80px;
+  80% {
+    transform: translateX(10px);
   }
+  100% {
+    transform: translateX(0);
+  }
+}
