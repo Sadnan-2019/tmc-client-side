@@ -20,7 +20,7 @@ const ScrollSmoother = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h1
+      <motion.h1 className='text-red-800 text-2xl'
         key={texts[currentIndex]}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
