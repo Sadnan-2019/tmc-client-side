@@ -3,14 +3,27 @@ import doctor from "../../assets/images/doctor.png";
 // import appoinment from "../../assets/images/appointment.png";
 import { motion } from 'framer-motion';
 const Makeappoinment = () => {
-  const texts = ['Make an Appoinment Today','Make an Appoinment Today Now']; // Add your desired texts here
+  const texts = ['Make an Appoinment Today','So Get Ready','Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi    sint dolores vitae saepe']; // Add your desired texts here
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  
+  // const textsTwo = [
+
+  //   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi    sint dolores vitae saepe accusantium non iure ut ullam distinctio  excepturi quaerat quod ipsam maxime quos in necessitatibus beatae labore eligendi culpa suscipit quae iste deserunt voluptas! Veniam expedita. Laborum'
+  
+  
+  
+  // ]; // Add your desired texts here
+  // const [textIndex, setTextIndex] = useState(0);
 
   
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
     }, 2000);
+    // const twoTexts = setInterval(() => {
+    //   setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    // }, 2000);
 
     return () => clearInterval(intervalId);
   }, [currentIndex, texts.length]);
@@ -37,13 +50,19 @@ const Makeappoinment = () => {
       </motion.h1>
 
 
-          <h2 className="text-1xl py-5 text-white font-bold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi,
-            sint dolores vitae saepe accusantium non iure ut ullam distinctio
-            excepturi quaerat quod ipsam maxime quos in necessitatibus beatae
-            labore eligendi culpa suscipit quae iste deserunt voluptas! Veniam,
-            expedita. Laborum?
-          </h2>
+
+
+
+
+      {/* <motion.h1 className='text-1xl py-2 font-bold text-white'
+        key={textsTwo[textIndex]}
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {textsTwo[textIndex]}
+      </motion.h1>
+          */}
 
           <div className="card-actions">
       <button className="btn btn-primary">Get Appoinment </button>
