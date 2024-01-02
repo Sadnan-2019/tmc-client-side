@@ -1,5 +1,5 @@
 import React from "react";
-import quoite from "../../assets/icons/quote.svg";
+import quoite from "../../assets/images/quote.png";
 import people1 from "../../assets/images/people1.png";
 import people2 from "../../assets/images/people2.png";
 import people3 from "../../assets/images/people3.png";
@@ -20,7 +20,7 @@ const Tstimoniel = () => {
           <h1 className="text-2xl text-pink-800">What our patients sayes</h1>
         </div>
         <div>
-          <img className=" sm:w-28 lg:w-60" src={quoite} alt="" />
+          <img className="text-white sm:w-28 lg:w-60" src={quoite} alt="" />
         </div>
       </div>
       <div className="grid sm:grid-cols-1 gap-12 lg:grid-cols-3 px-6">
