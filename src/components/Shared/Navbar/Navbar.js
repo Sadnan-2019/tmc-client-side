@@ -5,11 +5,11 @@ import auth from "../../../firebase.init";
 import { signOut } from "firebase/auth";
 // import chair from "../../assets/images/chair.png";
 const Navbar = () => {
-const navigate = useNavigate()
+  const navigate = useNavigate();
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
-    navigate("/login")
+    navigate("/login");
   };
 
   const menuitems = (
@@ -38,9 +38,20 @@ const navigate = useNavigate()
         {" "}
         <Link to="/">About</Link>
       </li>
+      {user && (
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
       <li>
-         {user ? <button className="btn btn-sm btn-ghost" onClick={logout}> Sign Out</button> :  <Link to="/login">Login</Link>}
-        
+        {user ? (
+          <button className="btn btn-sm btn-ghost" onClick={logout}>
+            {" "}
+            Sign Out
+          </button>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
       </li>
     </>
   );
@@ -75,11 +86,8 @@ const navigate = useNavigate()
           <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-          {menuitems}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{menuitems}</ul>
         </div>
-
       </div>
     </div>
   );

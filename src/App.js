@@ -14,6 +14,9 @@ import Nav from "./components/Shared/TopNav/Nav";
 import { useEffect, useRef } from "react";
  
 import locomotiveScroll from "locomotive-scroll";
+import Dashboard from "./components/Dashboard/Dashboard";
+import MyAppoinment from "./components/Dashboard/MyAppoinment";
+import MyReview from "./components/Dashboard/MyReview";
 function App() {
 
   const scrollRef = useRef(null);
@@ -48,6 +51,16 @@ function App() {
       <Route path="/appoinment" element={<PrivateRoute>
         <Appoinment />
       </PrivateRoute>  }>
+        
+      </Route>
+      <Route path="/dashboard" element={
+      <PrivateRoute>
+        <Dashboard />
+      </PrivateRoute>  }>
+
+
+        <Route index element={<MyAppoinment></MyAppoinment>}></Route>
+        <Route path="my-review" element={<MyReview></MyReview>}></Route>
         
       </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}

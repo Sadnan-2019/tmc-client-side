@@ -42,8 +42,8 @@ const Makeappoinment = () => {
 </h3> */}
 <motion.h1 className='text-4xl py-2 font-bold text-white'
         key={texts[currentIndex]}
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 4, scale: 1 }}
+        animate={{ opacity: 4, scale: 1 }}
         transition={{ duration: 1 }}
       >
         {texts[currentIndex]}
