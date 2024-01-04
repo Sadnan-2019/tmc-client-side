@@ -78,7 +78,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 mx-5 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 mx-5 shadow bg-base-100 rounded-box w-52 text-green-900"
             >
               {menuitems}
             </ul>
@@ -86,7 +86,11 @@ const Navbar = () => {
           <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{menuitems}</ul>
+          <ul className="menu menu-horizontal px-1 ">{menuitems}</ul>
+        </div>
+        <div className="navbar-end lg:hidden">
+        <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+
         </div>
       </div>
     </div>
