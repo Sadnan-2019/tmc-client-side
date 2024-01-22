@@ -16,8 +16,8 @@ const Tstimoniel = () => {
     <div className="px-12 my-12 bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]">
       <div className="flex justify-between ">
         <div>
-          <h1 className="text-2xl text-blue-400">Testimonial</h1>
-          <h1 className="text-2xl text-pink-800">What our patients sayes</h1>
+          <h1 className="text-2xl text-white">Testimonial</h1>
+          <h1 className="text-2xl text-white">What our patients sayes</h1>
         </div>
         <div>
           <img className="text-white sm:w-28 lg:w-60" src={quoite} alt="" />

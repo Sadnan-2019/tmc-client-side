@@ -17,7 +17,18 @@ const Doctors = () => {
       className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]"
     >
       {/* Add your sections or divs here */}
-
+      <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl py-2 md:text-6xl text-center text-white"
+             data-aos="fade-up"
+             data-aos-offset="200"
+             data-aos-delay="50"
+             data-aos-duration="1000"
+             data-aos-easing="ease-in-out"
+             data-aos-mirror="true"
+             data-aos-once="false"
+            
+            >
+              Our Doctors
+            </h2>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 justify-center items-center mx-5">
         <section className="" data-scroll-section>
           {/* <h2>Section 1</h2> */}

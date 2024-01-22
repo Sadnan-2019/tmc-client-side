@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import landingone from "../../assets/images/landing1.jpg";
+import landingone from "../../assets/images/operation image.jpg";
 import landingtwo from "../../assets/images/landing2.jpg";
 import landingthree from "../../assets/images/landing3.jpg";
 import landingfour from "../../assets/images/landing4.jpg";
@@ -73,15 +73,16 @@ const Banner = () => {
                     }`}
                   >
                     {" "}
-                    Trishal Convention Center (TCC) is a Business Organization.
+                    A premier diagnostic & hospital in Trishal,Mymensingh
+                    serving and caring for the people. 
                   </h2>
 
-                  <h1
+                  {/* <h1
                     className="mb-5 text-lg  lg:text-2xl max-w-lg mt-7 font-bold   md:text-[25px] poppins-t "
                     style={{ lineHeight: "120%", color: "white" }}
                   >
                     which aims to induce and influence.{" "}
-                  </h1>
+                  </h1> */}
 
                   <div className="flex  gap-4 mt-10 text-center">
                     <a
@@ -100,12 +101,13 @@ const Banner = () => {
                 </div>
 
                 <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  <img src={landingone} alt=""
-                  className={`  max-w-sm slide-text p-1   lg:p-2   lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
-                    currentSlideTwo === 0 ? "animatedpic" : ""
-                  }`}
-                  
-                   />
+                  <img
+                    src={landingone}
+                    alt=""
+                    className={`  max-w-sm slide-text p-1   lg:p-2   lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
+                      currentSlideTwo === 0 ? "animatedpic" : ""
+                    }`}
+                  />
 
                   {/* <a
                     href="/"
@@ -116,8 +118,6 @@ const Banner = () => {
                   </a> */}
                 </div>
               </div>
-
-             
             </section>
           </div>
           <div className=" ">
@@ -131,16 +131,18 @@ const Banner = () => {
                     }`}
                   >
                     {" "}
-                    Innovate of Unmatched
+                    This institution boasts
+                    the best and qualified professionals with the most updated
+                    and modern infrastructure.
                   </h2>
 
-                  <h1
+                  {/* <h1
                     className="mb-5 text-lg  lg:text-2xl max-w-lg mt-7 font-bold   md:text-[25px] poppins-t "
                     style={{ lineHeight: "120%", color: "white" }}
                   >
                     Innovative strategies with verified data analytics that help
                     to re-envision and develop the future market.
-                  </h1>
+                  </h1> */}
 
                   <div className="flex  gap-4 mt-10 text-center">
                     <a
