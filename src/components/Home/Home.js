@@ -8,6 +8,7 @@ import Footer from "../Shared/Footer/Footer";
 import Doctors from "../Doctors/Doctors";
 
 import ScrollSmoother from "../ScrollSmoother/ScrollSmoother";
+import OurFacility from "../OurFacility/OurFacility";
 
 // import New from '../New/New';
 
@@ -19,10 +20,13 @@ const Home = () => {
       <Banner className=""></Banner>
       {/* <Info></Info> */}
       <Services></Services>
-      <Makeappoinment></Makeappoinment>
-      <Tstimoniel></Tstimoniel>
-      {/* <ScrollSmoother></ScrollSmoother> */}
       <Doctors></Doctors>
+      <Makeappoinment></Makeappoinment>
+      <OurFacility></OurFacility>
+      <Tstimoniel></Tstimoniel>
+
+      {/* <ScrollSmoother></ScrollSmoother> */}
+      
       {/* <Business></Business> */}
       {/* <New></New> */}
       <Footer></Footer>
