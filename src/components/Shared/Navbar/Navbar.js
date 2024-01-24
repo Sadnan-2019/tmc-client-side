@@ -32,7 +32,7 @@ const Navbar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/review">Review</Link>
+        <Link to="/review" className="rounded-lg  ">Health Check-Up Packages</Link>
       </li>
       <li>
         {" "}

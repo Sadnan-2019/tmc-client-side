@@ -1,6 +1,6 @@
 import React from "react";
-import sample from "../../../assets/images/blood.png"
-import consultancy from "../../../assets/images/video-call.png"
+import sample from "../../../assets/images/blood.png";
+import consultancy from "../../../assets/images/video-call.png";
 import Marquee from "react-fast-marquee";
 const TopNav = () => {
   return (
@@ -26,11 +26,11 @@ const TopNav = () => {
               className="flex items-center font-bold   gap-2   "
               // style={{ color: "#92468E" }}
             >
-              <div><img className="w-10" src={consultancy} alt="" /></div>
               <div>
-                <p className="text-[10px] lg:text-xs   	">
-                  Video Consultancy 
-                </p>
+                <img className="w-10" src={consultancy} alt="" />
+              </div>
+              <div>
+                <p className="text-[10px] lg:text-xs   	">Video Consultancy</p>
               </div>
             </div>
             <div
@@ -59,10 +59,17 @@ const TopNav = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 justify-center  p-1  items-center   ">
-          <Marquee gradientColor={false} speed={80} gradient={false} play={true}>
-    <p className="">We Introduce 1152 slice CT Scan at       1st time in Bangladesh</p>
-
-          </Marquee>
+            <Marquee
+              gradientColor={false}
+              speed={80}
+              gradient={false}
+              play={true}
+            >
+              <p className="">
+                
+                Welcome to Trishal Medical Center–your premier destination for clinical care in Bangladesh.
+              </p>
+            </Marquee>
           </div>
 
           <div className="grid grid-cols-2 justify-items-center items-center gap-12  ">
@@ -71,7 +78,7 @@ const TopNav = () => {
               // style={{ color: "#92468E" }}
             >
               <ul className="flex items-center font-bold    gap-2">
-              <li>
+                <li>
                   <a
                     href="/"
                     rel="noreferrer"

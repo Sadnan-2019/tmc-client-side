@@ -3,17 +3,11 @@ import doctor from "../../assets/images/doctor.png";
 // import appoinment from "../../assets/images/appointment.png";
 import { motion } from 'framer-motion';
 const Makeappoinment = () => {
-  const texts = ['Make an Appoinment Today','So Get Ready','Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi    sint dolores vitae saepe']; // Add your desired texts here
+  const texts = ['Make an Appoinment Today','So Get Ready','We are a private hospital committed to delivering exceptional healthcare services with an emphasis on comfort, fairness, and value.']; // Add your desired texts here
   const [currentIndex, setCurrentIndex] = useState(0);
 
   
-  // const textsTwo = [
-
-  //   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quasi    sint dolores vitae saepe accusantium non iure ut ullam distinctio  excepturi quaerat quod ipsam maxime quos in necessitatibus beatae labore eligendi culpa suscipit quae iste deserunt voluptas! Veniam expedita. Laborum'
-  
-  
-  
-  // ]; // Add your desired texts here
+ 
   // const [textIndex, setTextIndex] = useState(0);
 
   
@@ -21,9 +15,7 @@ const Makeappoinment = () => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
     }, 2000);
-    // const twoTexts = setInterval(() => {
-    //   setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    // }, 2000);
+   
 
     return () => clearInterval(intervalId);
   }, [currentIndex, texts.length]);
@@ -37,9 +29,7 @@ const Makeappoinment = () => {
           <img className="mt-[-120px]" src={doctor} alt="" />
         </div>
         <div className="flex-1">
-          {/* <h2 className="text-2xl text-white font-bold">Appoinment</h2> */}
-          {/* <h3 className="text-4xl py-2 font-bold text-white">Make an Appoinment Today
-</h3> */}
+           
 <motion.h1 className='text-4xl py-2 font-bold text-white'
         key={texts[currentIndex]}
         initial={{ opacity: 4, scale: 1 }}
@@ -54,36 +44,13 @@ const Makeappoinment = () => {
 
 
 
-      {/* <motion.h1 className='text-1xl py-2 font-bold text-white'
-        key={textsTwo[textIndex]}
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {textsTwo[textIndex]}
-      </motion.h1>
-          */}
+      
 
           <div className="card-actions">
       <button className="btn btn-primary">Get Appoinment </button>
     </div>
         </div>
-        {/* <div>
-      <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <motion.h1 className='text-red-800 text-2xl'
-        key={texts[currentIndex]}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {texts[currentIndex]}
-      </motion.h1>
-    </motion.div>
-    </div> */}
+     
       </div>
     </div>
     </div>
