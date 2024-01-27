@@ -1,5 +1,5 @@
 import React from 'react';
-
+import onehundred from "../../assets/images/100tk.jpg"
 const OurFacility = () => {
     return (
         <div className='bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white '>
@@ -34,12 +34,12 @@ const OurFacility = () => {
 
       <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
         <div class="flex-shrink-0">
-          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1679&amp;q=80" alt=""/>
+          <img class="h-48 w-full object-cover" src={onehundred} alt=""/>
         </div>
         <div class="flex flex-1 flex-col justify-between bg-white p-6">
           <div class="flex-1">
             <p class="text-sm font-medium text-indigo-600">
-              <a href="#" class="hover:underline">Best Quality Eqipment</a>
+              <a href="#" class="hover:underline">100TK VISIT DOCTOR</a>
             </p>
             <a href="#" class="mt-2 block">
               <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
@@ -47,7 +47,7 @@ const OurFacility = () => {
                 Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
             </a>
           </div>
-          <div class="mt-6 flex items-center">
+          {/* <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a href="#">
                 <span class="sr-only">Roel Aufderehar</span>
@@ -64,7 +64,7 @@ const OurFacility = () => {
                 <span>6 min read</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -84,7 +84,7 @@ const OurFacility = () => {
                 tempore temporibus quo laudantium.</p>
             </a>
           </div>
-          <div class="mt-6 flex items-center">
+          {/* <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a href="#">
                 <span class="sr-only">Brenna Goyette</span>
@@ -101,7 +101,7 @@ const OurFacility = () => {
                 <span>4 min read</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -121,7 +121,7 @@ const OurFacility = () => {
                 perferendis hic.</p>
             </a>
           </div>
-          <div class="mt-6 flex items-center">
+          {/* <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a href="#">
                 <span class="sr-only">Daniela Metz</span>
@@ -138,7 +138,7 @@ const OurFacility = () => {
                 <span>11 min read</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
