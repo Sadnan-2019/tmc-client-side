@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { useEffect, useRef } from "react";
-import whatsapp from "../../assets/images/whatsapp.png"
+import whatsapp from "../../assets/images/whatsapp.png";
 import "./Doctors.css";
 const Doctors = () => {
   return (
@@ -68,9 +68,9 @@ const Doctors = () => {
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
               <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
-                Book Appoinment 
+                Book Appoinment
               </button>
-              <img alt="" src={whatsapp} className="w-5"/>
+              <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
 
@@ -125,9 +125,9 @@ const Doctors = () => {
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
               <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
-                Book Appoinment 
+                Book Appoinment
               </button>
-              <img alt="" src={whatsapp} className="w-5"/>
+              <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
 
@@ -182,9 +182,9 @@ const Doctors = () => {
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
               <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
-                Book Appoinment 
+                Book Appoinment
               </button>
-              <img alt="" src={whatsapp} className="w-5"/>
+              <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
 
@@ -239,9 +239,9 @@ const Doctors = () => {
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
               <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
-                Book Appoinment 
+                Book Appoinment
               </button>
-              <img alt="" src={whatsapp} className="w-5"/>
+              <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
 
@@ -296,9 +296,9 @@ const Doctors = () => {
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
               <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
-                Book Appoinment 
+                Book Appoinment
               </button>
-              <img alt="" src={whatsapp} className="w-5"/>
+              <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
 
@@ -353,9 +353,9 @@ const Doctors = () => {
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
               <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
-                Book Appoinment 
+                Book Appoinment
               </button>
-              <img alt="" src={whatsapp} className="w-5"/>
+              <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
 
