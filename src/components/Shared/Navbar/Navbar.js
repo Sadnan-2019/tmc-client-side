@@ -26,10 +26,10 @@ const Navbar = () => {
         {" "}
         <Link to="/our-doctors">Our Doctors</Link>
       </li>
-      <li>
+      {/* <li>
         {" "}
         <Link to="/our-department">Our Department</Link>
-      </li>
+      </li> */}
       <li>
         {" "}
         <Link to="/review" className="rounded-lg  ">Health Check-Up Packages</Link>

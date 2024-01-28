@@ -74,7 +74,7 @@ const Banner = () => {
                   >
                     {" "}
                     A premier diagnostic & hospital in Trishal,Mymensingh
-                    serving and caring for the people. 
+                    
                   </h2>
 
                   {/* <h1

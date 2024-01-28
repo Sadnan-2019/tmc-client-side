@@ -3,7 +3,7 @@ import doctor from "../../assets/images/doctor.png";
 // import appoinment from "../../assets/images/appointment.png";
 import { motion } from 'framer-motion';
 const Makeappoinment = () => {
-  const texts = ['Make an Appoinment Today','So Get Ready','We are a private hospital committed to delivering exceptional healthcare services with an emphasis on comfort, fairness, and value.']; // Add your desired texts here
+  const texts = ['Make an Appoinment Today','So Get Ready', ]; // Add your desired texts here
   const [currentIndex, setCurrentIndex] = useState(0);
 
   
