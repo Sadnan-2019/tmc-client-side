@@ -5,6 +5,7 @@ import auth from "../../firebase.init";
 const MyAppoinment = () => {
   const [appoinmnts, setAppoinments] = useState([]);
   const [user] = useAuthState(auth);
+  let i = 1;
 
   useEffect(() => {
     if (user) {
@@ -37,7 +38,7 @@ const MyAppoinment = () => {
        {
 
           appoinmnts.map(appoinmnt=> <tr>
-               <th>2</th>
+               <th>{i++}</th>
                <td>{appoinmnt.patients_name}</td>
                <td>{appoinmnt.department}</td>
                <td>{appoinmnt.date}</td>
