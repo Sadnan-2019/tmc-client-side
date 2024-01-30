@@ -63,13 +63,16 @@ const Doctors = () => {
                 >
                   <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
                 </svg>
-                <div>15</div>
+                <div>1005</div>
               </li>
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
-              <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
+              
+              <a href="https://wa.me/+8801619848555"
+            // href="https://wa.me/+8801767564737"
+            title="WHATSAPP CHAT" class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
                 Book Appoinment
-              </button>
+              </a>
               <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
@@ -124,9 +127,12 @@ const Doctors = () => {
               </li>
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
-              <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
+              
+              <a href="https://wa.me/+8801619848555"
+            // href="https://wa.me/+8801767564737"
+            title="WHATSAPP CHAT" class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
                 Book Appoinment
-              </button>
+              </a>
               <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
@@ -181,9 +187,12 @@ const Doctors = () => {
               </li>
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
-              <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
+              
+              <a href="https://wa.me/+8801619848555"
+            // href="https://wa.me/+8801767564737"
+            title="WHATSAPP CHAT" class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
                 Book Appoinment
-              </button>
+              </a>
               <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
@@ -238,9 +247,12 @@ const Doctors = () => {
               </li>
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
-              <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
+              
+              <a href="https://wa.me/+8801619848555"
+            // href="https://wa.me/+8801767564737"
+            title="WHATSAPP CHAT" class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
                 Book Appoinment
-              </button>
+              </a>
               <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
@@ -295,9 +307,12 @@ const Doctors = () => {
               </li>
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
-              <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
+              
+              <a href="https://wa.me/+8801619848555"
+            // href="https://wa.me/+8801767564737"
+            title="WHATSAPP CHAT" class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
                 Book Appoinment
-              </button>
+              </a>
               <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
@@ -352,9 +367,12 @@ const Doctors = () => {
               </li>
             </ul>
             <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
-              <button class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
+              
+              <a href="https://wa.me/+8801619848555"
+            // href="https://wa.me/+8801767564737"
+            title="WHATSAPP CHAT" class="rounded-full  hover:shadow-lg font-semibold text-white px-6 py-2">
                 Book Appoinment
-              </button>
+              </a>
               <img alt="" src={whatsapp} className="w-5" />
             </div>
           </div>
