@@ -13,7 +13,7 @@ const Dashboard = () => {
   </div> 
   <div className="drawer-side  ">
     <label htmlFor="dashboard-sidebar" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-80 min-h-full bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white  ">
+    <ul className="menu p-4 w-48 min-h-full bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white  ">
       {/* Sidebar content here */}
       <li><Link  to="/dashboard">My Appoinment</Link></li>
       <li><Link to="/dashboard/my-review">My Review</Link></li>
