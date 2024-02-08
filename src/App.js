@@ -8,17 +8,16 @@ import Appoinment from "./components/Appoinment/Appoinment";
 import Login from "./components/Login/Login";
 import SignUp from "./components/Login/SignUp";
 import PrivateRoute from "./components/Login/PrivateRoute";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import TopNav from "./components/Shared/TopNav/TopNav";
 import Nav from "./components/Shared/TopNav/Nav";
 import { useEffect, useRef } from "react";
- 
+
 import locomotiveScroll from "locomotive-scroll";
 import Dashboard from "./components/Dashboard/Dashboard";
 import MyAppoinment from "./components/Dashboard/MyAppoinment";
 import MyReview from "./components/Dashboard/MyReview";
 function App() {
-
   const scrollRef = useRef(null);
   useEffect(() => {
     const scroll = new locomotiveScroll({
@@ -39,39 +38,37 @@ function App() {
     };
   }, []);
   return (
-    <div  ref={scrollRef}
-    data-scroll-container className=" ">
+    <div ref={scrollRef} data-scroll-container className=" ">
       <TopNav></TopNav>
       <Nav></Nav>
       <Navbar></Navbar>
-      
 
       <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/appoinment" element={<PrivateRoute>
-        <Appoinment />
-      </PrivateRoute>  }>
-        
-      </Route>
-      <Route path="/dashboard" element={
-      <PrivateRoute>
-        <Dashboard />
-      </PrivateRoute>  }>
-
-
-        <Route index element={<MyAppoinment></MyAppoinment>}></Route>
-        <Route path="my-review" element={<MyReview></MyReview>}></Route>
-        
-      </Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route
+          path="/appoinment"
+          element={
+            <PrivateRoute>
+              <Appoinment />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        >
+          <Route index element={<MyAppoinment></MyAppoinment>}></Route>
+          <Route path="my-review" element={<MyReview></MyReview>}></Route>
+        </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
-
-
-     
       </Routes>
       <ToastContainer />
-
     </div>
   );
 }

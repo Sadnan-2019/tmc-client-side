@@ -9,6 +9,7 @@ import Doctors from "../Doctors/Doctors";
 
 import ScrollSmoother from "../ScrollSmoother/ScrollSmoother";
 import OurFacility from "../OurFacility/OurFacility";
+import Equipment from "../Equipment/Equipment";
 
 // import New from '../New/New';
 
@@ -21,6 +22,7 @@ const Home = () => {
       {/* <Info></Info> */}
       <Services></Services>
       <Doctors></Doctors>
+      <Equipment></Equipment>
       <Makeappoinment></Makeappoinment>
       <OurFacility></OurFacility>
       <Tstimoniel></Tstimoniel>
