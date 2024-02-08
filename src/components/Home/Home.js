@@ -10,6 +10,7 @@ import Doctors from "../Doctors/Doctors";
 import ScrollSmoother from "../ScrollSmoother/ScrollSmoother";
 import OurFacility from "../OurFacility/OurFacility";
 import Equipment from "../Equipment/Equipment";
+import Contact from "../Contact/Contact";
 
 // import New from '../New/New';
 
@@ -26,7 +27,7 @@ const Home = () => {
       <Makeappoinment></Makeappoinment>
       <OurFacility></OurFacility>
       <Tstimoniel></Tstimoniel>
-
+<Contact></Contact>
       {/* <ScrollSmoother></ScrollSmoother> */}
       
       {/* <Business></Business> */}
