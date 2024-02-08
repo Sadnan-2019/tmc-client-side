@@ -6,18 +6,21 @@ import "./Login.css";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
-  useUpdateProfile, useSendEmailVerification 
+  useUpdateProfile,
+  useSendEmailVerification,
 } from "react-firebase-hooks/auth";
 import Loading from "../Loading/Loading";
 import { Link, useNavigate } from "react-router-dom";
 import { sendEmailVerification } from "firebase/auth";
+import useToken from "../../hooks/useToken";
 
 const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
-    const [updateProfile, updating, UpDateError] = useUpdateProfile(auth);
+  const [updateProfile, updating, UpDateError] = useUpdateProfile(auth);
 
+  const [token] = useToken(user || gUser);
 
   let signError;
   const {
@@ -26,29 +29,25 @@ const SignUp = () => {
     handleSubmit,
   } = useForm();
 
-  const navigate = useNavigate()
-  const onSubmit = async data => {
+  const navigate = useNavigate();
+  const onSubmit = async (data) => {
     console.log(data);
-   await createUserWithEmailAndPassword(data.email, data.password);
-   await updateProfile({displayName:data.name})
-   console.log("Update done");
-   navigate("/appoinment")
-   veryfyEmail();
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
+    console.log("Update done");
+    // navigate("/appoinment");
+    veryfyEmail();
   };
 
-  const veryfyEmail=()=>{
-   sendEmailVerification(auth.currentUser)
-    .then(() => {
-      // 
+  const veryfyEmail = () => {
+    sendEmailVerification(auth.currentUser).then(() => {
+      //
       // ...
-      console.log("Email verification sent!")
+      console.log("Email verification sent!");
     });
+  };
 
-    
-  }
-
-
-  if (user || gUser ) {
+  if (user || gUser) {
     console.log(user || gUser);
   }
 
@@ -58,7 +57,9 @@ const SignUp = () => {
 
   if (error || gError || UpDateError) {
     signError = (
-      <p className="text-red-900 py-3">{error?.message || gError?.message || UpDateError.message}</p>
+      <p className="text-red-900 py-3">
+        {error?.message || gError?.message || UpDateError.message}
+      </p>
     );
   }
   return (
