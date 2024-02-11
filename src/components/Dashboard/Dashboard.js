@@ -16,7 +16,8 @@ const Dashboard = () => {
     <ul className="menu p-4 w-48 min-h-full bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white  ">
       {/* Sidebar content here */}
       <li><Link  to="/dashboard">My Appoinment</Link></li>
-      <li><Link to="/dashboard/my-review">My Review</Link></li>
+      <li><Link to="/dashboard/my-review">Add Doctor</Link></li>
+      <li><Link to="/dashboard/manage-doctor">Manage  Doctor</Link></li>
     </ul>
   
   </div>

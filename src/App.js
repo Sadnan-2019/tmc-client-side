@@ -17,6 +17,8 @@ import locomotiveScroll from "locomotive-scroll";
 import Dashboard from "./components/Dashboard/Dashboard";
 import MyAppoinment from "./components/Dashboard/MyAppoinment";
 import MyReview from "./components/Dashboard/MyReview";
+ 
+import ManageDoctor from "./components/Dashboard/ManageDoctor";
 function App() {
   const scrollRef = useRef(null);
   useEffect(() => {
@@ -63,6 +65,7 @@ function App() {
         >
           <Route index element={<MyAppoinment></MyAppoinment>}></Route>
           <Route path="my-review" element={<MyReview></MyReview>}></Route>
+          <Route path="manage-doctor" element={<ManageDoctor></ManageDoctor>}></Route>
         </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>
