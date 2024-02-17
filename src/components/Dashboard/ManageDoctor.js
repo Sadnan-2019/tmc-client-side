@@ -1,20 +1,35 @@
 import React, { useEffect, useState } from "react";
 
 const ManageDoctor = () => {
-  const [doctors, setServices] = useState([]);
+  const [doctors, setDoctors] = useState([]);
   let i = 1;
   useEffect(() => {
     fetch(`http://localhost:5000/all-doctors`)
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => setDoctors(data));
   }, []);
 
-  const handleDoctorDelete = (id) => {
+  const handleDoctorDelete = (_id) => {
     const proceed = window.confirm("Are you sure want to delete");
     if (proceed) {
-      console.log("deleteing user id ", id);
+      console.log("deleteing user id ", _id);
+      const url = `http://localhost:5000/doctor/${_id}`;
+
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+
+          if(data.deletedCount>0){
+            const remaining = doctors.filter(doctor=> doctor._id !==_id);
+            setDoctors(remaining)
+
+
+          }
+          console.log(data);
+        });
     }
-    
   };
 
   return (
@@ -34,7 +49,7 @@ const ManageDoctor = () => {
           </thead>
           <tbody className=" ">
             {/* row 1 */}
-            {doctors.map((doctor) => (
+            {doctors.map((doctor)  => (
               <tr>
                 <th>{i++}</th>
                 <td>{doctor.name}</td>
