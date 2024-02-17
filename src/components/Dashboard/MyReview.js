@@ -25,12 +25,12 @@ const MyReview = () => {
   };
   return (
     <div>
-      <h1 className="text-2xl text-red-500">MyReview</h1>
-      <div className="flex    h-screen bg-sky-300">
+      <h1 className="text-2xl text-white text-center mt-5">Add Doctor</h1>
+      <div className=" ">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
-              <span className="label-text text-black">Name</span>
+              <span className="label-text text-white">Name</span>
             </label>
             <input
               {...register("name", {
@@ -41,7 +41,7 @@ const MyReview = () => {
               })}
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs text-black"
             />
             <label className="label">
               {errors.name?.type === "required" && (
@@ -55,7 +55,7 @@ const MyReview = () => {
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
-              <span className="label-text text-black">Speciality</span>
+              <span className="label-text text-white">Speciality</span>
             </label>
             <input
               {...register("speciality", {
@@ -66,7 +66,7 @@ const MyReview = () => {
               })}
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs text-black "
             />
             <label className="label">
               {errors.speciality?.type === "required" && (
@@ -80,7 +80,7 @@ const MyReview = () => {
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
-              <span className="label-text text-black">Image Url</span>
+              <span className="label-text text-white">Image Url</span>
             </label>
             <input
               {...register("image", {
@@ -91,7 +91,7 @@ const MyReview = () => {
               })}
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs text-black"
             />
             <label className="label">
               {errors.image?.type === "required" && (
@@ -106,7 +106,7 @@ const MyReview = () => {
           <div className="card-actions justify-center py-5 ">
             <input
               value="Save"
-              className="btn w-full   max-w-xs  text-white btn-sm  bg-blue-900 justify-center"
+              className="btn w-full   max-w-xs  text-black btn-sm   justify-center"
               type="submit"
             />
           </div>

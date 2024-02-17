@@ -20,14 +20,14 @@ const MyAppoinment = () => {
   }, [user]);
   return (
     <div>
-      <h1 className="text-2xl text-red-500 text-center py-3">MyAppoinment: {appoinmnts.length}</h1>
+      <h1 className="text-2xl text-white text-center py-3">MyAppoinment: {appoinmnts.length}</h1>
 
       <div className="overflow-x-auto">
   <table className="table w-full">
     {/* head */}
     <thead className= " bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
       <tr>
-        <th>Serial Number</th>
+        <th>SL No</th>
         <th>Name</th>
         <th>Department</th>
         <th>Doctor Name</th>
