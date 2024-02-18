@@ -9,18 +9,18 @@ const AddDepartment = () => {
         handleSubmit,
       } = useForm();
       const onSubmit = (data) => {
-        // const url = `http://localhost:5000/department`;
-        // fetch(url, {
-        //   method: "POST",
-        //   headers: {
-        //     "content-type": "application/json",
-        //   },
-        //   body: JSON.stringify(data),
-        // })
-        //   .then((res) => res.json())
-        //   .then((doctorsData) => {
-        //     console.log(doctorsData);
-        //   });
+        const url = `http://localhost:5000/department`;
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((doctorsData) => {
+            console.log(doctorsData);
+          });
         console.log(data);
       };
     return (
@@ -90,7 +90,7 @@ const AddDepartment = () => {
                   message: "Image is requried",
                 },
               })}
-              type="file"
+              type="text"
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black"
             />
