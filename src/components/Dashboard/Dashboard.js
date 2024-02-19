@@ -52,7 +52,7 @@ const Dashboard = () => {
               </div>
               <div class="  p-1">
                 <li>
-                  <Link to="/dashboard/manage-doctor">Manage Department</Link>
+                  <Link to="/dashboard/manage-department">Manage Department</Link>
                 </li>
               </div>
             </details>

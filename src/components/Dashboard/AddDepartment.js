@@ -3,25 +3,29 @@ import { useForm } from 'react-hook-form';
  
 
 const AddDepartment = () => {
+ 
     const {
         register,
         formState: { errors },
         handleSubmit,
       } = useForm();
-      const onSubmit = (data) => {
-        const url = `http://localhost:5000/department`;
-        fetch(url, {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((res) => res.json())
-          .then((doctorsData) => {
-            console.log(doctorsData);
+      const onSubmit =async  (data) => {
+        try {
+          const formData = new FormData();
+          formData.append('dept_name', data.dept_name);
+          formData.append('description', data.description);
+          formData.append('file', data.file[0]); // Assuming "file" is the name of the file input
+
+          const response = await fetch("http://localhost:5000/department", {
+              method: "POST",
+              body: formData,
           });
-        console.log(data);
+
+          const responseData = await response.json();
+          console.log(responseData,formData);
+      } catch (error) {
+          console.error(error);
+      }
       };
     return (
         <div>
@@ -51,7 +55,7 @@ const AddDepartment = () => {
                 </span>
               )}
 
-              {/* <span>Bottom Left label</span> */}
+              
             </label>
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
@@ -76,7 +80,7 @@ const AddDepartment = () => {
                 </span>
               )}
 
-              {/* <span>Bottom Left label</span> */}
+             
             </label>
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
@@ -84,24 +88,24 @@ const AddDepartment = () => {
               <span className="label-text text-white">Image Url</span>
             </label>
             <input
-              {...register("image", {
+              {...register("file", {
                 required: {
                   value: true,
                   message: "Image is requried",
                 },
               })}
-              type="text"
+              type="file"
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black"
             />
             <label className="label">
-              {errors.image?.type === "required" && (
+              {errors.file?.type === "required" && (
                 <span className="label-text-alt text-red-500" role="alert">
-                  {errors.image.message}
+                  {errors.file.message}
                 </span>
               )}
 
-              {/* <span>Bottom Left label</span> */}
+             
             </label>
           </div>
           <div className="card-actions justify-center py-5 ">
@@ -112,6 +116,7 @@ const AddDepartment = () => {
             />
           </div>
         </form>
+      
       </div>
     </div>
 
