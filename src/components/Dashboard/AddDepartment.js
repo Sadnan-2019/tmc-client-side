@@ -32,7 +32,7 @@ const AddDepartment = () => {
            <div>
       <h1 className="text-2xl text-white text-center mt-5">Add Department</h1>
       <div className=" ">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
               <span className="label-text text-white">Department Name</span>

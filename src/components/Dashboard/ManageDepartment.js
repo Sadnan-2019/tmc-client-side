@@ -36,7 +36,7 @@ const ManageDepartment = ( ) => {
                 <td>
                   <img
                     class="object-cover object-center h-12 rounded-full w-12"
-                    src={doctor.imageUrl}
+                    src={doctor.file}
                     alt="Woman looking front"
                   />
                 </td>
