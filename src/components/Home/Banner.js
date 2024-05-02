@@ -97,7 +97,7 @@ const Banner = () => {
                   </div>
                 </div>
 
-                {/* <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
+                <div class="sm:block lg:hidden  text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
                   <img
                     src={landingone}
                     alt=""
@@ -107,13 +107,13 @@ const Banner = () => {
                   />
 
                   
-                </div> */}
+                </div>
 
 
-<div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
+<div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
 
   
-    <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+    <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
         <img class="h-full w-full object-cover rounded-3xl" src={landingfive} alt="Winding mountain road"/>
     </div>
  
