@@ -3,6 +3,7 @@ import landingone from "../../assets/images/operation image.jpg";
 import landingtwo from "../../assets/images/landing2.jpg";
 import landingthree from "../../assets/images/landing3.jpg";
 import landingfour from "../../assets/images/landing4.jpg";
+import landingfive from "../../assets/images/operation 2.jpg";
 import "./Banner.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
@@ -66,23 +67,18 @@ const Banner = () => {
             <section className="   blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
               <div className=" md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse       ">
                 <div className="slide-content sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0 ">
-                  <h2
+                  <span
                     style={{ lineHeight: "120%" }}
-                    className={`slide-text text-[25px] lg:text-[40px] font-bold   text-left   text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-pink-600   ${
+                    className={`slide-text text-[25px] lg:text-[32px] font-bold   text-left   text-transparent  text-white  ${
                       currentSlide === 0 ? "animated" : ""
                     }`}
                   >
                     {" "}
-                    A premier diagnostic & hospital in Trishal,Mymensingh
-                    
-                  </h2>
+                    A premier diagnostic & hospital <br></br>
+                    in Trishal,Mymensingh
+                  </span>
 
-                  {/* <h1
-                    className="mb-5 text-lg  lg:text-2xl max-w-lg mt-7 font-bold   md:text-[25px] poppins-t "
-                    style={{ lineHeight: "120%", color: "white" }}
-                  >
-                    which aims to induce and influence.{" "}
-                  </h1> */}
+                   
 
                   <div className="flex  gap-4 mt-10 text-center">
                     <a
@@ -91,32 +87,65 @@ const Banner = () => {
                         currentSlide === 0 ? "animated" : ""
                       }`}
                     >
-                      <span className="text-sm font-medium">
+                      <span className="text-sm font-medium lg:text-lg">
                         {" "}
-                        GET STARTED WITH US
+                        
+                        BOOKED YOUR DOCTOR
                       </span>
                       <BsArrowRight className="text-lg hidden lg:ml-2" />
                     </a>
                   </div>
                 </div>
 
-                <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
+                {/* <div class="    text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
                   <img
                     src={landingone}
                     alt=""
-                    className={`  max-w-sm slide-text p-1   lg:p-2   lg:text-lg font-bold  hover-button bg-gradient-to-r from-[#92468E] to-[#38235D]     border          text-white   ${
+                    className={`  max-w-sm slide-text p-1   lg:p-2   lg:text-lg font-bold  hover-button rounded-3xl     round-lg         text-white   ${
                       currentSlideTwo === 0 ? "animatedpic" : ""
                     }`}
                   />
 
-                  {/* <a
-                    href="/"
-                    
-                  >
-                    MORE EXPLORE
-                    <BsArrowRight className="text-lg   lg:ml-2" />
-                  </a> */}
-                </div>
+                  
+                </div> */}
+
+
+<div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
+
+  
+    <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+        <img class="h-full w-full object-cover rounded-3xl" src={landingfive} alt="Winding mountain road"/>
+    </div>
+ 
+
+  
+    <div
+        class="max-w-lg   md:max-w-2xl md:z-10   md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+        
+        <div class="flex flex-col p-12  ">
+            
+        <img class="h-full w-full object-cover rounded-3xl" src={landingone} alt="Winding mountain road"/>
+             
+        </div>
+      
+    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               </div>
             </section>
           </div>
@@ -131,9 +160,8 @@ const Banner = () => {
                     }`}
                   >
                     {" "}
-                    This institution boasts
-                    the best and qualified professionals with the most updated
-                    and modern infrastructure.
+                    This institution boasts the best and qualified professionals
+                    with the most updated and modern infrastructure.
                   </h2>
 
                   {/* <h1
