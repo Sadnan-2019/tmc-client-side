@@ -23,9 +23,9 @@ const Service = ({ service }) => {
           {/* </svg> */}
           <div class="space-y-2">
             <h3 class="font-bold text-white text-lg">{service.name}</h3>
-            <p class="text-sm text-muted-foreground text-white">
+            {/* <p class="text-sm text-muted-foreground text-white">
               App dir, Routing, Layouts, Loading UI and API routes.
-            </p>
+            </p> */}
           </div>
         </div>
 
