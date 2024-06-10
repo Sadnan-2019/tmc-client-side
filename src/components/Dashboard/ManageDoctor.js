@@ -44,7 +44,7 @@ const ManageDoctor = () => {
               <th>Doctor Name</th>
               <th>Department</th>
               <th>Photo</th>
-              <th>Manage</th>
+              
             </tr>
           </thead>
           <tbody className=" ">
@@ -62,6 +62,14 @@ const ManageDoctor = () => {
                     src={doctor.image}
                     alt="Woman looking front"
                   />
+                </td>
+                <td>
+                  <button
+                    onClick={() => handleDoctorDelete(doctor._id)}
+                    className="btn"
+                  >
+                    Delete
+                  </button>
                 </td>
                 <td>
                   <button
