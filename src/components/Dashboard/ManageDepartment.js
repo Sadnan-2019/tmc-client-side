@@ -8,6 +8,29 @@ const ManageDepartment = ( ) => {
         .then((res) => res.json())
         .then((data) => setDoctors(data));
     }, []);
+
+    const handleDoctorDelete = (_id) => {
+      const proceed = window.confirm("Are you sure want to delete");
+      if (proceed) {
+        console.log("deleteing user id ", _id);
+        const url = `http://localhost:5000/department/${_id}`;
+  
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+  
+            if(data.deletedCount>0){
+              const remaining = doctors.filter(doctor=> doctor._id !==_id);
+              setDoctors(remaining)
+  
+  
+            }
+            console.log(data);
+          });
+      }
+    };
     return (
         <div>
             <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
@@ -42,7 +65,7 @@ const ManageDepartment = ( ) => {
                 </td>
                 <td>
                   <button
-                    // onClick={() => handleDoctorDelete(doctor._id)}
+                    onClick={() => handleDoctorDelete(doctor._id)}
                     className="btn"
                   >
                     Delete
