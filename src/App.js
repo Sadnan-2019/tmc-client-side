@@ -66,7 +66,7 @@ function App() {
           }
         >
           <Route index element={<MyAppoinment></MyAppoinment>}></Route>
-          <Route path="my-review" element={<MyReview></MyReview>}></Route>
+          <Route path="add-doctor" element={<MyReview></MyReview>}></Route>
           <Route path="manage-doctor" element={<ManageDoctor></ManageDoctor>}></Route>
           <Route path="add-department" element={<AddDepartment></AddDepartment>}></Route>
           <Route path="manage-department" element={<ManageDepartment></ManageDepartment>}></Route>

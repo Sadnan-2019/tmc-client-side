@@ -32,7 +32,7 @@ const Dashboard = () => {
               </summary>
               <div class="  p-1">
                 {/* <p class="text-white">Add Doctor</p> */}
-                <li><Link to="/dashboard/my-review">Add Doctor</Link></li>
+                <li><Link to="/dashboard/add-doctor">Add Doctor</Link></li>
               </div>
               <div class="  p-1">
                 <li>
