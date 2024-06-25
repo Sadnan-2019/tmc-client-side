@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import floride from "../../assets/images/fluoride.png";
 import cavity from "../../assets/images/cavity.png";
 import Orthopedics from "../../assets/images/orthopedics.png";
@@ -20,6 +20,15 @@ import gsap from "gsap";
 
 import "./Services.css";
 const Services = () => {
+
+
+  const [doctors, setDoctors] = useState([]);
+    let i = 1;
+    useEffect(() => {
+      fetch(`http://localhost:5000/all-department`)
+        .then((res) => res.json())
+        .then((data) => setDoctors(data));
+    }, []);
   const services = [
     {
       _id: 1,
@@ -139,8 +148,8 @@ const Services = () => {
               id="smooth-content "
               class="scroll-container  mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
             >
-              {services.map((service) => (
-                <Service service={service} key={service._id}></Service>
+              {doctors.map((doctor) => (
+                <Service doctor={doctor} key={doctor._id}></Service>
               ))}
             </div>
           </div>
