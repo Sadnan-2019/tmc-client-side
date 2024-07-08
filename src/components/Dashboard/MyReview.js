@@ -93,6 +93,17 @@ const MyReview = () => {
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black"
             />
+             {/* <input
+              {...register("file", {
+                required: {
+                  value: true,
+                  message: "Image is requried",
+                },
+              })}
+              type="file"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs text-black"
+            /> */}
             <label className="label">
               {errors.image?.type === "required" && (
                 <span className="label-text-alt text-red-500" role="alert">
