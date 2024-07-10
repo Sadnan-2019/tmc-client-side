@@ -5,13 +5,13 @@ const Service = (props) => {
   return (
     <div>
       <div 
-      data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
+    //   data-aos="fade-up"
+    // data-aos-offset="200"
+    // data-aos-delay="50"
+    // data-aos-duration="1000"
+    // data-aos-easing="ease-in-out"
+    // data-aos-mirror="true"
+    // data-aos-once="false"
     // data-aos-anchor-placement="top-center"
       class="relative overflow-hidden rounded-lg border   select-none hover:shadow hover:shadow-teal-200 p-2">
         <div class="flex h-[200px] flex-col justify-between rounded-md p-6">

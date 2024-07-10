@@ -25,13 +25,13 @@ const Services = () => {
           <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2
               class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-              data-aos-once="false"
+              // data-aos="fade-up"
+              // data-aos-offset="200"
+              // data-aos-delay="50"
+              // data-aos-duration="1000"
+              // data-aos-easing="ease-in-out"
+              // data-aos-mirror="true"
+              // data-aos-once="false"
             >
               Our Department
             </h2>

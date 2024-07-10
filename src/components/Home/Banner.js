@@ -190,7 +190,7 @@ const Banner = () => {
 
           {/* /// thried  */}
           <div className=" ">
-            <section className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]blog h-auto       text-white">
+            <section className="  blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]      text-white">
               <div className=" md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-2  gap-5 justify-center items-center">
                 <div className="sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0">
                  
@@ -224,7 +224,7 @@ const Banner = () => {
               </div>
             </section>
           </div>
-          <div className=" ">
+          {/* <div className=" ">
             <section className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]  blog h-auto       text-white">
               <div className=" md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-2  gap-5 justify-center items-center">
                 <div className="sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0">
@@ -268,25 +268,9 @@ const Banner = () => {
                 </div>
               </div>
 
-              {/* <div
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <svg
-                  className=""
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1440 320"
-                >
-                  <path
-                    fill="white"
-                    fill-opacity="50"
-                    d="M0,128L120,160C240,192,480,256,720,272C960,288,1200,256,1320,240L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-                  ></path>
-                </svg>
-              </div> */}
+              
             </section>
-          </div>
+          </div> */}
         </Slider>
       </div>
     </div>
