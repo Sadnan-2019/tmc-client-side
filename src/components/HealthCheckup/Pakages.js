@@ -12,6 +12,10 @@ const Pakages = () => {
           <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
             <th class="  p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
               {" "}
+              Serial No
+            </th>
+            <th class="  p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+              {" "}
               Package Name
             </th>
             <th class="  p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
@@ -35,64 +39,131 @@ const Pakages = () => {
               </td>
             </tr> */}
 
-            <tr>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              Dengue Recovery Package
-              </td>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              1000TK
-              </td>
-            </tr>
-            
-            <tr>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              Dengue Test Package
-              </td>
-            </tr>
-            <tr>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                Diabetes Plan Health Check 1 (Under Plan)
-              </td>
-            </tr>
-            <tr>
-              {" "}
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                Diabetes Plan Health Check 2 (Under Plan)
-              </td>
-            </tr>
-            <tr>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                Diabetes Screening
-              </td>
-            </tr>
-            <tr>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                Drug Screening
-              </td>
-            </tr>
-            <tr>
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                Essential Cardiac Screening
-              </td>
-            </tr>
-            <tr>
-              {" "}
-              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-                Essential Vitamin Check-Up
-              </td>
-            </tr>
-            <tr>
+          <tr>
+            <td>1</td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              Excessive Hair Fall for Men
+              Dengue Recovery Package
             </td>
-            </tr>
-           <tr> <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
               <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
-              {/* <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button> */}
-            </td></tr>
-         
+            </td>
+          </tr>
+
+          <tr>
+          <td>2</td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Dengue Test Package
+            </td>{" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button>
+            </td>
+          </tr>
+          <tr>
+          <td>3</td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Diabetes Plan Health Check 1 (Under Plan)
+            </td>{" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button>
+            </td>
+          </tr>
+          <tr>
+          <td>4</td>
+            {" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Diabetes Plan Health Check 2 (Under Plan)
+            </td> <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+              </td>
+              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button></td>
+          </tr>
+          <tr>
+          <td>5</td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Diabetes Screening
+            </td>{" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button>
+            </td>
+          </tr>
+          <tr>
+          <td>6</td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Drug Screening
+            </td>{" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button>
+            </td>
+          </tr>
+          <tr>
+          <td>7</td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Essential Cardiac Screening
+            </td> <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+              </td>
+              <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button></td>
+          </tr>
+          <tr>
+          <td>8</td>
+            {" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Essential Vitamin Check-Up
+            </td>{" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button>
+            </td>
+          </tr>
+          <tr>
+          <td>9</td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              Excessive Hair Fall for Men
+            </td>{" "}
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              1000TK
+            </td>
+            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+                VIEW DETAILS
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
