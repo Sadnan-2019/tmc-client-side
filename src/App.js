@@ -23,6 +23,8 @@ import AddDepartment from "./components/Dashboard/AddDepartment";
 import ManageDepartment from "./components/Dashboard/ManageDepartment";
  
 import AllDoctor from "./components/AllDoctor/AllDoctor";
+import Footer from "./components/Shared/Footer/Footer";
+import HealthCheckup from "./components/HealthCheckup/HealthCheckup";
  
  
 function App() {
@@ -54,6 +56,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/our-doctors" element={<AllDoctor/>}></Route>
+        <Route path="/health-checkup" element={<HealthCheckup/>}></Route>
         <Route
           path="/appoinment"
           element={
@@ -80,7 +83,9 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
+
     </div>
   );
 }

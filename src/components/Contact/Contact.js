@@ -6,19 +6,20 @@ const Contact = () => {
        
       <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] py-6 sm:py-12">
         <div class=" max-w-4xl mx-auto w-full">
-          <div class="grid lg:grid-cols-2 h-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="  p-10 ">
-            <iframe
-        className="broder   lg:w-[500px] md:w-[350px] py-8 rounded  h-96  "
+            <iframe width="100%"
+                    height="480"
+        className="broder rounded-lg overflow-hidden  lg:w-[500px] md:w-[350px] py-8 rounded    "
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7257.280447857329!2d90.3975879!3d24.5670919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37564360d48085d3%3A0x4c1350094f6e4766!2sTMC%20Diagnostic%20%26%20Hospital!5e0!3m2!1sen!2sbd!4v1708100932319!5m2!1sen!2sbd"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
             </div>
-            <div class="bg-blue-50 p-14  ">
+            <div class="bg-blue-50 p-5 rounded-lg  ">
               <h2 class="mb-14 font-bold text-4xl text-blue-900 before:block before:absolute before:bg-sky-300 before:content[''] relative before:w-20 before:h-1 before:-skew-y-3 before:-bottom-4">
-                Entrer en contact
+                Contact
               </h2>
               <div class="grid gap-6 mb-6 grid-cols-2 text-white">
                 <div class="flex flex-col ">
@@ -55,7 +56,7 @@ const Contact = () => {
               <div class="mb-6 text-white">
                 <textarea
                   class="placeholder-white bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] w-full rounded-2xl placeholder:text-lg   px-6 py-4"
-                  placeholder="Votre message ici"
+                  placeholder="Message"
                   name=""
                   id=""
                   rows="8"

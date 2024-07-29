@@ -32,7 +32,7 @@ const Navbar = () => {
       </li> */}
       <li>
         {" "}
-        <Link to="/review" className="rounded-lg  ">Health Check-Up Packages</Link>
+        <Link to="/health-checkup" className="rounded-lg  ">Health Check-Up Packages</Link>
       </li>
       <li>
         {" "}
@@ -83,7 +83,7 @@ const Navbar = () => {
               {menuitems}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">{menuitems}</ul>
