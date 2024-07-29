@@ -21,6 +21,10 @@ import MyReview from "./components/Dashboard/MyReview";
 import ManageDoctor from "./components/Dashboard/ManageDoctor";
 import AddDepartment from "./components/Dashboard/AddDepartment";
 import ManageDepartment from "./components/Dashboard/ManageDepartment";
+ 
+import AllDoctor from "./components/AllDoctor/AllDoctor";
+ 
+ 
 function App() {
   const scrollRef = useRef(null);
   useEffect(() => {
@@ -49,6 +53,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/our-doctors" element={<AllDoctor/>}></Route>
         <Route
           path="/appoinment"
           element={
