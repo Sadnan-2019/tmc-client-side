@@ -57,26 +57,39 @@ const Dashboard = () => {
               </div>
             </details>
           </li>
-          {/* <li>
+          <li>
             <details class="mb-2">
               <summary class=" p-3 rounded-lg cursor-pointer shadow">
-                <span class="font-semibold">Nested Dropdown 2</span>
+                <span class="font-semibold text-white">Facility</span>
               </summary>
-              <div class="  p-4">
-                <p class="text-white">Content for Nested Dropdown 2</p>
+              <div class="  p-1">
+                {/* <p class="text-white">Add Doctor</p> */}
+                <li><Link to="/dashboard/add-department">Add Facility</Link></li>
+              </div>
+              <div class="  p-1">
+                <li>
+                  <Link to="/dashboard/manage-department">Manage Facility</Link>
+                </li>
               </div>
             </details>
           </li>
           <li>
             <details class="mb-2">
-              <summary class="  p-3 rounded-lg cursor-pointer shadow">
-                <span class="font-semibold text-white">Nested Dropdown 3</span>
+              <summary class=" p-3 rounded-lg cursor-pointer shadow">
+                <span class="font-semibold text-white">Review</span>
               </summary>
-              <div class="  p-4">
-                <p class="text-white">Content for Nested Dropdown 3</p>
+              <div class="  p-1">
+                {/* <p class="text-white">Add Doctor</p> */}
+                <li><Link to="/dashboard/add-department">Add Review</Link></li>
+              </div>
+              <div class="  p-1">
+                <li>
+                  <Link to="/dashboard/manage-department">Manage Review</Link>
+                </li>
               </div>
             </details>
-          </li> */}
+          </li>
+          
         </ul>
       </div>
     </div>
