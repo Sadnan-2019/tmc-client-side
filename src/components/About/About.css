@@ -1,0 +1,8 @@
+.about{
+    background-image:linear-gradient(
+        to left,
+        rgba(1, 4, 15, 0.555),
+        rgba(43, 40, 40, 0.396)
+      ), url('../../assets/images/aboutlanding2.jpg');
+
+}

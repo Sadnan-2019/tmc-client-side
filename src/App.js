@@ -25,6 +25,7 @@ import ManageDepartment from "./components/Dashboard/ManageDepartment";
 import AllDoctor from "./components/AllDoctor/AllDoctor";
 import Footer from "./components/Shared/Footer/Footer";
 import HealthCheckup from "./components/HealthCheckup/HealthCheckup";
+import About from "./components/About/About";
  
  
 function App() {
@@ -57,6 +58,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/our-doctors" element={<AllDoctor/>}></Route>
         <Route path="/health-checkup" element={<HealthCheckup/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
         <Route
           path="/appoinment"
           element={

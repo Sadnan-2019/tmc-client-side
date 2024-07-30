@@ -10,9 +10,9 @@ const AllDoctor = () => {
  
       >
         <div className="absolute inset-0   "></div>
-        <div className="relative flex justify-end items-center h-full p-6">
+        <div className="relative flex justify-start items-center h-full p-6">
           <div className=" p-4 rounded">
-            <h1 className="text-3xl text-white font-bold">OUR DOCTORS</h1>
+            <h1 className="text-5xl text-white font-bold">OUR DOCTORS</h1>
             {/* <p className="mt-2">Your banner description goes here.</p> */}
           </div>
         </div>
