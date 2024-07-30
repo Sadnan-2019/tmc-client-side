@@ -6,7 +6,7 @@ const AllDoctor = () => {
   return (
     <div>
       <div
-        className="relative  w-full h-64 bg-cover bg-center doctor-landind "
+        className="relative  w-full h-screen bg-cover bg-center doctor-landind "
  
       >
         <div className="absolute inset-0   "></div>

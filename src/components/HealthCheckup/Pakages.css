@@ -1,0 +1,17 @@
+.pakages {
+  background-image: linear-gradient(
+      to left,
+      rgba(2, 1, 9, 0.01),
+      rgba(14, 0, 0, 0.9)
+    ),
+    url("../../assets/images/healthcheckupbanner2.jpg");
+
+  height: auto;
+  width: 100%;
+
+  background-size: cover;
+
+  background-size: 100% 100%;
+
+  background-repeat: no-repeat;
+}

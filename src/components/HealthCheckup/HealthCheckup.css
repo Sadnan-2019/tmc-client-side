@@ -1,8 +1,8 @@
-.health-checkup{
-    
-    background-image:linear-gradient(
-        to left,
-        rgba(1, 4, 15, 0.555),
-        rgba(43, 40, 40, 0.396)), 
-        url('../../assets/images/healthcheckupbanner.jpg');
+.health-checkup {
+  background-image: linear-gradient(
+      to left,
+      rgba(1, 4, 15, 0.555),
+      rgba(43, 40, 40, 0.396)
+    ),
+    url("../../assets/images/healthcheckupbanner.jpg");
 }

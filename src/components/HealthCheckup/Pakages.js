@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./Pakages.css"
 const Pakages = () => {
   return (
-    <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]">
+    <div className="pakages ">
       <h1 className="text-3xl text-white font-bold text-center py-5">
         All Packages
       </h1>
@@ -48,7 +48,7 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
@@ -63,7 +63,7 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
@@ -77,7 +77,7 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
@@ -91,7 +91,7 @@ const Pakages = () => {
               1000TK
               </td>
               <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button></td>
           </tr>
@@ -104,7 +104,7 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
@@ -118,7 +118,7 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
@@ -131,7 +131,7 @@ const Pakages = () => {
               1000TK
               </td>
               <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button></td>
           </tr>
@@ -145,7 +145,7 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
@@ -159,11 +159,14 @@ const Pakages = () => {
               1000TK
             </td>
             <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">
+              <button class="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white font-bold py-1 px-2 border border-blue-500 rounded">
                 VIEW DETAILS
               </button>
             </td>
           </tr>
+
+
+          
         </tbody>
       </table>
     </div>

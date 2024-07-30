@@ -1,4 +1,8 @@
 .doctor-landind {
-    background-image: url('../../assets/images/doctorbanner2.jpg');
+    background-image:linear-gradient(
+        to left,
+        rgba(1, 4, 15, 0.555),
+        rgba(43, 40, 40, 0.396)
+      ), url('../../assets/images/healthcheckupbanner2.jpg');
 
 }
