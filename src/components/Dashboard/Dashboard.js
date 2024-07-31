@@ -60,6 +60,22 @@ const Dashboard = () => {
           <li>
             <details class="mb-2">
               <summary class=" p-3 rounded-lg cursor-pointer shadow">
+                <span class="font-semibold text-white">Health Package </span>
+              </summary>
+              <div class="  p-1">
+                {/* <p class="text-white">Add Doctor</p> */}
+                <li><Link to="/dashboard/add-department">Add Package  </Link></li>
+              </div>
+              <div class="  p-1">
+                <li>
+                  <Link to="/dashboard/manage-department">Manage Package</Link>
+                </li>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="mb-2">
+              <summary class=" p-3 rounded-lg cursor-pointer shadow">
                 <span class="font-semibold text-white">Facility</span>
               </summary>
               <div class="  p-1">
