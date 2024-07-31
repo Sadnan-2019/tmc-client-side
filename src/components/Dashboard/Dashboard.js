@@ -64,11 +64,11 @@ const Dashboard = () => {
               </summary>
               <div class="  p-1">
                 {/* <p class="text-white">Add Doctor</p> */}
-                <li><Link to="/dashboard/add-department">Add Package  </Link></li>
+                <li><Link to="/dashboard/add-package">Add Package  </Link></li>
               </div>
               <div class="  p-1">
                 <li>
-                  <Link to="/dashboard/manage-department">Manage Package</Link>
+                  <Link to="/dashboard/manage-package">Manage Package</Link>
                 </li>
               </div>
             </details>

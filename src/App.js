@@ -26,6 +26,7 @@ import AllDoctor from "./components/AllDoctor/AllDoctor";
 import Footer from "./components/Shared/Footer/Footer";
 import HealthCheckup from "./components/HealthCheckup/HealthCheckup";
 import About from "./components/About/About";
+import AddPackage from "./components/Dashboard/AddPackage";
  
  
 function App() {
@@ -80,6 +81,7 @@ function App() {
           <Route path="manage-doctor" element={<ManageDoctor></ManageDoctor>}></Route>
           <Route path="add-department" element={<AddDepartment></AddDepartment>}></Route>
           <Route path="manage-department" element={<ManageDepartment></ManageDepartment>}></Route>
+          <Route path="add-package" element={<AddPackage></AddPackage>}></Route>
         </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>
