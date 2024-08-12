@@ -156,7 +156,7 @@ const Banner = () => {
                     >
                       <span className="text-sm font-medium">
                         {" "}
-                        GET STARTED WITH US
+                        BOOKED YOUR DOCTOR
                       </span>
                       <BsArrowRight className="text-lg hidden lg:ml-2" />
                     </a>
@@ -213,7 +213,7 @@ const Banner = () => {
                     >
                       <span className="text-sm font-medium">
                         {" "}
-                        GET STARTED WITH US
+                        BOOKED YOUR DOCTOR
                       </span>
                       <BsArrowRight className="text-lg hidden lg:ml-2" />
                     </a>
