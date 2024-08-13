@@ -27,6 +27,8 @@ import Footer from "./components/Shared/Footer/Footer";
 import HealthCheckup from "./components/HealthCheckup/HealthCheckup";
 import About from "./components/About/About";
 import AddPackage from "./components/Dashboard/AddPackage";
+import ManagePackage from "./components/Dashboard/ManagePackage";
+import AddFacility from "./components/Dashboard/AddFacility";
  
  
 function App() {
@@ -82,6 +84,8 @@ function App() {
           <Route path="add-department" element={<AddDepartment></AddDepartment>}></Route>
           <Route path="manage-department" element={<ManageDepartment></ManageDepartment>}></Route>
           <Route path="add-package" element={<AddPackage></AddPackage>}></Route>
+          <Route path="manage-package" element={<ManagePackage/>}></Route>
+          <Route path="add-facility" element={<AddFacility/>}></Route>
         </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>

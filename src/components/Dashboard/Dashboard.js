@@ -80,7 +80,7 @@ const Dashboard = () => {
               </summary>
               <div class="  p-1">
                 {/* <p class="text-white">Add Doctor</p> */}
-                <li><Link to="/dashboard/add-department">Add Facility</Link></li>
+                <li><Link to="/dashboard/add-facility">Add Facility</Link></li>
               </div>
               <div class="  p-1">
                 <li>
