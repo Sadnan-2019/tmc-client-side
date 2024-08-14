@@ -59,7 +59,7 @@ const ManageDoctor = () => {
                 <td>
                   <img
                     class="object-cover object-center h-12 rounded-full w-12"
-                    src={doctor.image}
+                    src={doctor.imageUrl}
                     alt="Woman looking front"
                   />
                 </td>

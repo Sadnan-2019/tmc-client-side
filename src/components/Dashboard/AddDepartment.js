@@ -7,6 +7,8 @@ const AddDepartment = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
+
+  
   const onSubmit = async (data) => {
     try {
       const formData = new FormData();
