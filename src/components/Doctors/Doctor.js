@@ -1,7 +1,7 @@
 import React from "react";
 import whatsapp from "../../assets/images/whatsapp.png";
 const Doctor = ({ doctor }) => {
-  const { name, speciality, image } = doctor;
+  const { name, speciality, imageUrl } = doctor;
   return (
     <div>
       <section className="" data-scroll-section>
@@ -10,7 +10,7 @@ const Doctor = ({ doctor }) => {
           <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
             <img
               class="object-cover object-center h-32"
-              src={image}
+              src={imageUrl}
               alt="Woman looking front"
             />
           </div>
