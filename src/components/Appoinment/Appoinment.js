@@ -11,7 +11,7 @@ const Appoinment = () => {
 
               <AppoinmentBanner date={date} setDate={setDate}></AppoinmentBanner>
               <AvailableAppoinment date={date} ></AvailableAppoinment>
-               <Footer></Footer>
+               {/* <Footer></Footer> */}
           </div>
      );
 };
