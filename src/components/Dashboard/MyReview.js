@@ -6,24 +6,12 @@ const MyReview = () => {
   const {
     register,
     formState: { errors },
-    handleSubmit,
+    handleSubmit,reset
   } = useForm();
 
 
   const onSubmit = async (data) => {
-    // const url = `http://localhost:5000/doctors`;
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((res) => res.json())
-    //   .then((doctorsData) => {
-    //     console.log(doctorsData);
-    //   });
-    // console.log(data);
+
 
     try {
       const formData = new FormData();
@@ -34,7 +22,12 @@ const MyReview = () => {
       const response = await fetch("http://localhost:5000/doctors", {
         method: "POST",
         body: formData,
+
+
       });
+      if (response.ok) {
+        reset();
+      }
 
       const responseData = await response.json();
       console.log(responseData, formData);
@@ -76,7 +69,7 @@ const MyReview = () => {
             <label className="label">
               <span className="label-text text-white">Speciality</span>
             </label>
-            <input
+            <textarea
               {...register("speciality", {
                 required: {
                   value: true,
@@ -86,7 +79,7 @@ const MyReview = () => {
               type="text"
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black "
-            />
+            ></textarea>
             <label className="label">
               {errors.speciality?.type === "required" && (
                 <span className="label-text-alt text-red-500" role="alert">
@@ -112,7 +105,7 @@ const MyReview = () => {
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black"
             />
-              
+
             <label className="label">
               {errors.file?.type === "required" && (
                 <span className="label-text-alt text-red-500" role="alert">

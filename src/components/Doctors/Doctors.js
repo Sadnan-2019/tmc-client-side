@@ -27,7 +27,7 @@ const Doctors = () => {
       >
         Our Doctors
       </h2>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 justify-center items-center mx-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-center gap-5 mt-5 items-center mx-5">
         {doctors.map((doctor) => (
           <Doctor key={doctor.id} doctor={doctor}></Doctor>
         ))}
