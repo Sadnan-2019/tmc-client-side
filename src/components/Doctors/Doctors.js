@@ -3,8 +3,16 @@ import React, { useEffect, useRef, useState } from "react";
 
 import "./Doctors.css";
 import Doctor from "./Doctor";
+import { useNavigate } from "react-router-dom";
 const Doctors = () => {
   const [doctors, setServices] = useState([]);
+ 
+  const datas =doctors.slice(0,3);
+  let navigate = useNavigate();
+  const allDoctor = () => {
+    const path = `/allproduct`;
+    navigate(path);
+  };
 
   useEffect(() => {
     fetch(`http://localhost:5000/all-doctors`)
@@ -28,10 +36,24 @@ const Doctors = () => {
         Our Doctors
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-center gap-5 mt-5 items-center mx-5">
-        {doctors.map((doctor) => (
+        {datas.map((doctor) => (
           <Doctor key={doctor.id} doctor={doctor}></Doctor>
         ))}
       </div>
+
+
+      <div className=" px-5  py-5 flex justify-center">
+       
+            <button
+              htmlFor="my-modal-6"
+              className="btn btn-md modal-button   text-[white] bg-gradient-to-r from-[#303640] to-[#103264]   animate-pulse    "
+              style={{ backgroundColor: "#453364" }}
+              onClick={allDoctor}
+            >
+              More Doctor
+            </button>
+          
+        </div>
     </div>
   );
 };

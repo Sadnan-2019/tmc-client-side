@@ -4,7 +4,7 @@ const Doctor = ({ doctor }) => {
   const { name, speciality, imageUrl } = doctor;
   return (
     <div>
-      <section className=" "  >
+      <section className="   "  >
         <div class="team  h-96    ">
           {/* <div class="  h-32 w-96 overflow-hidden"></div> */}
           <div class="mx-auto w-32 h-32   border-4 border-white rounded-full overflow-hidden">
@@ -18,8 +18,8 @@ const Doctor = ({ doctor }) => {
             <h2 class="font-semibold text-white ">{name}</h2>
             <p class="text-white">{speciality}</p>
           </div>
-          
-          <div class=" rounded-full  border-t  mt-2 bg-gray-900 flex justify-center items-center">
+
+          <div class="    rounded-full  border-t  mt-10 bg-gray-900 flex justify-center items-center">
             <a
               href="https://wa.me/+8801619848555"
               title="WHATSAPP CHAT"
@@ -30,7 +30,14 @@ const Doctor = ({ doctor }) => {
             <img alt="" src={whatsapp} className="w-5" />
           </div>
         </div>
+
+
       </section>
+
+ 
+       
+
+
     </div>
   );
 };
