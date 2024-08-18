@@ -25,7 +25,7 @@ const AllDoctorList = ({ doctor }) => {
     <div className="absolute bottom-0 left-0 right-0 bg-gray-900 py-1">
       <div className="flex justify-center items-center">
         <a
-          href="https://wa.me/+8801619848555"
+          href="https://wa.me/+8801774966666"
           title="WHATSAPP CHAT"
           className="rounded-full hover:shadow-lg font-semibold text-white px-6 py-2"
         >

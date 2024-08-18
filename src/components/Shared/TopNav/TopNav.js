@@ -80,7 +80,7 @@ const TopNav = () => {
               <ul className="flex items-center font-bold    gap-2">
                 <li>
                   <a
-                    href="/"
+                    href="https://www.facebook.com/tmcdiagnostichospitaltr"
                     rel="noreferrer"
                     target="_blank"
                     class="text-white transition hover:opacity-75"

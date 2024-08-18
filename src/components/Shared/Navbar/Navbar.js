@@ -24,7 +24,7 @@ const Navbar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/our-doctors">Our Doctors</Link>
+        <Link to="/alldoctorlist">Our Doctors</Link>
       </li>
       {/* <li>
         {" "}

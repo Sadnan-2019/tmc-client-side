@@ -56,11 +56,15 @@ const Nav = () => {
               </div>
               <div>
                 <p className="text-[10px] lg:text-xs   	">
-                  <a href="tel:+01643-390832 " className="  	">
-                    01643-390832
+                  <a href="tel:+880 1774-966666 " className="  	">
+                  +880 1774-966666
                   </a>
                 </p>
-                <p className="text-[10px] lg:text-xs  	 	">01643-390832 </p>
+                <p className="text-[10px] lg:text-xs  	 	">
+                <a href="tel:+880 1774-955555 " className="  	">
+                +880 1774-955555
+                  </a>
+                   </p>
               </div>
             </div>
             <div
