@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AllDoctor.css"
-import Doctor from "../Doctors/Doctor";
+ 
 import Doctors from "../Doctors/Doctors";
+import AllDoctorList from "./AllDoctorList";
 const AllDoctor = () => {
+  const [doctors, setServices] = useState([]);
+
+ 
+  // let navigate = useNavigate();
+  // const allDoctor = () => {
+  //   const path = `/allproduct`;
+  //   navigate(path);
+  // };
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/all-doctors`)
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+
+
   return (
     <div>
       <div
@@ -18,7 +35,29 @@ const AllDoctor = () => {
         </div>
       </div>
 
-      <Doctors></Doctors>
+      <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]">
+      {/* Add your sections or divs here */}
+      <h2
+        class="font-bold text-3xl leading-[1.1] sm:text-3xl py-2 md:text-6xl text-center text-white"
+      // data-aos="fade-up"
+      // data-aos-offset="200"
+      // data-aos-delay="50"
+      // data-aos-duration="1000"
+      // data-aos-easing="ease-in-out"
+      // data-aos-mirror="true"
+      // data-aos-once="false"
+      >
+        Our Doctors
+      </h2>
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-center gap-5 mt-5 items-center mx-5">
+        {doctors.map((doctor) => (
+          <AllDoctorList key={doctor.id} doctor={doctor}></AllDoctorList>
+        ))}
+      </div>
+
+
+       
+    </div>
     </div>
   );
 };

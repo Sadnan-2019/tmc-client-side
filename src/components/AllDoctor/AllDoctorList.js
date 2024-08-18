@@ -1,13 +1,10 @@
-import React from "react";
+import React from 'react';
 import whatsapp from "../../assets/images/whatsapp.png";
-const Doctor = ({ doctor }) => {
-  const { name, speciality, imageUrl } = doctor;
-  return (
-    <div>
-      
-
-
-      <section className="relative">
+const AllDoctorList = ({ doctor }) => {
+    const { name, speciality, imageUrl } = doctor;
+    return (
+        <div>
+               <section className="relative">
   <div className="team h-96 flex flex-col justify-between">
     {/* Image Section */}
     <div className="mx-auto w-32 h-32 border-4 border-white rounded-full overflow-hidden">
@@ -39,12 +36,8 @@ const Doctor = ({ doctor }) => {
     </div>
   </div>
 </section>
-
-
-
-
-    </div>
-  );
+        </div>
+    );
 };
 
-export default Doctor;
+export default AllDoctorList;
