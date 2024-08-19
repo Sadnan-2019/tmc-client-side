@@ -15,7 +15,7 @@ const AddPackage = () => {
           formData.append("package_rate", data.package_rate);
           formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
     
-          const response = await fetch("http://localhost:5000/department", {
+          const response = await fetch("http://localhost:5000/healthpackage", {
             method: "POST",
             body: formData,
           });

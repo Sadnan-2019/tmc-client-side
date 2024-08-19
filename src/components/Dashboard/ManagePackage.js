@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ManagePackage = () => {
-    const [doctors, setDoctors] = useState([]);
+    const [allpackages, setpackage] = useState([]);
     let i = 1;
     return (
         <div>
@@ -23,17 +23,17 @@ const ManagePackage = () => {
             </thead>
             <tbody className=" ">
               {/* row 1 */}
-              {doctors.map((doctor) => (
+              {allpackages.map((packages) => (
                 <tr>
                   <th>{i++}</th>
-                  <td>{doctor.dept_name}</td>
-                  <td>{doctor.description}</td>
+                  <td>{packages.package_name}</td>
+                  <td>{packages.package_rate}</td>
                   {/* <td>{doctor._id}</td> */}
 
                   <td>
                     <img
                       class="object-cover object-center h-12 rounded-full w-12"
-                      src={doctor.imageUrl}
+                      src={packages.imageUrl}
                       alt="Woman looking front"
                     />
                   </td>

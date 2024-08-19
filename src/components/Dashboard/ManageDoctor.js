@@ -66,15 +66,15 @@ const ManageDoctor = () => {
                 <td>
                   <button
                     onClick={() => handleDoctorDelete(doctor._id)}
-                    className="btn"
+                    className="btn btn-xs"
                   >
-                    Delete
+                    EDIT
                   </button>
                 </td>
                 <td>
                   <button
                     onClick={() => handleDoctorDelete(doctor._id)}
-                    className="btn"
+                    className="btn btn-xs"
                   >
                     Delete
                   </button>
