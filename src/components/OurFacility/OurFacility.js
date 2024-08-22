@@ -44,6 +44,11 @@ const OurFacility = () => {
                   <span class="absolute inset-0"></span>100 TAKA
                 </a>
               </h3>
+              <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                <a href="/tech-blog/post1">
+        <span class="absolute inset-0"></span>100 lorem50 TAKA 100        
+                </a>
+              </h3>
             </article>
             {/* <!-- Second blog post --> */}
             <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">

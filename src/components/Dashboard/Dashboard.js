@@ -96,7 +96,7 @@ const Dashboard = () => {
               </summary>
               <div class="  p-1">
                 {/* <p class="text-white">Add Doctor</p> */}
-                <li><Link to="/dashboard/add-department">Add Review</Link></li>
+                <li><Link to="/dashboard/add-review">Add Review</Link></li>
               </div>
               <div class="  p-1">
                 <li>

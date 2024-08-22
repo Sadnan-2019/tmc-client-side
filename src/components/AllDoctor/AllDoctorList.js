@@ -16,7 +16,7 @@ const AllDoctorList = ({ doctor }) => {
     </div>
 
     {/* Text Section */}
-    <div className="text-center mt-2 flex-grow">
+    <div className="text-center mt-2 flex-grow      " >
       <h2 className="font-semibold text-white">{name}</h2>
       <p className="text-white">{speciality}</p>
     </div>

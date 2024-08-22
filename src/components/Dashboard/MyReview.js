@@ -92,7 +92,7 @@ const MyReview = () => {
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
-              <span className="label-text text-white">Image Url</span>
+              <span className="label-text text-white">Image Upload</span>
             </label>
             <input
               {...register("file", {

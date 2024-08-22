@@ -10,11 +10,11 @@ const AddFacility = () => {
       const onSubmit = async (data) => {
         try {
           const formData = new FormData();
-          formData.append("package_name", data.package_name);
+          formData.append("facility_name", data.package_name);
           formData.append("package_rate", data.package_rate);
           formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
     
-          const response = await fetch("http://localhost:5000/department", {
+          const response = await fetch("http://localhost:5000/facility", {
             method: "POST",
             body: formData,
           });
