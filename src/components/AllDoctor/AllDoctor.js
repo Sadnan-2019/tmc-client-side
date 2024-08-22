@@ -54,7 +54,7 @@ const AllDoctor = () => {
                 class="mt-2  shadow-md focus:outline-none rounded-2xl py-3 px-6 block w-full "
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search"
+                placeholder="Search Your Department"
               />
 
 

@@ -1,13 +1,44 @@
 import React, { useEffect, useState } from 'react';
 
 const ManagePackage = () => {
-    const [allpackages, setpackage] = useState([]);
+    const [allpackages, setPackage] = useState([]);
     let i = 1;
     useEffect(() => {
       fetch(`http://localhost:5000/all-health-package`)
         .then((res) => res.json())
-        .then((data) => setpackage(data));
+        .then((data) => setPackage(data));
     }, []);
+
+    const handlePackageDelete = (_id) => {
+      const proceed = window.confirm("Are you sure want to delete");
+      if (proceed) {
+        console.log("deleteing user id ", _id);
+        const url = `http://localhost:5000/package/${_id}`;
+  
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              const remaining = allpackages.filter((packages) => packages._id !== _id);
+              setPackage(remaining);
+            }
+            console.log(data);
+          });
+      }
+    };
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div>
             <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
@@ -24,6 +55,7 @@ const ManagePackage = () => {
                 <th>Package Name</th>
                 <th>Package Rate</th>
                 <th>Photo</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody className=" ">
@@ -44,18 +76,18 @@ const ManagePackage = () => {
                   </td>
                   <td>
                     <button
-                    //   onClick={() => handleDoctorDelete(doctor._id)}
+                    //   onClick={() => handlePackageDelete(doctor._id)}
                       className="btn btn-xs"
                     >
-                      Delete
+                      EDIT
                     </button>
                   </td>
                   <td>
                     <button
-                    //   onClick={() => handleDoctorDelete(doctor._id)}
+                      onClick={() => handlePackageDelete(packages._id)}
                       className="btn btn-xs"
                     >
-                      Edit
+                    DELETE
                     </button>
                   </td>
                 </tr>
