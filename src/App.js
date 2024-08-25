@@ -30,6 +30,7 @@ import AddPackage from "./components/Dashboard/AddPackage";
 import ManagePackage from "./components/Dashboard/ManagePackage";
 import AddFacility from "./components/Dashboard/AddFacility";
 import AddReview from "./components/Dashboard/AddReview";
+import ManageReview from "./components/Dashboard/ManageReview";
  
  
 function App() {
@@ -89,6 +90,7 @@ function App() {
           <Route path="manage-package" element={<ManagePackage/>}></Route>
           <Route path="add-facility" element={<AddFacility/>}></Route>
           <Route path="add-review" element={<AddReview/>}></Route>
+          <Route path="manage-review" element={<ManageReview/>}></Route>
         </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>

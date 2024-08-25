@@ -100,7 +100,7 @@ const Dashboard = () => {
               </div>
               <div class="  p-1">
                 <li>
-                  <Link to="/dashboard/manage-department">Manage Review</Link>
+                  <Link to="/dashboard/manage-review">Manage Review</Link>
                 </li>
               </div>
             </details>

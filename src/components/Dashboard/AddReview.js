@@ -16,8 +16,8 @@ const AddReview = () => {
 
         try {
             const formData = new FormData();
-            formData.append("reviewer_name", data.name);
-            formData.append("review_details", data.speciality);
+            formData.append("reviewer_name", data.reviewer_name);
+            formData.append("review_details", data.review_details);
             formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
 
             const response = await fetch("http://localhost:5000/review", {
