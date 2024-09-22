@@ -1,11 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const AddDepartment = () => {
   const {
     register,
     formState: { errors },
-    handleSubmit,
+    handleSubmit,reset
   } = useForm();
 
   
@@ -20,6 +21,10 @@ const AddDepartment = () => {
         method: "POST",
         body: formData,
       });
+      if (response.ok) {
+        reset();
+        toast("SAVE SUCCESSFULLY");
+      }
 
       const responseData = await response.json();
       console.log(responseData, formData);

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const MyReview = () => {
   const {
@@ -8,6 +9,8 @@ const MyReview = () => {
     formState: { errors },
     handleSubmit,reset
   } = useForm();
+
+
 
 
   const onSubmit = async (data) => {
@@ -27,6 +30,7 @@ const MyReview = () => {
       });
       if (response.ok) {
         reset();
+        toast("SAVE SUCCESSFULLY");
       }
 
       const responseData = await response.json();
