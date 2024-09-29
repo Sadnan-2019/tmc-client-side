@@ -8,8 +8,8 @@ const ManageDoctor = () => {
     fetch(`http://localhost:5000/all-doctors`)
       .then((res) => res.json())
       .then((data) => setDoctors(data));
+      
   }, []);
-
 
   const [activePage, setActivePage] = useState(1);
   const itemsCountPerPage = 5;
@@ -23,20 +23,6 @@ const ManageDoctor = () => {
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   const handleDoctorDelete = (_id) => {
     const proceed = window.confirm("Are you sure want to delete");
@@ -75,7 +61,7 @@ const ManageDoctor = () => {
           <tbody className=" ">
             {/* row 1 */}
             {currentItems.map((doctor) => (
-              <tr>
+              <tr key={doctor.id}>
                 <th>{i++}</th>
                 <td>{doctor.name}</td>
                 <td>{doctor.speciality}</td>
@@ -113,16 +99,17 @@ const ManageDoctor = () => {
         </table>
 
         <div className="pagination-container">
-        <Pagination className="pagination"
-          activePage={activePage}
-          itemsCountPerPage={itemsCountPerPage}
-          totalItemsCount={doctors.length}
-          pageRangeDisplayed={5}
-          onChange={handlePageChange}
-          itemClass="page-item"
-          linkClass="page-link"
-        />
-      </div>
+          <Pagination
+            className="pagination"
+            activePage={activePage}
+            itemsCountPerPage={itemsCountPerPage}
+            totalItemsCount={doctors.length}
+            pageRangeDisplayed={5}
+            onChange={handlePageChange}
+            itemClass="page-item"
+            linkClass="page-link"
+          />
+        </div>
       </div>
     </div>
   );
