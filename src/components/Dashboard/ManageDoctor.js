@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Pagination from "react-js-pagination";
 
 const ManageDoctor = () => {
   const [doctors, setDoctors] = useState([]);
@@ -8,6 +9,34 @@ const ManageDoctor = () => {
       .then((res) => res.json())
       .then((data) => setDoctors(data));
   }, []);
+
+
+  const [activePage, setActivePage] = useState(1);
+  const itemsCountPerPage = 5;
+
+  // Get the current items for the active page
+  const indexOfLastItem = activePage * itemsCountPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage;
+  const currentItems = doctors.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Function to handle page change
+  const handlePageChange = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   const handleDoctorDelete = (_id) => {
     const proceed = window.confirm("Are you sure want to delete");
@@ -20,12 +49,9 @@ const ManageDoctor = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-
-          if(data.deletedCount>0){
-            const remaining = doctors.filter(doctor=> doctor._id !==_id);
-            setDoctors(remaining)
-
-
+          if (data.deletedCount > 0) {
+            const remaining = doctors.filter((doctor) => doctor._id !== _id);
+            setDoctors(remaining);
           }
           console.log(data);
         });
@@ -44,12 +70,11 @@ const ManageDoctor = () => {
               <th>Doctor Name</th>
               <th>Department</th>
               <th>Photo</th>
-              
             </tr>
           </thead>
           <tbody className=" ">
             {/* row 1 */}
-            {doctors.map((doctor)  => (
+            {currentItems.map((doctor) => (
               <tr>
                 <th>{i++}</th>
                 <td>{doctor.name}</td>
@@ -86,6 +111,18 @@ const ManageDoctor = () => {
             {/* row 3 */}
           </tbody>
         </table>
+
+        <div className="pagination-container">
+        <Pagination className="pagination"
+          activePage={activePage}
+          itemsCountPerPage={itemsCountPerPage}
+          totalItemsCount={doctors.length}
+          pageRangeDisplayed={5}
+          onChange={handlePageChange}
+          itemClass="page-item"
+          linkClass="page-link"
+        />
+      </div>
       </div>
     </div>
   );

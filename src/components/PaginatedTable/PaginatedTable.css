@@ -1,0 +1,45 @@
+/* Pagination styles using Flexbox */
+.pagination-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+     
+  }
+  
+  .page-item {
+    margin: 0 5px;
+    display: flex;
+  }
+  .pagination{
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .page-link {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-link:hover {
+    background-color: #0056b3;
+  }
+  
+  .active .page-link {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .page-link[aria-disabled="true"] {
+    background-color: #6c757d;
+    pointer-events: none;
+  }
+  
