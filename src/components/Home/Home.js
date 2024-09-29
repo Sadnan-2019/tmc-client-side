@@ -11,6 +11,7 @@ import ScrollSmoother from "../ScrollSmoother/ScrollSmoother";
 import OurFacility from "../OurFacility/OurFacility";
 import Equipment from "../Equipment/Equipment";
 import Contact from "../Contact/Contact";
+import PaginatedTable from "../PaginatedTable/PaginatedTable";
 
 // import New from '../New/New';
 
@@ -20,6 +21,7 @@ const Home = () => {
       {/* <h2>This is home</h2>  */}
 
       <Banner className=""></Banner>
+      <PaginatedTable></PaginatedTable>
       {/* <Info></Info> */}
       <Services></Services>
       <Doctors></Doctors>
