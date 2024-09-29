@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Pagination from 'react-js-pagination';
 import "./PaginatedTable.css"
 const PaginatedTable = () => {
-    const [doctors, setDoctors] = useState([]);
-    // const data = Array.from({ length: 100 }, (_, i) => ({
-    //     id: i + 1,
-    //     name: `Name ${i + 1}`,
-    //     email: `user${i + 1}@example.com`,
-    //     phone: `+1234567890${i + 1}`,
-    //   }));
 
-      let i = 1;
-      useEffect(() => {
-        fetch(`http://localhost:5000/all-doctors`)
-          .then((res) => res.json())
-          .then((data) => setDoctors(data));
-      }, []);
+    const data = Array.from({ length: 100 }, (_, i) => ({
+        id: i + 1,
+        name: `Name ${i + 1}`,
+        email: `user${i + 1}@example.com`,
+        phone: `+1234567890${i + 1}`,
+      }));
+
+      
 
        // State for active page and items per page
   const [activePage, setActivePage] = useState(1);
@@ -24,7 +19,7 @@ const PaginatedTable = () => {
   // Get the current items for the active page
   const indexOfLastItem = activePage * itemsCountPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsCountPerPage;
-  const currentItems = doctors.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
   // Function to handle page change
   const handlePageChange = (pageNumber) => {
@@ -62,7 +57,7 @@ const PaginatedTable = () => {
         <Pagination className="pagination"
           activePage={activePage}
           itemsCountPerPage={itemsCountPerPage}
-          totalItemsCount={doctors.length}
+          totalItemsCount={data.length}
           pageRangeDisplayed={5}
           onChange={handlePageChange}
           itemClass="page-item"
