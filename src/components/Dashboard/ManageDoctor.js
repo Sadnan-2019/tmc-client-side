@@ -12,7 +12,7 @@ const ManageDoctor = () => {
   }, []);
 
   const [activePage, setActivePage] = useState(1);
-  const itemsCountPerPage = 5;
+  const itemsCountPerPage = 7;
 
   // Get the current items for the active page
   const indexOfLastItem = activePage * itemsCountPerPage;
@@ -63,6 +63,7 @@ const ManageDoctor = () => {
             {currentItems.map((doctor) => (
               <tr key={doctor.id}>
                 <th>{i++}</th>
+                
                 <td>{doctor.name}</td>
                 <td>{doctor.speciality}</td>
                 {/* <td>{doctor._id}</td> */}
@@ -104,7 +105,7 @@ const ManageDoctor = () => {
             activePage={activePage}
             itemsCountPerPage={itemsCountPerPage}
             totalItemsCount={doctors.length}
-            pageRangeDisplayed={5}
+            // pageRangeDisplayed={7}
             onChange={handlePageChange}
             itemClass="page-item"
             linkClass="page-link"

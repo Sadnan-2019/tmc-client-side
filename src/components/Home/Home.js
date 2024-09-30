@@ -21,7 +21,7 @@ const Home = () => {
       {/* <h2>This is home</h2>  */}
 
       <Banner className=""></Banner>
-      <PaginatedTable></PaginatedTable>
+      {/* <PaginatedTable></PaginatedTable> */}
       {/* <Info></Info> */}
       <Services></Services>
       <Doctors></Doctors>
