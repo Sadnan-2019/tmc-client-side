@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Pagination from "react-js-pagination";
 
 const ManageDepartment = () => {
   const [doctors, setDoctors] = useState([]);
@@ -9,6 +10,19 @@ const ManageDepartment = () => {
       .then((data) => setDoctors(data));
   }, []);
 
+
+  const [activePage, setActivePage] = useState(1);
+  const itemsCountPerPage = 7;
+
+  // Get the current items for the active page
+  const indexOfLastItem = activePage * itemsCountPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage ;
+  const currentItems = doctors.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Function to handle page change
+  const handlePageChange = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
   const handleDoctorDelete = (_id) => {
     const proceed = window.confirm("Are you sure want to delete");
     if (proceed) {
@@ -49,7 +63,7 @@ const ManageDepartment = () => {
             </thead>
             <tbody className=" ">
               {/* row 1 */}
-              {doctors.map((doctor) => (
+              {currentItems.map((doctor) => (
                 <tr>
                   <th>{i++}</th>
                   <td>{doctor.dept_name}</td>
@@ -86,6 +100,18 @@ const ManageDepartment = () => {
               {/* row 3 */}
             </tbody>
           </table>
+          <div className="pagination-container">
+          <Pagination
+            className="pagination"
+            activePage={activePage}
+            itemsCountPerPage={itemsCountPerPage}
+            totalItemsCount={doctors.length}
+            // pageRangeDisplayed={7}
+            onChange={handlePageChange}
+            itemClass="page-item"
+            linkClass="page-link"
+          />
+        </div>
         </div>
       </div>
     </div>

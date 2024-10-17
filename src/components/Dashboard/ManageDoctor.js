@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "react-js-pagination";
+import { Link } from "react-router-dom";
 
 const ManageDoctor = () => {
   const [doctors, setDoctors] = useState([]);
@@ -16,7 +17,7 @@ const ManageDoctor = () => {
 
   // Get the current items for the active page
   const indexOfLastItem = activePage * itemsCountPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage ;
   const currentItems = doctors.slice(indexOfFirstItem, indexOfLastItem);
 
   // Function to handle page change
@@ -43,6 +44,13 @@ const ManageDoctor = () => {
         });
     }
   };
+  const handleDoctorUpdate = (_id)=>{
+    const url = `http://localhost:5000/update_doctor/${_id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+    console.log("updating user id ", _id);
+  }
 
   return (
     <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
@@ -60,32 +68,37 @@ const ManageDoctor = () => {
           </thead>
           <tbody className=" ">
             {/* row 1 */}
-            {currentItems.map((doctor) => (
-              <tr key={doctor.id}>
+            {currentItems.map((doctors) => (
+              <tr key={doctors.id}>
                 <th>{i++}</th>
                 
-                <td>{doctor.name}</td>
-                <td>{doctor.speciality}</td>
+                <td>{doctors.name}</td>
+                <td>{doctors.speciality}</td>
                 {/* <td>{doctor._id}</td> */}
 
                 <td>
                   <img
                     class="object-cover object-center h-12 rounded-full w-12"
-                    src={doctor.imageUrl}
+                    src={doctors.imageUrl}
                     alt="Woman looking front"
                   />
                 </td>
                 <td>
-                  <button
-                    onClick={() => handleDoctorDelete(doctor._id)}
+                  
+                  <Link to={`/update/${doctors._id}`}>
+
+              {/* <button>Update</button> */}
+              <button
+                    // onClick={() => handleDoctorUpdate(doctors._id)}
                     className="btn btn-xs"
-                  >
+                  > 
                     EDIT
                   </button>
+            </Link>
                 </td>
                 <td>
                   <button
-                    onClick={() => handleDoctorDelete(doctor._id)}
+                    onClick={() => handleDoctorDelete(doctors._id)}
                     className="btn btn-xs"
                   >
                     Delete
