@@ -65,7 +65,7 @@ const UpdateDoctor = () => {
               <span className="label-text text-white">Name</span>
             </label>
             <input
-              value={detailsDoctors?.name}
+              defaultValue={detailsDoctors?.name}
               type="text"
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black"
@@ -92,7 +92,8 @@ const UpdateDoctor = () => {
                 },
               })}
               type="text"
-              value={detailsDoctors?.speciality}
+              defaultValue={detailsDoctors?.speciality}
+            //   devalue={}
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs text-black "
             ></textarea>
