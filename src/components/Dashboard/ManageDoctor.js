@@ -44,13 +44,13 @@ const ManageDoctor = () => {
         });
     }
   };
-  const handleDoctorUpdate = (_id)=>{
-    const url = `http://localhost:5000/update_doctor/${_id}`;
-    fetch(url, {
-      method: "DELETE",
-    })
-    console.log("updating user id ", _id);
-  }
+  // const handleDoctorUpdate = (_id)=>{
+  //   const url = `http://localhost:5000/update_doctor/${_id}`;
+  //   fetch(url, {
+  //     method: "DELETE",
+  //   })
+  //   console.log("updating user id ", _id);
+  // }
 
   return (
     <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
@@ -69,7 +69,7 @@ const ManageDoctor = () => {
           <tbody className=" ">
             {/* row 1 */}
             {currentItems.map((doctors) => (
-              <tr key={doctors.id}>
+              <tr key={doctors._id}>
                 <th>{i++}</th>
                 
                 <td>{doctors.name}</td>
@@ -85,7 +85,7 @@ const ManageDoctor = () => {
                 </td>
                 <td>
                   
-                  <Link to={`/update/${doctors._id}`}>
+                  <Link to={`update/${doctors._id}`}>
 
               {/* <button>Update</button> */}
               <button
