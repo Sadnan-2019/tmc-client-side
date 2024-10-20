@@ -1,7 +1,7 @@
 import React from "react";
 import onehundred from "../../assets/images/100tk.jpg";
 import diabetices from "../../assets/images/freediametices.jpg";
-import pragnet from "../../assets/images/pragnetsurgery.jpg";
+import medical from "../../assets/images/freemedicalcamp.jpeg";
 const OurFacility = () => {
   return (
     <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white ">
@@ -69,7 +69,7 @@ const OurFacility = () => {
             {/* <!-- Third blog post --> */}
             <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
               <img
-                src={onehundred}
+                src={medical}
                 alt=""
                 class="absolute inset-0 -z-10 h-full w-full object-cover"
               />
