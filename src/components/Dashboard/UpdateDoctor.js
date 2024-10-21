@@ -44,10 +44,14 @@ const UpdateDoctor = ( ) => {
       const formData = new FormData();
       formData.append("name", data.name);
       formData.append("speciality", data.speciality);
-      formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
-
-      const response = await fetch("http://localhost:5000/doctors", {
-        method: "POST",
+    //   formData.append("file", data.file[0]); 
+      // Assuming "file" is the name of the file input
+// Only append file if a new image is selected
+if (data.file && data.file[0]) {
+    formData.append("file", data.file[0]);
+  }
+      const response = await fetch(`http://localhost:5000/update-doctors/${doctorId}`, {
+        method: "PATCH",
         body: formData,
       });
       if (response.ok) {
@@ -74,7 +78,13 @@ const UpdateDoctor = ( ) => {
                 <span className="label-text text-white">Name</span>
               </label>
               <input
+              {...register("name", {
+                required: {
+                  message: "name is requried",
+                },
+              })}
                 defaultValue={detailsDoctors?.name}
+                // {...register("name", { required: "Name is required" })}
                 type="text"
                 placeholder="Type here"
                 className="input input-bordered w-full max-w-xs text-black"
@@ -128,12 +138,18 @@ const UpdateDoctor = ( ) => {
                 <span className="label-text text-white">Image Upload</span>
               </label>
               <input
+                // {...register("file", {
+                //   required: {
+                //     value: true,
+                //     message: "Image is requried",
+                //   },
+                // })}
                 {...register("file", {
-                  required: {
-                    value: true,
-                    message: "Image is requried",
-                  },
-                })}
+                    validate: (value) =>
+                      value.length > 0 || detailsDoctors?.imageUrl
+                        ? true
+                        : "Image is required",
+                  })}
                 type="file"
                 onChange={handleImageChange} 
                 placeholder="Type here"
