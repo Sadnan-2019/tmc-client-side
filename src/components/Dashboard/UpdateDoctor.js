@@ -56,7 +56,7 @@ if (data.file && data.file[0]) {
       });
       if (response.ok) {
         reset();
-        toast("SAVE SUCCESSFULLY");
+        toast("UPDATE  SUCCESSFULLY");
       }
 
       const responseData = await response.json();

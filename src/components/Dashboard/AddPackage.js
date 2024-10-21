@@ -17,6 +17,11 @@ const AddPackage = () => {
     
           const response = await fetch("http://localhost:5000/healthpackage", {
             method: "POST",
+            headers: {
+              "content-type" : "application/json",
+              
+  
+            },
             body: formData,
           });
     
