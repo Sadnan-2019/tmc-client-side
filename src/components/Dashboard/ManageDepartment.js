@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "react-js-pagination";
+import { Link } from "react-router-dom";
 
 const ManageDepartment = () => {
-  const [doctors, setDoctors] = useState([]);
+  const [departments, setDepartments] = useState([]);
   let i = 1;
   useEffect(() => {
     fetch(`http://localhost:5000/all-department`)
       .then((res) => res.json())
-      .then((data) => setDoctors(data));
+      .then((data) => setDepartments(data));
   }, []);
-
 
   const [activePage, setActivePage] = useState(1);
   const itemsCountPerPage = 7;
 
   // Get the current items for the active page
   const indexOfLastItem = activePage * itemsCountPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage ;
-  const currentItems = doctors.slice(indexOfFirstItem, indexOfLastItem);
+  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage;
+  const currentItems = departments.slice(indexOfFirstItem, indexOfLastItem);
 
   // Function to handle page change
   const handlePageChange = (pageNumber) => {
@@ -35,8 +35,8 @@ const ManageDepartment = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            const remaining = doctors.filter((doctor) => doctor._id !== _id);
-            setDoctors(remaining);
+            const remaining = departments.filter((doctor) => doctor._id !== _id);
+            setDepartments(remaining);
           }
           console.log(data);
         });
@@ -63,34 +63,37 @@ const ManageDepartment = () => {
             </thead>
             <tbody className=" ">
               {/* row 1 */}
-              {currentItems.map((doctor) => (
+              {currentItems.map((departments) => (
                 <tr>
                   <th>{i++}</th>
-                  <td>{doctor.dept_name}</td>
-                  <td>{doctor.description}</td>
+                  <td>{departments.dept_name}</td>
+                  <td>{departments.description}</td>
                   {/* <td>{doctor._id}</td> */}
 
                   <td>
                     <img
                       class="object-cover object-center h-12 rounded-full w-12"
-                      src={doctor.imageUrl}
+                      src={departments.imageUrl}
                       alt="Woman looking front"
                     />
                   </td>
                   <td>
-                    <button
-                      onClick={() => handleDoctorDelete(doctor._id)}
-                      className="btn btn-xs"
-                    >
-                     EDIT
-                    </button>
+                    <Link to={`update-dept/${departments._id}`}>
+                      {/* <button>Update</button> */}
+                      <button
+                        // onClick={() => handleDoctorUpdate(departments._id)}
+                        className="btn btn-xs"
+                      >
+                        EDIT
+                      </button>
+                    </Link>
                   </td>
                   <td>
                     <button
-                      onClick={() => handleDoctorDelete(doctor._id)}
+                      onClick={() => handleDoctorDelete(departments._id)}
                       className="btn btn-xs"
                     >
-                     DELETE
+                      DELETE
                     </button>
                   </td>
                 </tr>
@@ -101,17 +104,17 @@ const ManageDepartment = () => {
             </tbody>
           </table>
           <div className="pagination-container">
-          <Pagination
-            className="pagination"
-            activePage={activePage}
-            itemsCountPerPage={itemsCountPerPage}
-            totalItemsCount={doctors.length}
-            // pageRangeDisplayed={7}
-            onChange={handlePageChange}
-            itemClass="page-item"
-            linkClass="page-link"
-          />
-        </div>
+            <Pagination
+              className="pagination"
+              activePage={activePage}
+              itemsCountPerPage={itemsCountPerPage}
+              totalItemsCount={departments.length}
+              // pageRangeDisplayed={7}
+              onChange={handlePageChange}
+              itemClass="page-item"
+              linkClass="page-link"
+            />
+          </div>
         </div>
       </div>
     </div>
