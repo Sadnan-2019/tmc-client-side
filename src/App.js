@@ -32,6 +32,7 @@ import AddFacility from "./components/Dashboard/AddFacility";
 import AddReview from "./components/Dashboard/AddReview";
 import ManageReview from "./components/Dashboard/ManageReview";
 import UpdateDoctor from "./components/Dashboard/UpdateDoctor";
+import UpdateDepartment from "./components/Dashboard/UpdateDepartment";
  
  
 function App() {
@@ -93,6 +94,7 @@ function App() {
           <Route path="add-review" element={<AddReview/>}></Route>
           <Route path="manage-review" element={<ManageReview/>}></Route>
           <Route path="manage-doctor/update/:doctorId" element={<UpdateDoctor />} />
+          <Route path="manage-department/update-dept/:deptId" element={<UpdateDepartment />} />
         </Route>
         {/* <Route path="/home" element={<Home />}></Route> */}
         <Route path="/login" element={<Login />}></Route>
