@@ -51,7 +51,7 @@ if (data.file && data.file[0]) {
     formData.append("file", data.file[0]);
   }
       const response = await fetch(`http://localhost:5000/update-doctors/${doctorId}`, {
-        method: "PATCH",
+        method: "PUT",
         body: formData,
       });
       if (response.ok) {
