@@ -1,30 +1,28 @@
+import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 const AddFacility = () => {
 
-    const {
-        register,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-      const onSubmit = async (data) => {
-        try {
-          const formData = new FormData();
-          formData.append("facility_name", data.package_name);
-          formData.append("package_rate", data.package_rate);
-          formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
-    
-          const response = await fetch("http://localhost:5000/facility", {
-            method: "POST",
-            body: formData,
-          });
-    
-          const responseData = await response.json();
-          console.log(responseData, formData);
-        } catch (error) {
-          console.error(error);
-        }
-      };
+  const { register, formState: { errors },handleSubmit, reset } = useForm();
+
+  // Handle form submission
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post('http://localhost:5000/facility', {
+        facility_name: data.facility_name,
+        // price: parseFloat(data.price),
+        facility_description: data.facility_description,
+      });
+      if (response.status === 201) {
+        alert("Book added successfully!");
+        reset();
+        console.log(response); // Reset form fields after successful submission
+      }
+    } catch (error) {
+      console.error("There was an error adding the book!", error);
+      alert("Failed to add book");
+    }
+  };
     return (
         <div>
               <div>
@@ -77,29 +75,7 @@ const AddFacility = () => {
                 )}
               </label>
             </div>
-            <div className="form-control w-full mx-auto max-w-xs">
-              <label className="label">
-                <span className="label-text text-white">Image Upload</span>
-              </label>
-              <input
-                {...register("file", {
-                  required: {
-                    value: true,
-                    message: "Image is requried",
-                  },
-                })}
-                type="file"
-                placeholder="Type here"
-                className="input input-bordered w-full max-w-xs text-black"
-              />
-              <label className="label">
-                {errors.file?.type === "required" && (
-                  <span className="label-text-alt text-red-500" role="alert">
-                    {errors.file.message}
-                  </span>
-                )}
-              </label>
-            </div>
+             
             <div className="card-actions justify-center py-5 ">
               <input
                 value="Save"
