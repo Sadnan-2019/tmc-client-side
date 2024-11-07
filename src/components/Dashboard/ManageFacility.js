@@ -78,11 +78,11 @@ const ManageFacility = () => {
                 </td> */}
                 <td>
                   
-                  <Link to={`update/${facilities._id}`}>
+                  <Link to={`update-facility/${facilities._id}`}>
 
               {/* <button>Update</button> */}
               <button
-                    // onClick={() => handleDoctorUpdate(doctors._id)}
+                    // onClick={() => handleDoctorUpdate(facilities._id)}
                     className="btn btn-xs"
                   > 
                     EDIT
