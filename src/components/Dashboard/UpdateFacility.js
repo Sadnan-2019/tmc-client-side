@@ -19,6 +19,8 @@ const UpdateFacility = () => {
 
   // Function to handle form submission
   const onSubmit = async (data) => {
+
+    console.log('Form Data:', data);
     try {
       const response = await axios.put(
         `http://localhost:5000/update-facility/${facilityId}`,
@@ -30,7 +32,7 @@ const UpdateFacility = () => {
         }
       );
 
-      console.log('Form Data:', data);
+      
       console.log('Facility updated:', response.data);
       alert('Facility updated successfully!');
 
