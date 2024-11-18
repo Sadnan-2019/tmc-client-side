@@ -8,12 +8,21 @@ const AddFacility = () => {
   // Handle form submission
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/facility', {
-        facility_name: data.facility_name,
-        // price: parseFloat(data.price),
-        facility_description: data.facility_description,
+      // Create a FormData object to handle file uploads
+      const formData = new FormData();
+      formData.append('facility_name', data.facility_name);
+      formData.append('facility_description', data.facility_description);
+      formData.append('file', data.file[0]); // Append the file
+  
+      // Make the POST request using axios
+      const response = await axios.post('http://localhost:5000/facility', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       });
+      console.log(response);
       if (response.status === 201) {
+        console.log('Facility updated:', response.data);
         alert("Book added successfully!");
         reset();
         console.log(response); // Reset form fields after successful submission
@@ -71,6 +80,29 @@ const AddFacility = () => {
                 {errors.facility_description?.type === "required" && (
                   <span className="label-text-alt text-red-500" role="alert">
                     {errors.facility_description.message}
+                  </span>
+                )}
+              </label>
+            </div>
+            <div className="form-control w-full mx-auto max-w-xs">
+              <label className="label">
+                <span className="label-text text-white"> Photo</span>
+              </label>
+              <input
+                {...register("file", {
+                  required: {
+                    value: true,
+                    message: " Photo   is requried",
+                  },
+                })}
+                type="file"
+                placeholder=" "
+                className="input input-bordered w-full max-w-xs text-black "
+              />
+              <label className="label">
+                {errors.file?.type === "required" && (
+                  <span className="label-text-alt text-red-500" role="alert">
+                    {errors.file.message}
                   </span>
                 )}
               </label>
