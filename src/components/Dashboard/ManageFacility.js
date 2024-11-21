@@ -69,13 +69,13 @@ const ManageFacility = () => {
                 <td>{facilities.facility_description}</td>
                 {/* <td>{doctor._id}</td> */}
 
-                {/* <td>
+                <td>
                   <img
                     class="object-cover object-center h-12 rounded-full w-12"
                     src={facilities.imageUrl}
                     alt="Woman looking front"
                   />
-                </td> */}
+                </td>
                 <td>
                   
                   <Link to={`update-facility/${facilities._id}`}>
