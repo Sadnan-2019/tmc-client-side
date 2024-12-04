@@ -22,9 +22,15 @@ const UpdateFacility = () => {
 
     console.log('Form Data:', data);
     try {
+
+      const formData = new FormData();
+      formData.append('facility_name', data.facility_name);
+      formData.append('facility_description', data.facility_description);
+      formData.append('file', data.file[0]);
+
       const response = await axios.put(
         `http://localhost:5000/update-facility/${facilityId}`,
-        data,
+        formData,
         {
           headers: {
             'Content-Type': 'application/json', // Set Content-Type to application/json
@@ -50,7 +56,7 @@ const UpdateFacility = () => {
         <h2 className='text-red-600'>Update Facility Information for ID: {facilityId}</h2>
         <h2>Update Facility Information for: {detailsFacility?.facility_name}</h2>
         <h2 className="text-2xl mb-4">Update Facility</h2>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-2" enctype="multipart/form-data">
           <input
             type="text"
             placeholder="Facility Name"
@@ -65,6 +71,40 @@ const UpdateFacility = () => {
             className="block border p-2 mb-2 text-black"
             defaultValue={detailsFacility?.facility_description}
           />
+
+
+
+<div className="form-control w-full mx-auto max-w-xs">
+              <label className="label">
+                <span className="label-text text-white">Image Update</span>
+              </label>
+              <input
+                // {...register("file", {
+                //   required: {
+                //     value: true,
+                //     message: "Image is requried",
+                //   },
+                // })}
+                {...register("file", {
+                    validate: (value) =>
+                      value.length > 0 || detailsFacility?.imageUrl
+                        ? true
+                        : "Image is required",
+                  })}
+                type="file"
+                // onChange={handleImageChange} 
+                placeholder="Type here"
+                className="input input-bordered w-full max-w-xs text-black"
+              />
+
+              {/* <label className="label">
+                {errors.file?.type === "required" && (
+                  <span className="label-text-alt text-red-500" role="alert">
+                    {errors.file.message}
+                  </span>
+                )}
+              </label> */}
+            </div>
           <input
             value="Save"
             className="btn w-full max-w-xs text-black btn-sm justify-center"
