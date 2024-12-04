@@ -26,14 +26,17 @@ const UpdateFacility = () => {
       const formData = new FormData();
       formData.append('facility_name', data.facility_name);
       formData.append('facility_description', data.facility_description);
-      formData.append('file', data.file[0]);
+      // formData.append('file', data.file[0]);
+      if (data.file?.[0]) {
+        formData.append('file', data.file[0]);
+      }
 
       const response = await axios.put(
         `http://localhost:5000/update-facility/${facilityId}`,
         formData,
         {
           headers: {
-            'Content-Type': 'application/json', // Set Content-Type to application/json
+            'Content-Type': 'multipart/form-data', // Set Content-Type to application/json
           },
         }
       );
