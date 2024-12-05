@@ -13,14 +13,14 @@ const AddFacility = () => {
       formData.append('facility_name', data.facility_name);
       formData.append('facility_description', data.facility_description);
       formData.append('file', data.file[0]); // Append the file
-  
+  console.log(data)
       // Make the POST request using axios
       const response = await axios.post('http://localhost:5000/facility', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log(response);
+      // console.log(response);
       if (response.status === 201) {
         console.log('Facility updated:', response.data);
         alert("Book added successfully!");

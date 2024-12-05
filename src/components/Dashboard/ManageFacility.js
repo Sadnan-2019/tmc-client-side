@@ -11,7 +11,7 @@ const ManageFacility = () => {
       .then((data) => setFacilities(data));
       
   }, []);
-
+console.log(facilities)
   const [activePage, setActivePage] = useState(1);
   const itemsCountPerPage = 7;
 

@@ -24,12 +24,21 @@ const UpdateFacility = () => {
     try {
 
       const formData = new FormData();
-      formData.append('facility_name', data.facility_name);
-      formData.append('facility_description', data.facility_description);
+     
+
+      if(data.facility_name){
+        formData.append('facility_name', data.facility_name);
+      }
+      if( data.facility_description){
+        formData.append('facility_description', data.facility_description);
+      }
       // formData.append('file', data.file[0]);
+      
       if (data.file?.[0]) {
         formData.append('file', data.file[0]);
+        console.log(formData,"NEW COLNLE")
       }
+      // console.log(formData)
 
       const response = await axios.put(
         `http://localhost:5000/update-facility/${facilityId}`,
