@@ -4,7 +4,7 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useLoaderData, useParams } from "react-router-dom";
-const UpdateDoctor = ( ) => {
+const UpdateDoctor = () => {
   const { doctorId } = useParams();
   // const [doctor, setDoctor] = useState({ name: '', speciality: '' });
   const [doctors, setDoctor] = useState([]);
@@ -34,33 +34,38 @@ const UpdateDoctor = ( ) => {
     }
   };
 
-
-
-
-
-
   const onSubmit = async (data) => {
     try {
       const formData = new FormData();
-      formData.append("name", data.name);
-      formData.append("speciality", data.speciality);
-    //   formData.append("file", data.file[0]); 
-      // Assuming "file" is the name of the file input
-// Only append file if a new image is selected
-if (data.file && data.file[0]) {
-    formData.append("file", data.file[0]);
-  }
-      const response = await fetch(`http://localhost:5000/update-doctors/${doctorId}`, {
-        method: "PUT",
-        body: formData,
-      });
-      if (response.ok) {
-        reset();
-        toast("UPDATE  SUCCESSFULLY");
-      }
+      
 
-      const responseData = await response.json();
-      console.log(responseData, formData);
+      if (data.name) {
+        formData.append("name", data.name);
+      }
+      if (data.speciality) {
+        formData.append("speciality", data.speciality);
+      }
+      // formData.append('file', data.file[0]);
+
+      if (data.file?.[0]) {
+        formData.append("file", data.file[0]);
+        console.log(formData, "NEW COLNLE");
+      }
+      const response = await axios.put(
+        `http://localhost:5000/update-doctors/${doctorId}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data", // Set Content-Type to application/json
+          },
+        }
+      );
+      
+      console.log("Facility updated:", response.data);
+      alert("Facility updated successfully!");
+
+      // const responseData = await response.json();
+      // console.log(responseData, formData);
     } catch (error) {
       console.error(error);
     }
@@ -78,11 +83,11 @@ if (data.file && data.file[0]) {
                 <span className="label-text text-white">Name</span>
               </label>
               <input
-              {...register("name", {
-                required: {
-                  message: "name is requried",
-                },
-              })}
+                {...register("name", {
+                  required: {
+                    message: "name is requried",
+                  },
+                })}
                 defaultValue={detailsDoctors?.name}
                 // {...register("name", { required: "Name is required" })}
                 type="text"
@@ -145,13 +150,13 @@ if (data.file && data.file[0]) {
                 //   },
                 // })}
                 {...register("file", {
-                    validate: (value) =>
-                      value.length > 0 || detailsDoctors?.imageUrl
-                        ? true
-                        : "Image is required",
-                  })}
+                  validate: (value) =>
+                    value.length > 0 || detailsDoctors?.imageUrl
+                      ? true
+                      : "Image is required",
+                })}
                 type="file"
-                onChange={handleImageChange} 
+                onChange={handleImageChange}
                 placeholder="Type here"
                 className="input input-bordered w-full max-w-xs text-black"
               />
