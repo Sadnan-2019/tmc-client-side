@@ -23,7 +23,7 @@ const Footer = () => {
                     href="#"
                     class="border-b border-solid border-transparent hover:border-[#E83133] hover:text-[#E83133]"
                   >
-                    House 11, Road 108, Gulshan 2, Dhaka, Bangladesh. 1212.
+                    ZeroPoint, Noudhar, Trishal 2220 Mymensingh, Dhaka Division, Bangladesh
                   </span>
                 </li>
               </ul>
