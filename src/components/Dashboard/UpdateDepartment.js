@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
@@ -35,30 +36,48 @@ const UpdateDepartment = () => {
     
     
       const onSubmit = async (data) => {
+
         try {
           const formData = new FormData();
-          formData.append("name", data.name);
-          formData.append("speciality", data.speciality);
-        //   formData.append("file", data.file[0]); 
-          // Assuming "file" is the name of the file input
-    // Only append file if a new image is selected
-    if (data.file && data.file[0]) {
-        formData.append("file", data.file[0]);
-      }
-          const response = await fetch(`http://localhost:5000/update-departments/${deptId}`, {
-            method: "PATCH",
-            body: formData,
-          });
-          if (response.ok) {
-            reset();
-            toast("UPDATE  SUCCESSFULLY");
-          }
     
-          const responseData = await response.json();
-          console.log(responseData, formData);
+          if (data.dept_name) {
+            formData.append("dept_name", data.dept_name);
+          }
+          if (data.facility_description) {
+            formData.append("facility_description", data.facility_description);
+          }
+          // formData.append('file', data.file[0]);
+    
+          if (data.file?.[0]) {
+            formData.append("file", data.file[0]);
+            console.log(formData, "NEW COLNLE");
+          }
+          // console.log(formData)
+    
+          const response = await axios.put(
+            `http://localhost:5000/update-facility/${deptId}`,
+            formData,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data", // Set Content-Type to application/json
+              },
+            }
+          );
+    
+          console.log("Doctor updated:", response.data);
+          alert("Doctor updated successfully!");
+    
+          // Reset the form fields (optional)
+          reset();
         } catch (error) {
-          console.error(error);
+          console.error("Error updating facility:", error);
+          alert("Failed to update the facility");
         }
+
+
+
+
+         
       };
     return (
         <div>
@@ -73,9 +92,9 @@ const UpdateDepartment = () => {
                 <span className="label-text text-white">Name</span>
               </label>
               <input
-              {...register("name", {
+              {...register("dept_name", {
                 required: {
-                  message: "name is requried",
+                  message: "dept_name is requried",
                 },
               })}
                 defaultValue={detailsDepartments?.dept_name}
@@ -99,7 +118,7 @@ const UpdateDepartment = () => {
                 <span className="label-text text-white">Speciality</span>
               </label>
               <textarea
-                {...register("speciality", {
+                {...register("description", {
                   required: {
                     message: "Speciality is requried",
                   },
