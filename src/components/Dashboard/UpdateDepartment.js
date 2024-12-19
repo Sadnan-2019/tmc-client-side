@@ -43,8 +43,8 @@ const UpdateDepartment = () => {
           if (data.dept_name) {
             formData.append("dept_name", data.dept_name);
           }
-          if (data.facility_description) {
-            formData.append("facility_description", data.facility_description);
+          if (data.description) {
+            formData.append("description", data.description);
           }
           // formData.append('file', data.file[0]);
     
@@ -55,7 +55,7 @@ const UpdateDepartment = () => {
           // console.log(formData)
     
           const response = await axios.put(
-            `http://localhost:5000/update-facility/${deptId}`,
+            `http://localhost:5000/update-department/${deptId}`,
             formData,
             {
               headers: {
@@ -64,8 +64,8 @@ const UpdateDepartment = () => {
             }
           );
     
-          console.log("Doctor updated:", response.data);
-          alert("Doctor updated successfully!");
+          console.log("Department updated:", response.data);
+          alert("Department updated successfully!");
     
           // Reset the form fields (optional)
           reset();
@@ -81,8 +81,8 @@ const UpdateDepartment = () => {
       };
     return (
         <div>
-            Me doctor update
-            <h2>Update Doctor Information for ID: {detailsDepartments?.dept_name}</h2>
+            Me Department update
+            <h2>Update Department Information for ID: {detailsDepartments?.dept_name}</h2>
             <div>
         <h1 className="text-2xl text-white text-center mt-5">Update Department</h1>
         <div className=" ">
