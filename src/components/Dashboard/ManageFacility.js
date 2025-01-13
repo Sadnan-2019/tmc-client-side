@@ -54,9 +54,10 @@ console.log(facilities)
           <thead className="text-white">
             <tr className="text-xl">
               <th>Sl No</th>
-              <th>Doctor Name</th>
-              <th>Department</th>
+              <th>Facility Name</th>
+              <th>Description</th>
               <th>Photo</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody className=" ">

@@ -12,6 +12,7 @@ import OurFacility from "../OurFacility/OurFacility";
 import Equipment from "../Equipment/Equipment";
 import Contact from "../Contact/Contact";
 import PaginatedTable from "../PaginatedTable/PaginatedTable";
+import HomeFacility from "../OurFacility/HomeFacility";
 
 // import New from '../New/New';
 
@@ -27,7 +28,8 @@ const Home = () => {
       <Doctors></Doctors>
       <Equipment></Equipment>
       {/* <Makeappoinment></Makeappoinment> */}
-      <OurFacility></OurFacility>
+      {/* <OurFacility></OurFacility> */}
+      <HomeFacility></HomeFacility>
       <Tstimoniel></Tstimoniel>
 <Contact></Contact>
       {/* <ScrollSmoother></ScrollSmoother> */}
