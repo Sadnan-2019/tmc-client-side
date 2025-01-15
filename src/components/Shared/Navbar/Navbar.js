@@ -18,10 +18,10 @@ const Navbar = () => {
         {" "}
         <Link to="/">Home</Link>
       </li>
-      <li>
+      {/* <li>
         {" "}
         <Link to="/appoinment">Appoinment</Link>
-      </li>
+      </li> */}
       <li>
         {" "}
         <Link to="/alldoctorlist">Our Doctors</Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <div className="navbar bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white ">
         <div className="navbar-start">
           <div className="dropdown">

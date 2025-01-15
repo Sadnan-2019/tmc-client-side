@@ -36,9 +36,9 @@ const OurFacility = (props) => {
                 </a>
               </h3>
               <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href="/tech-blog/post1">
+               
         <span class="absolute inset-0"></span>{facility_name}        
-                </a>
+               
               </h3>
             </article>
             {/* <!-- Second blog post --> */}
