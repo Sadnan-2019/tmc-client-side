@@ -67,7 +67,7 @@ const Banner = () => {
         {/* <h2> Responsive </h2> */}
         <Slider {...settings} className="">
           <div className=" ">
-            <section className="   blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
+            <section className="  landingone  blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
               <div className=" md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse       ">
                 <div className="slide-content sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0 ">
                   <span
@@ -107,7 +107,7 @@ const Banner = () => {
                   />
                 </div> */}
 
-                <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
+                {/* <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
                   <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
                     <img
                       class="h-full w-full object-cover rounded-3xl"
@@ -125,7 +125,7 @@ const Banner = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>
@@ -133,7 +133,7 @@ const Banner = () => {
           {/* second ////  */}
 
           <div className=" ">
-            <section className=" blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
+            <section className="landingtwo blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
               <div className="md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse">
                 <div className="sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0">
                   <h2
@@ -163,9 +163,8 @@ const Banner = () => {
                   </div>
                 </div>
 
-                <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  {/* <img src={landingtwo} alt="" className="  h-5/6 w-5/6 " /> */}
-                  <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
+                {/* <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
+                   <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
                     <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
                       <img
                         class="h-full w-full object-cover rounded-3xl"
@@ -184,7 +183,7 @@ const Banner = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>
@@ -192,7 +191,7 @@ const Banner = () => {
 
           {/* /// thried  */}
           <div className=" ">
-            <section className="  blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]      text-white">
+            <section className="landingthree  blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]      text-white">
               <div className=" md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-2  gap-5 justify-center items-center">
                 <div className="sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0">
                  
@@ -220,9 +219,8 @@ const Banner = () => {
                   </div>
                 </div>
 
-                <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  {/* <img src={landingtwo} alt="" className="  h-5/6 w-5/6 " /> */}
-                  <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
+                {/* <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
+                   <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
                     <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
                       <img
                         class="h-full w-full object-cover rounded-3xl"
@@ -241,7 +239,7 @@ const Banner = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>
