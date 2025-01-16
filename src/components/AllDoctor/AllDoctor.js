@@ -45,7 +45,7 @@ const AllDoctor = () => {
           Our Doctors
         </h2>
 
-        <div class=" ">
+        <div class=" sticky top-0 z-50">
           <div class="  py-5   ">
             <div class="mx-10 ">
 
