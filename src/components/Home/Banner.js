@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-// import landingone from "../../assets/images/operation image.jpg";
-// import landingthree from "../../assets/images/landing3.jpg";
-// import landingfour from "../../assets/images/landing4.jpg";
-// import landingfive from "../../assets/images/operation 2.jpg";
-// import machineone from "../../assets/images/machine1.jpeg";
-// import machinetwo from "../../assets/images/machine3.jpeg";
-// import banner2 from "../../assets/images/banner2.jpg";
-// import banner3 from "../../assets/images/banner3.jpg";
+
 import "./Banner.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
@@ -67,183 +60,78 @@ const Banner = () => {
         {/* <h2> Responsive </h2> */}
         <Slider {...settings} className="">
           <div className=" ">
-            <section className="  landingone  blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
-              <div className=" md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse       ">
-                <div className="slide-content sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0 ">
-                  <span
-                    style={{ lineHeight: "120%" }}
-                    className={`slide-text text-[25px] lg:text-[32px] font-bold   text-left   text-transparent  text-white  ${
-                      currentSlide === 0 ? "animated" : ""
-                    }`}
-                  >
-                    {" "}
-                    A premier diagnostic & hospital <br></br>
-                    in Trishal,Mymensingh
-                  </span>
-
-                  <div className="flex  gap-4 mt-10 text-center">
-                    <a
-                      href="/"
-                      className={`slide-text btn-sm lg:p-2 rounded-full    hover-button bg-gradient-to-r from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
-                        currentSlide === 0 ? "animated" : ""
-                      }`}
-                    >
-                      <span className="text-sm font-medium lg:text-lg">
-                        {" "}
-                        BOOKED YOUR DOCTOR
-                      </span>
-                      <BsArrowRight className="text-lg hidden lg:ml-2" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* <div class="sm:block lg:hidden  text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                  <img
-                    src={landingone}
-                    alt=""
-                    className={`  max-w-sm slide-text p-1   lg:p-2   lg:text-lg font-bold  hover-button rounded-3xl     round-lg         text-white   ${
-                      currentSlideTwo === 0 ? "animatedpic" : ""
-                    }`}
-                  />
-                </div> */}
-
-                {/* <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
-                  <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
-                    <img
-                      class="h-full w-full object-cover rounded-3xl"
-                      src={landingfive}
-                      alt="Winding mountain road"
-                    />
-                  </div>
-
-                  <div class="max-w-lg   md:max-w-2xl md:z-10   md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
-                    <div class="flex flex-col p-12  ">
-                      <img
-                        class="h-full w-full object-cover rounded-3xl"
-                        src={landingone}
-                        alt="Winding mountain road"
-                      />
+            <section className="landingone  blog h-auto        ">
+              <div class="  relative z-10 flex flex-col justify-center items-center h-full text-center  ">
+                <div class=" ">
+                  <div class="   ">
+                    <div class="text-center">
+                      <h1
+                        style={{ lineHeight: "120%" }}
+                        className={`gupter-regular  slide-text  max-w-5xl text-2xl font-bold leading-none tracking-tighter   lg:text-[40px] lg:max-w-7xl    text-transparent   text-white ${
+                          currentSlide === 0 ? "animated" : ""
+                        }`}
+                      >
+                        A premier diagnostic & hospital
+                        <br class=" lg:block" />
+                        in Trishal,Mymensingh
+                      </h1>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </section>
           </div>
-
           {/* second ////  */}
-
           <div className=" ">
-            <section className="landingtwo blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-white">
-              <div className="md:py-20 py-10 lg:py-24 hero-content flex-col lg:flex-row-reverse">
-                <div className="sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0">
-                  <h2
-                    style={{ lineHeight: "120%" }}
-                    className={`slide-text  text-[25px] lg:text-[32px] font-bold   text-left   text-transparent  text-white     ${
-                      currentSlide === 1 ? "animated" : ""
-                    }`}
-                  >
-                    {" "}
-                    This institution boasts the best and most qualified professionals
-                    with the most updated and modern infrastructure & technology  
-                  </h2>
-
-                  <div className="flex  gap-4 mt-10 text-center">
-                    <a
-                      href="/"
-                      className={`slide-text btn-sm lg:p-2 rounded-full    hover-button bg-gradient-to-r from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
-                        currentSlide === 1 ? "animated" : ""
-                      }`}
-                    >
-                      <span className="text-sm font-medium">
-                        {" "}
-                        BOOKED YOUR DOCTOR
-                      </span>
-                      <BsArrowRight className="text-lg hidden lg:ml-2" />
-                    </a>
+            <section className="landingtwo  blog h-auto        ">
+              <div class="  relative z-10 flex flex-col justify-center items-center h-full text-center  ">
+                <div class=" ">
+                  <div class="   ">
+                    <div class="text-center">
+                      <h1
+                        style={{ lineHeight: "120%" }}
+                        className={`gupter-regular  slide-text  max-w-5xl text-2xl font-bold leading-none tracking-tighter   lg:text-[40px] lg:max-w-7xl    text-transparent   text-white ${
+                          currentSlide === 1 ? "animated" : ""
+                        }`}
+                      >
+                        This institution boasts the best and most qualified
+                        professionals
+                        <br class=" lg:block" />
+                        with the most updated and modern infrastructure &
+                        technology
+                      </h1>
+                    </div>
                   </div>
                 </div>
-
-                {/* <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                   <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
-                    <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
-                      <img
-                        class="h-full w-full object-cover rounded-3xl"
-                        src={machineone}
-                        alt="Winding mountain road"
-                      />
-                    </div>
-
-                    <div class="max-w-lg   md:max-w-2xl md:z-10   md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
-                      <div class="flex flex-col p-12  ">
-                        <img
-                          class="h-full w-full object-cover rounded-3xl"
-                          src={machinetwo}
-                          alt="Winding mountain road"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </section>
           </div>
-
 
           {/* /// thried  */}
+
           <div className=" ">
-            <section className="landingthree  blog   hero min-h-screen      bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]      text-white">
-              <div className=" md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-2  gap-5 justify-center items-center">
-                <div className="sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0">
-                 
-
-                  <h1
-                    className="text-[25px] lg:text-[32px] font-bold   text-left   text-transparent  text-white "
-                    style={{ lineHeight: "120%", color: "white" }}
-                  >
-                    All surgery, diagnostic tests, medicines & blood banks are under one umbrella.
-                  </h1>
-
-                  <div className="flex  gap-4 mt-10 text-center">
-                    <a
-                      href="/"
-                      className={`slide-text btn-sm lg:p-2 rounded-full    hover-button bg-gradient-to-r from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
-                        currentSlide === 2 ? "animated" : ""
-                      }`}
-                    >
-                      <span className="text-sm font-medium">
-                        {" "}
-                        BOOKED YOUR DOCTOR
-                      </span>
-                      <BsArrowRight className="text-lg hidden lg:ml-2" />
-                    </a>
+            <section className="landingthree  blog h-auto        ">
+              <div class="  relative z-10 flex flex-col justify-center items-center h-full text-center  ">
+                <div class=" ">
+                  <div class="   ">
+                    <div class="text-center">
+                      <h1
+                        style={{ lineHeight: "120%" }}
+                        className={`gupter-regular  slide-text  max-w-5xl text-2xl font-bold leading-none tracking-tighter   lg:text-[40px] lg:max-w-7xl    text-transparent   text-white ${
+                          currentSlide === 2 ? "animated" : ""
+                        }`}
+                      >
+                        All surgery, diagnostic tests, medicines & blood banks
+                        are
+                        <br class=" lg:block" />
+                        under one umbrella.{" "}
+                      </h1>
+                    </div>
                   </div>
                 </div>
-
-                {/* <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
-                   <div class="relative   lg:flex sm:flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl   xl:max-w-6xl">
-                    <div class=" w-full h-64 lg:w-1/2 lg:h-auto">
-                      <img
-                        class="h-full w-full object-cover rounded-3xl"
-                        src={banner3}
-                        alt="Winding mountain road"
-                      />
-                    </div>
-
-                    <div class="max-w-lg   md:max-w-2xl md:z-10   md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
-                      <div class="flex flex-col p-12  ">
-                        <img
-                          class="h-full w-full object-cover rounded-3xl"
-                          src={banner2}
-                          alt="Winding mountain road"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </section>
           </div>
-          
         </Slider>
       </div>
     </div>

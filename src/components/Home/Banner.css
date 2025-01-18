@@ -29,72 +29,124 @@
       rgba(154, 143, 213, 0.01),
       rgba(0, 9, 10, 0.9)
     ),
-    url("../../assets/images/tmch.jpeg");
-  /* background-repeat: no-repeat;
-        background-size: cover; */
-  height: auto;
+    url("../../assets/images/tmch6.jpg");
   width: 100%;
-  /* background-size: contain; */
+  height: 100vh;
+
+  background-size: contain;
   background-size: cover;
 
-  background-size: 100% 85%;
+  background-size: 100% 100%;
 
   background-repeat: no-repeat;
 }
 .landingtwo {
   background-image: linear-gradient(
       to left,
-      rgba(2, 1, 9, 0.01),
-      rgba(3, 3, 3, 0.9)
+      rgba(154, 143, 213, 0.01),
+      rgba(0, 9, 10, 0.9)
     ),
     url("../../assets/images/tmch2.jpg");
-  /* background-repeat: no-repeat;
-        background-size: cover; */
-  height: auto;
   width: 100%;
-  /* background-size: contain; */
+  height: 100vh;
+
+  background-size: contain;
   background-size: cover;
 
-  background-size: 100% 85%;
+  background-size: 100% 100%;
 
   background-repeat: no-repeat;
 }
+
+
+
+ 
+
+
 .landingthree {
   background-image: linear-gradient(
       to left,
-      rgba(2, 1, 9, 0.01),
-      rgba(3, 3, 3, 0.9)
+      rgba(154, 143, 213, 0.01),
+      rgba(0, 9, 10, 0.9)
     ),
     url("../../assets/images/tmch5.jpg");
-  /* background-repeat: no-repeat;
-        background-size: cover; */
-  height: auto;
   width: 100%;
-  /* background-size: contain; */
+  height: 100vh;
+
+  background-size: contain;
   background-size: cover;
 
-  background-size: 100% 85%;
+  background-size: 100% 100%;
 
   background-repeat: no-repeat;
 }
-.landingfour {
-  background-image: linear-gradient(
-      to left,
-      rgba(2, 1, 9, 0.01),
-      rgba(3, 3, 3, 0.9)
-    ),
-    url("../../assets/images/chair.png");
-  /* background-repeat: no-repeat;
-        background-size: cover; */
-  height: auto;
-  width: 100%;
-  /* background-size: contain; */
-  background-size: cover;
 
-  background-size: 100% 85%;
 
-  background-repeat: no-repeat;
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 393px) {
+  .landingone {
+    width: 100%;
+    background-image: linear-gradient(
+        to left,
+        rgba(154, 143, 213, 0.01),
+        rgba(0, 9, 10, 0.9)
+      ),
+      url("../../assets/images/tmch6.jpg");
+    height: 30vh;
+
+    background-size: contain;
+    background-size: cover;
+
+    /* background-size: 100% 100%; */
+
+    background-repeat: no-repeat;
+  }
+
+  .landingtwo {
+    width: 100%;
+    background-image: linear-gradient(
+        to left,
+        rgba(2, 1, 9, 0.01),
+        rgba(3, 3, 3, 0.9)
+      ),
+      url("../../assets/images/tmch2.jpg");
+    height: 30vh;
+
+    background-size: contain;
+    background-size: cover;
+
+    /* background-size: 100% 100%; */
+
+    background-repeat: no-repeat;
+  }
+
+  .landingthree {
+    width: 100%;
+    background-image: linear-gradient(
+        to left,
+        rgba(2, 1, 9, 0.01),
+        rgba(3, 3, 3, 0.9)
+      ),
+      url("../../assets/images/tmch5.jpg");
+    height: 30vh;
+
+    background-size: contain;
+    background-size: cover;
+
+    background-size: 100% 100%;
+
+    background-repeat: no-repeat;
+  }
 }
+
+ 
 
 .slide-text {
   opacity: 0;
@@ -137,12 +189,6 @@
   animation-duration: 1s;
 }
 
-
-
-
-
-
-
 @keyframes bounce-in-left {
   0% {
     opacity: 0;
@@ -159,13 +205,6 @@
     transform: translateX(0);
   }
 }
-
-
-
-
-
-
-
 
 @keyframes fade-in {
   from {
