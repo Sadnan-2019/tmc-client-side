@@ -43,7 +43,7 @@ const Navbar = () => {
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
-      <li>
+      {/* <li>
         {user ? (
           <button className="btn btn-sm btn-ghost" onClick={logout}>
             {" "}
@@ -52,7 +52,7 @@ const Navbar = () => {
         ) : (
           <Link to="/login">Login</Link>
         )}
-      </li>
+      </li> */}
     </>
   );
   return (

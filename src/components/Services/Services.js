@@ -6,11 +6,11 @@ import gsap from "gsap";
 import "./Services.css";
 const Services = () => {
 
-
+ 
   const [doctors, setDoctors] = useState([]);
     // let i = 1;
     useEffect(() => {
-      fetch(`http://localhost:5000/all-department`)
+      fetch(`https://mrg.com.bd/tmcback/all-department`)
         .then((res) => res.json())
         .then((data) => setDoctors(data));
     }, []);
