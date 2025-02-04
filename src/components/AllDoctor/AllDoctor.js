@@ -5,7 +5,7 @@ const AllDoctor = () => {
 
   const [doctors, setServices] = useState([]);
   useEffect(() => {
-    fetch(`https://mrg.com.bd/tmcback/all-doctors`)
+    fetch(`http://localhost:5000/all-doctors`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
