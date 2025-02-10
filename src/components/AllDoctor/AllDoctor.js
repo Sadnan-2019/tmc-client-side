@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./AllDoctor.css"
 import AllDoctorList from "./AllDoctorList";
 const AllDoctor = () => {
-
+  
   const [doctors, setServices] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/all-doctors`)
