@@ -10,7 +10,7 @@ const Services = () => {
   const [doctors, setDoctors] = useState([]);
     // let i = 1;
     useEffect(() => {
-      fetch(`http://localhost:5000/all-department`)
+      fetch(`https://tmc-server-side-dhj2kh1li-mdsadnanhossain94-gmailcoms-projects.vercel.app/all-department`)
         .then((res) => res.json())
         .then((data) => setDoctors(data));
     }, []);
