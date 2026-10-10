@@ -29,7 +29,7 @@ const Home = () => {
       <Equipment></Equipment>
       {/* <Makeappoinment></Makeappoinment> */}
       {/* <OurFacility></OurFacility> */}
-      <HomeFacility></HomeFacility>
+      {/* <HomeFacility></HomeFacility> */}
       <Tstimoniel></Tstimoniel>
 <Contact></Contact>
       {/* <ScrollSmoother></ScrollSmoother> */}

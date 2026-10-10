@@ -15,7 +15,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// console.log("Checking API Key:", process.env.REACT_APP_API_KEY);
 
+const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 export default auth;
