@@ -6,13 +6,7 @@ import people3 from "../../assets/images/review3.jpg";
 import Review from "./Review";
 
 const Tstimoniel = () => {
-
   const [allReviews, setReviews] = useState([]);
-  const reviews = [
-    { _id: 1, name: "Shafiul Hasan Shihab", review: "Diagnostic & consultations available with nice neat & clean environment", img: people1 },
-    { _id: 2, name: "Md Abdul Gofur", review: "The behavior of the staff is very nice   ", img: people2 },
-    { _id: 3, name: "Fakhruzzaman Palash", review: "Environment is nice & professional staff", img: people3 },
-  ];
 
   useEffect(() => {
     fetch(`http://localhost:5000/all-review`)
@@ -32,12 +26,9 @@ const Tstimoniel = () => {
         </div>
       </div>
       <div className="grid sm:grid-cols-1 gap-12 lg:grid-cols-3 px-6">
-
-        {
-
-allReviews.map(review =>
-            <Review review={review} key={review._id}></Review>)
-        }
+        {allReviews.map((review) => (
+          <Review key={review._id} review={review} ></Review>
+        ))}
       </div>
     </div>
   );

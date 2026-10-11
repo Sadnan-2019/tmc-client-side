@@ -6,7 +6,8 @@ const ManageDepartment = () => {
   const [departments, setDepartments] = useState([]);
   let i = 1;
   useEffect(() => {
-    fetch(`https:localhostall-department`)
+    fetch(`http://localhost:5000/all-department`)
+    
       .then((res) => res.json())
       .then((data) => setDepartments(data));
   }, []);
