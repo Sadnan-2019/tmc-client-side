@@ -1,47 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const ManagePackage = () => {
-    const [allpackages, setPackage] = useState([]);
-    let i = 1;
-    useEffect(() => {
-      fetch(`http://localhost:5000/all-health-package`)
+  const [allpackages, setPackage] = useState([]);
+  let i = 1;
+  useEffect(() => {
+    fetch(`https://tmc-server-side-theta.vercel.app/all-health-package`)
+      .then((res) => res.json())
+      .then((data) => setPackage(data));
+  }, []);
+
+  const handlePackageDelete = (_id) => {
+    const proceed = window.confirm("Are you sure want to delete");
+    if (proceed) {
+      console.log("deleteing user id ", _id);
+      const url = `https://tmc-server-side-theta.vercel.app/package/${_id}`;
+
+      fetch(url, {
+        method: "DELETE",
+      })
         .then((res) => res.json())
-        .then((data) => setPackage(data));
-    }, []);
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remaining = allpackages.filter(
+              (packages) => packages._id !== _id,
+            );
+            setPackage(remaining);
+          }
+          console.log(data);
+        });
+    }
+  };
 
-    const handlePackageDelete = (_id) => {
-      const proceed = window.confirm("Are you sure want to delete");
-      if (proceed) {
-        console.log("deleteing user id ", _id);
-        const url = `http://localhost:5000/package/${_id}`;
-  
-        fetch(url, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.deletedCount > 0) {
-              const remaining = allpackages.filter((packages) => packages._id !== _id);
-              setPackage(remaining);
-            }
-            console.log(data);
-          });
-      }
-    };
-
-
-
-
-
-
-
-
-
-
-
-    return (
-        <div>
-            <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
+  return (
+    <div>
+      <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
         <h1 className="text-4xl text-white text-center py-5">
           {" "}
           Package Details
@@ -76,7 +68,7 @@ const ManagePackage = () => {
                   </td>
                   <td>
                     <button
-                    //   onClick={() => handlePackageDelete(doctor._id)}
+                      //   onClick={() => handlePackageDelete(doctor._id)}
                       className="btn btn-xs"
                     >
                       EDIT
@@ -87,7 +79,7 @@ const ManagePackage = () => {
                       onClick={() => handlePackageDelete(packages._id)}
                       className="btn btn-xs"
                     >
-                    DELETE
+                      DELETE
                     </button>
                   </td>
                 </tr>
@@ -99,8 +91,8 @@ const ManagePackage = () => {
           </table>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default ManagePackage;

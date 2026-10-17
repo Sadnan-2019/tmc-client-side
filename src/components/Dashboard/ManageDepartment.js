@@ -6,8 +6,7 @@ const ManageDepartment = () => {
   const [departments, setDepartments] = useState([]);
   let i = 1;
   useEffect(() => {
-    fetch(`http://localhost:5000/all-department`)
-    
+    fetch(`https://tmc-server-side-theta.vercel.app/all-department`)
       .then((res) => res.json())
       .then((data) => setDepartments(data));
   }, []);
@@ -28,7 +27,7 @@ const ManageDepartment = () => {
     const proceed = window.confirm("Are you sure want to delete");
     if (proceed) {
       console.log("deleteing user id ", _id);
-      const url = `http://localhost:5000/department/${_id}`;
+      const url = `https://tmc-server-side-theta.vercel.app/department/${_id}`;
 
       fetch(url, {
         method: "DELETE",
@@ -36,7 +35,9 @@ const ManageDepartment = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            const remaining = departments.filter((doctor) => doctor._id !== _id);
+            const remaining = departments.filter(
+              (doctor) => doctor._id !== _id,
+            );
             setDepartments(remaining);
           }
           console.log(data);

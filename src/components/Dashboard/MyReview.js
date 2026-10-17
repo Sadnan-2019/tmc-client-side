@@ -7,27 +7,24 @@ const MyReview = () => {
   const {
     register,
     formState: { errors },
-    handleSubmit,reset
+    handleSubmit,
+    reset,
   } = useForm();
 
-
-
-
   const onSubmit = async (data) => {
-
-
     try {
       const formData = new FormData();
       formData.append("name", data.name);
       formData.append("speciality", data.speciality);
       formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
 
-      const response = await fetch("http://localhost:5000/doctors", {
-        method: "POST",
-        body: formData,
-
-
-      });
+      const response = await fetch(
+        "https://tmc-server-side-theta.vercel.app/doctors",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
       if (response.ok) {
         reset();
         toast("SAVE SUCCESSFULLY");

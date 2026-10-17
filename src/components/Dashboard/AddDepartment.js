@@ -6,10 +6,10 @@ const AddDepartment = () => {
   const {
     register,
     formState: { errors },
-    handleSubmit,reset
+    handleSubmit,
+    reset,
   } = useForm();
 
-  
   const onSubmit = async (data) => {
     try {
       const formData = new FormData();
@@ -17,10 +17,13 @@ const AddDepartment = () => {
       formData.append("description", data.description);
       formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
 
-      const response = await fetch("http://localhost:5000/department", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://tmc-server-side-theta.vercel.app/department",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
       if (response.ok) {
         reset();
         toast("SAVE SUCCESSFULLY");

@@ -1,28 +1,36 @@
-import axios from 'axios';
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import axios from "axios";
+import React from "react";
+import { useForm } from "react-hook-form";
 const AddFacility = () => {
-
-  const { register, formState: { errors },handleSubmit, reset } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
 
   // Handle form submission
   const onSubmit = async (data) => {
     try {
       // Create a FormData object to handle file uploads
       const formData = new FormData();
-      formData.append('facility_name', data.facility_name);
-      formData.append('facility_description', data.facility_description);
-      formData.append('file', data.file[0]); // Append the file
-  console.log(data)
+      formData.append("facility_name", data.facility_name);
+      formData.append("facility_description", data.facility_description);
+      formData.append("file", data.file[0]); // Append the file
+      console.log(data);
       // Make the POST request using axios
-      const response = await axios.post('http://localhost:5000/facility', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
+      const response = await axios.post(
+        "https://tmc-server-side-theta.vercel.app/facility",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         },
-      });
+      );
       // console.log(response);
       if (response.status === 201) {
-        console.log('Facility updated:', response.data);
+        console.log("Facility updated:", response.data);
         alert("Book added successfully!");
         reset();
         console.log(response); // Reset form fields after successful submission
@@ -32,9 +40,9 @@ const AddFacility = () => {
       alert("Failed to add book");
     }
   };
-    return (
-        <div>
-              <div>
+  return (
+    <div>
+      <div>
         <h1 className="text-2xl text-white text-center mt-5">Add Facility</h1>
         <div className=" ">
           <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
@@ -63,7 +71,9 @@ const AddFacility = () => {
             </div>
             <div className="form-control w-full mx-auto max-w-xs">
               <label className="label">
-                <span className="label-text text-white">Facility Description</span>
+                <span className="label-text text-white">
+                  Facility Description
+                </span>
               </label>
               <input
                 {...register("facility_description", {
@@ -107,7 +117,7 @@ const AddFacility = () => {
                 )}
               </label>
             </div>
-             
+
             <div className="card-actions justify-center py-5 ">
               <input
                 value="Save"
@@ -118,8 +128,8 @@ const AddFacility = () => {
           </form>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default AddFacility;

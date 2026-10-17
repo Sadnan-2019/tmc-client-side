@@ -3,9 +3,9 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
-const BookingModal = ({ treatment, date, setTreatment,refetch }) => {
+const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
   const { _id, dept_name, doctor_name, slots } = treatment;
 
   const [user, loading, error] = useAuthState(auth);
@@ -27,7 +27,7 @@ const BookingModal = ({ treatment, date, setTreatment,refetch }) => {
       slot,
     };
 
-    fetch(`http://localhost:5000/appoinment`, {
+    fetch(`https://tmc-server-side-theta.vercel.app/appoinment`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,20 +37,19 @@ const BookingModal = ({ treatment, date, setTreatment,refetch }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-          console.log(data)
-          // console.log("sadannnnwni",appoinment)
+        console.log(data);
+        // console.log("sadannnnwni",appoinment)
 
-        if(data.success){
-          toast(`Appoinment is set,${formattedDate} at ${slot}`)
-        
-
-        }else{
-          toast.error(`You Have an Appoinment is set,${formattedDate} at ${slot}`)
-
+        if (data.success) {
+          toast(`Appoinment is set,${formattedDate} at ${slot}`);
+        } else {
+          toast.error(
+            `You Have an Appoinment is set,${formattedDate} at ${slot}`,
+          );
         }
-        refetch()
-        setTreatment(null)
-      } );
+        refetch();
+        setTreatment(null);
+      });
   };
   return (
     <div>

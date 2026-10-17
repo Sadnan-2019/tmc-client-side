@@ -11,8 +11,8 @@ const useToken = (user) => {
     const password = user?.user?.password;
     const currentUser = { email: email, name: name, password: password };
 
-    if ({email,name,password}) {
-      fetch(`http://localhost:5000/users/${email}`, {
+    if ({ email, name, password }) {
+      fetch(`https://tmc-server-side-theta.vercel.app/users/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

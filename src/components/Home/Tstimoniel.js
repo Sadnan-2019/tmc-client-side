@@ -9,7 +9,7 @@ const Tstimoniel = () => {
   const [allReviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/all-review`)
+    fetch(`https://tmc-server-side-theta.vercel.app/all-review`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -27,7 +27,7 @@ const Tstimoniel = () => {
       </div>
       <div className="grid sm:grid-cols-1 gap-12 lg:grid-cols-3 px-6">
         {allReviews.map((review) => (
-          <Review key={review._id} review={review} ></Review>
+          <Review key={review._id} review={review}></Review>
         ))}
       </div>
     </div>

@@ -15,7 +15,7 @@ const Doctors = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/all-doctors`)
+    fetch(`https://tmc-server-side-theta.vercel.app/all-doctors`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -25,13 +25,13 @@ const Doctors = () => {
       {/* Add your sections or divs here */}
       <h2
         class="font-bold text-3xl leading-[1.1] sm:text-3xl py-2 md:text-6xl text-center text-white"
-      // data-aos="fade-up"
-      // data-aos-offset="200"
-      // data-aos-delay="50"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
-      // data-aos-mirror="true"
-      // data-aos-once="false"
+        // data-aos="fade-up"
+        // data-aos-offset="200"
+        // data-aos-delay="50"
+        // data-aos-duration="1000"
+        // data-aos-easing="ease-in-out"
+        // data-aos-mirror="true"
+        // data-aos-once="false"
       >
         Our Doctors
       </h2>
@@ -41,9 +41,7 @@ const Doctors = () => {
         ))}
       </div>
 
-
       <div className=" px-5  py-5 flex justify-center">
-
         <button
           htmlFor="my-modal-6"
           className="btn btn-md modal-button   text-[white] bg-gradient-to-r from-[#303640] to-[#103264]   animate-pulse    "
@@ -52,7 +50,6 @@ const Doctors = () => {
         >
           More Doctor
         </button>
-
       </div>
     </div>
   );

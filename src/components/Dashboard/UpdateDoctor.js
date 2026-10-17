@@ -12,7 +12,7 @@ const UpdateDoctor = () => {
   // const doctor = useLoaderData()
   // const {_id,name,speciality} =doctor;
   useEffect(() => {
-    fetch(`http://localhost:5000/all-doctors`)
+    fetch(`https://tmc-server-side-theta.vercel.app/all-doctors`)
       .then((response) => response.json())
       .then((data) => setDoctor(data))
       .catch((error) => console.error("Error fetching coffee:", error));
@@ -37,7 +37,6 @@ const UpdateDoctor = () => {
   const onSubmit = async (data) => {
     try {
       const formData = new FormData();
-      
 
       if (data.name) {
         formData.append("name", data.name);
@@ -52,15 +51,15 @@ const UpdateDoctor = () => {
         console.log(formData, "NEW COLNLE");
       }
       const response = await axios.put(
-        `http://localhost:5000/update-doctors/${doctorId}`,
+        `https://tmc-server-side-theta.vercel.app/update-doctors/${doctorId}`,
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data", // Set Content-Type to application/json
           },
-        }
+        },
       );
-      
+
       console.log("Facility updated:", response.data);
       alert("Facility updated successfully!");
 

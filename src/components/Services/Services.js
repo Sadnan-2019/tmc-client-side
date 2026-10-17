@@ -1,20 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
- 
+
 import Service from "./Service";
 import gsap from "gsap";
 
 import "./Services.css";
 const Services = () => {
-
- 
   const [doctors, setDoctors] = useState([]);
-    // let i = 1;
-    useEffect(() => {
-      fetch(`http://localhost:5000/all-department`)
-        .then((res) => res.json())
-        .then((data) => setDoctors(data));
-    }, []);
- 
+  // let i = 1;
+  useEffect(() => {
+    fetch(`https://tmc-server-side-theta.vercel.app/all-department`)
+      .then((res) => res.json())
+      .then((data) => setDoctors(data));
+  }, []);
+
   return (
     <div className="bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90] text-black ">
       <div className="">

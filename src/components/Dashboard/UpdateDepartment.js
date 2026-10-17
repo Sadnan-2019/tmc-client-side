@@ -1,90 +1,85 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateDepartment = () => {
-    const { deptId } = useParams();
-    const [departments, setDepartments] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:5000/all-department`)
-          .then((response) => response.json())
-          .then((data) => setDepartments(data))
-          .catch((error) => console.error("Error fetching coffee:", error));
-      }, []);
-      const detailsDepartments = departments.find((d) => d._id === deptId);
-      const {
-        register,
-        formState: { errors },
-        handleSubmit,
-        reset,
-      } = useForm();
-      const [previewImage, setPreviewImage] = useState(detailsDepartments?.imageUrl);
+  const { deptId } = useParams();
+  const [departments, setDepartments] = useState([]);
+  useEffect(() => {
+    fetch(`https://tmc-server-side-theta.vercel.app/all-department`)
+      .then((response) => response.json())
+      .then((data) => setDepartments(data))
+      .catch((error) => console.error("Error fetching coffee:", error));
+  }, []);
+  const detailsDepartments = departments.find((d) => d._id === deptId);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+  const [previewImage, setPreviewImage] = useState(
+    detailsDepartments?.imageUrl,
+  );
 
-      const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-          const previewUrl = URL.createObjectURL(file);
-          setPreviewImage(previewUrl); // Set preview image
-        }
-      };
-    
-    
-    
-    
-    
-    
-      const onSubmit = async (data) => {
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const previewUrl = URL.createObjectURL(file);
+      setPreviewImage(previewUrl); // Set preview image
+    }
+  };
 
-        try {
-          const formData = new FormData();
-    
-          if (data.dept_name) {
-            formData.append("dept_name", data.dept_name);
-          }
-          if (data.description) {
-            formData.append("description", data.description);
-          }
-          // formData.append('file', data.file[0]);
-    
-          if (data.file?.[0]) {
-            formData.append("file", data.file[0]);
-            console.log(formData, "NEW COLNLE");
-          }
-          // console.log(formData)
-    
-          const response = await axios.put(
-            `http://localhost:5000/update-department/${deptId}`,
-            formData,
-            {
-              headers: {
-                "Content-Type": "multipart/form-data", // Set Content-Type to application/json
-              },
-            }
-          );
-    
-          console.log("Department updated:", response.data);
-          alert("Department updated successfully!");
-    
-          // Reset the form fields (optional)
-          reset();
-        } catch (error) {
-          console.error("Error updating facility:", error);
-          alert("Failed to update the facility");
-        }
+  const onSubmit = async (data) => {
+    try {
+      const formData = new FormData();
 
+      if (data.dept_name) {
+        formData.append("dept_name", data.dept_name);
+      }
+      if (data.description) {
+        formData.append("description", data.description);
+      }
+      // formData.append('file', data.file[0]);
 
+      if (data.file?.[0]) {
+        formData.append("file", data.file[0]);
+        console.log(formData, "NEW COLNLE");
+      }
+      // console.log(formData)
 
+      const response = await axios.put(
+        `https://tmc-server-side-theta.vercel.app/update-department/${deptId}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data", // Set Content-Type to application/json
+          },
+        },
+      );
 
-         
-      };
-    return (
-        <div>
-            Me Department update
-            <h2>Update Department Information for ID: {detailsDepartments?.dept_name}</h2>
-            <div>
-        <h1 className="text-2xl text-white text-center mt-5">Update Department</h1>
+      console.log("Department updated:", response.data);
+      alert("Department updated successfully!");
+
+      // Reset the form fields (optional)
+      reset();
+    } catch (error) {
+      console.error("Error updating facility:", error);
+      alert("Failed to update the facility");
+    }
+  };
+  return (
+    <div>
+      Me Department update
+      <h2>
+        Update Department Information for ID: {detailsDepartments?.dept_name}
+      </h2>
+      <div>
+        <h1 className="text-2xl text-white text-center mt-5">
+          Update Department
+        </h1>
         <div className=" ">
           <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
             <div className="form-control w-full mx-auto max-w-xs">
@@ -92,11 +87,11 @@ const UpdateDepartment = () => {
                 <span className="label-text text-white">Name</span>
               </label>
               <input
-              {...register("dept_name", {
-                required: {
-                  message: "dept_name is requried",
-                },
-              })}
+                {...register("dept_name", {
+                  required: {
+                    message: "dept_name is requried",
+                  },
+                })}
                 defaultValue={detailsDepartments?.dept_name}
                 // {...register("name", { required: "Name is required" })}
                 type="text"
@@ -159,13 +154,13 @@ const UpdateDepartment = () => {
                 //   },
                 // })}
                 {...register("file", {
-                    validate: (value) =>
-                      value.length > 0 || detailsDepartments?.imageUrl
-                        ? true
-                        : "Image is required",
-                  })}
+                  validate: (value) =>
+                    value.length > 0 || detailsDepartments?.imageUrl
+                      ? true
+                      : "Image is required",
+                })}
                 type="file"
-                onChange={handleImageChange} 
+                onChange={handleImageChange}
                 placeholder="Type here"
                 className="input input-bordered w-full max-w-xs text-black"
               />
@@ -188,8 +183,8 @@ const UpdateDepartment = () => {
           </form>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default UpdateDepartment;

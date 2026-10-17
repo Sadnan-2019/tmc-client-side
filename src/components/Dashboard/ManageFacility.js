@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import Pagination from 'react-js-pagination';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import Pagination from "react-js-pagination";
+import { Link } from "react-router-dom";
 
 const ManageFacility = () => {
-    const [facilities, setFacilities] = useState([]);
+  const [facilities, setFacilities] = useState([]);
   let i = 1;
   useEffect(() => {
-    fetch(`http://localhost:5000/all-failities`)
+    fetch(`https://tmc-server-side-theta.vercel.app/all-failities`)
       .then((res) => res.json())
       .then((data) => setFacilities(data));
-      
   }, []);
-console.log(facilities)
+  console.log(facilities);
   const [activePage, setActivePage] = useState(1);
   const itemsCountPerPage = 7;
 
   // Get the current items for the active page
   const indexOfLastItem = activePage * itemsCountPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage ;
+  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage;
   const currentItems = facilities.slice(indexOfFirstItem, indexOfLastItem);
 
   // Function to handle page change
@@ -29,7 +28,7 @@ console.log(facilities)
     const proceed = window.confirm("Are you sure want to delete");
     if (proceed) {
       console.log("deleteing user id ", _id);
-      const url = `http://localhost:5000/delete-facility/${_id}`;
+      const url = `https://tmc-server-side-theta.vercel.app/delete-facility/${_id}`;
 
       fetch(url, {
         method: "DELETE",
@@ -37,91 +36,94 @@ console.log(facilities)
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
-            const remaining = facilities.filter((facility) => facility._id !== _id);
+            const remaining = facilities.filter(
+              (facility) => facility._id !== _id,
+            );
             setFacilities(remaining);
           }
           console.log(data);
         });
     }
   };
-    return (
-        <div>
-            <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
-      <h1 className="text-4xl text-white text-center py-5"> Facility Details</h1>
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          {/* head */}
-          <thead className="text-white">
-            <tr className="text-xl">
-              <th>Sl No</th>
-              <th>Facility Name</th>
-              <th>Description</th>
-              <th>Photo</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody className=" ">
-            {/* row 1 */}
-            {currentItems.map((facilities) => (
-              <tr key={facilities._id}>
-                <th>{i++}</th>
-                
-                <td>{facilities.facility_name}</td>
-                <td>{facilities.facility_description}</td>
-                {/* <td>{doctor._id}</td> */}
-
-                <td>
-                  <img
-                    class="object-cover object-center h-12 rounded-full w-12"
-                    src={facilities.imageUrl}
-                    alt="Woman looking front"
-                  />
-                </td>
-                <td>
-                  
-                  <Link to={`update-facility/${facilities._id}`}>
-
-              {/* <button>Update</button> */}
-              <button
-                    // onClick={() => handleDoctorUpdate(facilities._id)}
-                    className="btn btn-xs"
-                  > 
-                    EDIT
-                  </button>
-            </Link>
-                </td>
-                <td>
-                  <button
-                    onClick={() => handleFacilityDelete(facilities._id)}
-                    className="btn btn-xs"
-                  >
-                    Delete
-                  </button>
-                </td>
+  return (
+    <div>
+      <div className=" bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white text-xl">
+        <h1 className="text-4xl text-white text-center py-5">
+          {" "}
+          Facility Details
+        </h1>
+        <div className="overflow-x-auto">
+          <table className="table w-full">
+            {/* head */}
+            <thead className="text-white">
+              <tr className="text-xl">
+                <th>Sl No</th>
+                <th>Facility Name</th>
+                <th>Description</th>
+                <th>Photo</th>
+                <th>Action</th>
               </tr>
-            ))}
-            {/* row 2 */}
+            </thead>
+            <tbody className=" ">
+              {/* row 1 */}
+              {currentItems.map((facilities) => (
+                <tr key={facilities._id}>
+                  <th>{i++}</th>
 
-            {/* row 3 */}
-          </tbody>
-        </table>
+                  <td>{facilities.facility_name}</td>
+                  <td>{facilities.facility_description}</td>
+                  {/* <td>{doctor._id}</td> */}
 
-        <div className="pagination-container">
-          <Pagination
-            className="pagination"
-            activePage={activePage}
-            itemsCountPerPage={itemsCountPerPage}
-            totalItemsCount={facilities.length}
-            pageRangeDisplayed={7}
-            onChange={handlePageChange}
-            itemClass="page-item"
-            linkClass="page-link"
-          />
+                  <td>
+                    <img
+                      class="object-cover object-center h-12 rounded-full w-12"
+                      src={facilities.imageUrl}
+                      alt="Woman looking front"
+                    />
+                  </td>
+                  <td>
+                    <Link to={`update-facility/${facilities._id}`}>
+                      {/* <button>Update</button> */}
+                      <button
+                        // onClick={() => handleDoctorUpdate(facilities._id)}
+                        className="btn btn-xs"
+                      >
+                        EDIT
+                      </button>
+                    </Link>
+                  </td>
+                  <td>
+                    <button
+                      onClick={() => handleFacilityDelete(facilities._id)}
+                      className="btn btn-xs"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+              {/* row 2 */}
+
+              {/* row 3 */}
+            </tbody>
+          </table>
+
+          <div className="pagination-container">
+            <Pagination
+              className="pagination"
+              activePage={activePage}
+              itemsCountPerPage={itemsCountPerPage}
+              totalItemsCount={facilities.length}
+              pageRangeDisplayed={7}
+              onChange={handlePageChange}
+              itemClass="page-item"
+              linkClass="page-link"
+            />
+          </div>
         </div>
       </div>
     </div>
-        </div>
-    );
+  );
 };
 
 export default ManageFacility;

@@ -1,41 +1,40 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React from "react";
+import { useForm } from "react-hook-form";
 
 const AddPackage = () => {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  const onSubmit = async (data) => {
+    try {
+      const formData = new FormData();
+      formData.append("package_name", data.package_name);
+      formData.append("package_rate", data.package_rate);
+      formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
 
-    const {
-        register,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-      const onSubmit = async (data) => {
-        try {
-          const formData = new FormData();
-          formData.append("package_name", data.package_name);
-          formData.append("package_rate", data.package_rate);
-          formData.append("file", data.file[0]); // Assuming "file" is the name of the file input
-    
-          const response = await fetch("http://localhost:5000/healthpackage", {
-            method: "POST",
-            headers: {
-              "content-type" : "application/json",
-              
-  
-            },
-            body: formData,
-          });
-    
-          const responseData = await response.json();
-          console.log(responseData, formData);
-        } catch (error) {
-          console.error(error);
-        }
-      };
+      const response = await fetch(
+        "https://tmc-server-side-theta.vercel.app/healthpackage",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: formData,
+        },
+      );
 
+      const responseData = await response.json();
+      console.log(responseData, formData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-    return (
-        <div>
-            <div>
+  return (
+    <div>
+      <div>
         <h1 className="text-2xl text-white text-center mt-5">Add Package</h1>
         <div className=" ">
           <form onSubmit={handleSubmit(onSubmit)} enctype="multipart/form-data">
@@ -118,8 +117,8 @@ const AddPackage = () => {
           </form>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default AddPackage;

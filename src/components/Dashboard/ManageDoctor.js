@@ -6,10 +6,9 @@ const ManageDoctor = () => {
   const [doctors, setDoctors] = useState([]);
   let i = 1;
   useEffect(() => {
-    fetch(`http://localhost:5000/all-doctors`)
+    fetch(`https://tmc-server-side-theta.vercel.app/all-doctors`)
       .then((res) => res.json())
       .then((data) => setDoctors(data));
-      
   }, []);
 
   const [activePage, setActivePage] = useState(1);
@@ -17,7 +16,7 @@ const ManageDoctor = () => {
 
   // Get the current items for the active page
   const indexOfLastItem = activePage * itemsCountPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage ;
+  const indexOfFirstItem = indexOfLastItem - itemsCountPerPage;
   const currentItems = doctors.slice(indexOfFirstItem, indexOfLastItem);
 
   // Function to handle page change
@@ -29,7 +28,7 @@ const ManageDoctor = () => {
     const proceed = window.confirm("Are you sure want to delete");
     if (proceed) {
       console.log("deleteing user id ", _id);
-      const url = `http://localhost:5000/doctor/${_id}`;
+      const url = `https://tmc-server-side-theta.vercel.app/doctor/${_id}`;
 
       fetch(url, {
         method: "DELETE",
@@ -45,7 +44,7 @@ const ManageDoctor = () => {
     }
   };
   // const handleDoctorUpdate = (_id)=>{
-  //   const url = `http://localhost:5000/update_doctor/${_id}`;
+  //   const url = `https://tmc-server-side-theta.vercel.app/update_doctor/${_id}`;
   //   fetch(url, {
   //     method: "DELETE",
   //   })
@@ -71,7 +70,7 @@ const ManageDoctor = () => {
             {currentItems.map((doctors) => (
               <tr key={doctors._id}>
                 <th>{i++}</th>
-                
+
                 <td>{doctors.name}</td>
                 <td>{doctors.speciality}</td>
                 {/* <td>{doctor._id}</td> */}
@@ -84,17 +83,15 @@ const ManageDoctor = () => {
                   />
                 </td>
                 <td>
-                  
                   <Link to={`update/${doctors._id}`}>
-
-              {/* <button>Update</button> */}
-              <button
-                    // onClick={() => handleDoctorUpdate(doctors._id)}
-                    className="btn btn-xs"
-                  > 
-                    EDIT
-                  </button>
-            </Link>
+                    {/* <button>Update</button> */}
+                    <button
+                      // onClick={() => handleDoctorUpdate(doctors._id)}
+                      className="btn btn-xs"
+                    >
+                      EDIT
+                    </button>
+                  </Link>
                 </td>
                 <td>
                   <button

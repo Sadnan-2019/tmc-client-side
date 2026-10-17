@@ -9,7 +9,7 @@ const UpdateFacility = () => {
   const { register, handleSubmit, reset } = useForm();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/all-failities`)
+    fetch(`https://tmc-server-side-theta.vercel.app/all-failities`)
       .then((response) => response.json())
       .then((data) => setFacility(data))
       .catch((error) => console.error("Error fetching facilities:", error));
@@ -45,13 +45,13 @@ const UpdateFacility = () => {
       // console.log(formData)
 
       const response = await axios.put(
-        `http://localhost:5000/update-facility/${facilityId}`,
+        `https://tmc-server-side-theta.vercel.app/update-facility/${facilityId}`,
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data", // Set Content-Type to application/json
           },
-        }
+        },
       );
 
       console.log("Doctor updated:", response.data);
@@ -99,19 +99,18 @@ const UpdateFacility = () => {
             />
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
-              <img
-                class="object-cover object-center h-52 rounded-full w-52"
-                // src={detailsDoctors?.imageUrl}
-                src={previewImage || detailsFacility?.imageUrl}
-                alt="Woman looking front"
-              />
-            </div>
+            <img
+              class="object-cover object-center h-52 rounded-full w-52"
+              // src={detailsDoctors?.imageUrl}
+              src={previewImage || detailsFacility?.imageUrl}
+              alt="Woman looking front"
+            />
+          </div>
           <div className="form-control w-full mx-auto max-w-xs">
             <label className="label">
               <span className="label-text text-white">Image Update</span>
             </label>
             <input
-              
               {...register("file", {
                 validate: (value) =>
                   value.length > 0 || detailsFacility?.imageUrl
@@ -133,11 +132,11 @@ const UpdateFacility = () => {
               </label> */}
           </div>
           <div className="form-control w-full mx-auto max-w-xs">
-          <input
-            value="Update"
-            className="btn w-full max-w-xs text-black btn-sm justify-center"
-            type="submit"
-          />
+            <input
+              value="Update"
+              className="btn w-full max-w-xs text-black btn-sm justify-center"
+              type="submit"
+            />
           </div>
         </form>
       </div>
